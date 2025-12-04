@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { Phone, Search, CheckCircle2 } from "lucide-react";
+import { Phone, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import heroFamily from "@/assets/hero-family.jpg";
+import { ZipCodeChecker } from "@/components/ZipCodeChecker";
 
 const benefits = [
   "No Hidden Fees",
@@ -11,7 +11,7 @@ const benefits = [
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen pt-20 flex items-center overflow-hidden">
+    <section className="relative pt-24 pb-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/50" />
       
@@ -20,7 +20,7 @@ export const HeroSection = () => {
       <div className="absolute bottom-20 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -48,17 +48,9 @@ export const HeroSection = () => {
               Get connected with great deals available at your location.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button variant="hero" size="xl">
-                <Search className="w-5 h-5" />
-                Check Availability Now
-              </Button>
-              <Button variant="heroOutline" size="xl" asChild>
-                <a href="tel:+18885240250">
-                  <Phone className="w-5 h-5" />
-                  Call: (888) 524-0250
-                </a>
-              </Button>
+            {/* Zip Code Checker */}
+            <div className="mb-8">
+              <ZipCodeChecker variant="hero" />
             </div>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-6">
