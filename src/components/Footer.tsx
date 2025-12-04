@@ -1,4 +1,20 @@
+import { Link } from "react-router-dom";
 import { Wifi, Phone, Mail, MapPin } from "lucide-react";
+
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
+const serviceLinks = [
+  { label: "Home Internet", href: "/services" },
+  { label: "Business Internet", href: "/services" },
+  { label: "TV Packages", href: "/services" },
+  { label: "Fiber Plans", href: "/services" },
+  { label: "Bundle Deals", href: "/services" },
+];
 
 export const Footer = () => {
   return (
@@ -7,14 +23,14 @@ export const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
                 <Wifi className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="font-heading font-bold text-xl text-foreground">
                 AQ Systems
               </span>
-            </div>
+            </Link>
             <p className="text-muted-foreground mb-4">
               Your trusted partner for finding the best internet and TV services in your area.
             </p>
@@ -24,11 +40,11 @@ export const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {["Home", "Services", "How It Works", "About Us", "Contact"].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    {link}
-                  </a>
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <Link to={link.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -38,11 +54,11 @@ export const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-2">
-              {["Home Internet", "Business Internet", "TV Packages", "Fiber Plans", "Bundle Deals"].map((service) => (
-                <li key={service}>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    {service}
-                  </a>
+              {serviceLinks.map((service) => (
+                <li key={service.label}>
+                  <Link to={service.href} className="text-muted-foreground hover:text-primary transition-colors">
+                    {service.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -77,12 +93,12 @@ export const Footer = () => {
             © {new Date().getFullYear()} AQ Systems. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            <Link to="/contact" className="text-muted-foreground hover:text-primary text-sm transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            </Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-primary text-sm transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
