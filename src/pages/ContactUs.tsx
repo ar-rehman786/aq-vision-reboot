@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Our Address",
-    value: "AQ Systems\n3408 E Derringer Way\nGilbert, AZ 85297",
+    value: "Choice Communication LLC\n3408 E Derringer Way\nGilbert, AZ 85297",
     href: null,
   },
   {
@@ -24,13 +24,13 @@ const contactInfo = [
     label: "Phone",
     value: "(888) 524-0250",
     href: "tel:+18885240250",
-    extra: "Monday - Friday: 8am - 8pm EST\nSaturday: 9am - 5pm EST",
+    extra: "Monday to Friday: 8:00 AM – 8:00 PM EST\nSaturday: 9:00 AM – 5:00 PM EST",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "support@aqsystems.com",
-    href: "mailto:support@aqsystems.com",
+    value: "support@internetone.live",
+    href: "mailto:support@internetone.live",
     extra: "We typically respond within 24 hours",
   },
   {
@@ -90,12 +90,12 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Get Internet & TV Service Quote - AQ Systems</title>
+        <title>Get in Touch | Check Internet & TV Availability - AQ Systems</title>
         <meta 
           name="description" 
           content="Contact AQ Systems to check internet and TV availability in your area. Call (888) 524-0250 or fill out our form for a free consultation. Response within 24 hours." 
         />
-        <meta name="keywords" content="contact AQ Systems, internet availability check, TV service inquiry, get quote" />
+        <meta name="keywords" content="contact us, get in touch, internet availability, TV service inquiry, free quote" />
         <link rel="canonical" href="/contact-us" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -109,7 +109,7 @@ const ContactUs = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
               >
-                Contact Us
+                Get in Touch
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -117,8 +117,8 @@ const ContactUs = () => {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-muted-foreground max-w-3xl mx-auto"
               >
-                Ready to explore internet and TV services in your area? Fill out the form below 
-                or contact us directly. We're here to help you find the perfect plan.
+                Interested in exploring internet and TV services available in your area? 
+                Complete the form below or reach out to us directly.
               </motion.p>
             </div>
           </section>
@@ -148,7 +148,7 @@ const ContactUs = () => {
                             value={formData.fullName}
                             onChange={handleChange}
                             required
-                            placeholder="John Doe"
+                            placeholder="Your Full Name"
                           />
                         </div>
                         <div className="space-y-2">
@@ -160,7 +160,7 @@ const ContactUs = () => {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            placeholder="john@example.com"
+                            placeholder="Your Email Address"
                           />
                         </div>
                       </div>
@@ -175,7 +175,7 @@ const ContactUs = () => {
                             value={formData.phone}
                             onChange={handleChange}
                             required
-                            placeholder="(555) 123-4567"
+                            placeholder="Your Phone Number"
                           />
                         </div>
                         <div className="space-y-2">
@@ -185,7 +185,7 @@ const ContactUs = () => {
                             onValueChange={(value) => setFormData({ ...formData, serviceInterest: value })}
                           >
                             <SelectTrigger>
-                              <SelectValue placeholder="Select a service" />
+                              <SelectValue placeholder="Choose a Service" />
                             </SelectTrigger>
                             <SelectContent>
                               <SelectItem value="internet">Internet Only</SelectItem>
@@ -205,7 +205,7 @@ const ContactUs = () => {
                           value={formData.address}
                           onChange={handleChange}
                           required
-                          placeholder="123 Main Street"
+                          placeholder="Your Service Address"
                         />
                       </div>
 
@@ -218,7 +218,7 @@ const ContactUs = () => {
                             value={formData.city}
                             onChange={handleChange}
                             required
-                            placeholder="City"
+                            placeholder="Your City"
                           />
                         </div>
                         <div className="space-y-2">
@@ -229,7 +229,7 @@ const ContactUs = () => {
                             value={formData.state}
                             onChange={handleChange}
                             required
-                            placeholder="State"
+                            placeholder="Your State"
                           />
                         </div>
                         <div className="space-y-2">
@@ -240,7 +240,7 @@ const ContactUs = () => {
                             value={formData.zipCode}
                             onChange={handleChange}
                             required
-                            placeholder="12345"
+                            placeholder="ZIP Code"
                           />
                         </div>
                       </div>
@@ -252,22 +252,22 @@ const ContactUs = () => {
                           name="message"
                           value={formData.message}
                           onChange={handleChange}
-                          placeholder="Tell us about your needs or any questions you have..."
+                          placeholder="Please share your questions or specific needs with us."
                           rows={4}
                         />
                       </div>
 
                       <p className="text-sm text-muted-foreground">
-                        By submitting this form, you consent to be contacted by AQ Systems regarding 
-                        internet and TV services available in your area. Your information will be 
-                        handled according to our{" "}
+                        By submitting this form, you agree to be contacted by Choice Communication LLC 
+                        regarding available internet and TV services in your area. Your information will 
+                        be processed in accordance with our{" "}
                         <Link to="/policies/privacy-policy" className="text-primary hover:underline">
                           Privacy Policy
                         </Link>.
                       </p>
 
                       <Button type="submit" variant="hero" size="lg" className="w-full" disabled={isSubmitting}>
-                        {isSubmitting ? "Submitting..." : "Submit Request"}
+                        {isSubmitting ? "Submitting..." : "Submit Your Request"}
                       </Button>
                     </form>
                   </div>
