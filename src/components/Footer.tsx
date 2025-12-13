@@ -4,8 +4,8 @@ import { Wifi, Phone, Mail, MapPin } from "lucide-react";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "About Us", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Contact", href: "/contact-us" },
 ];
 
 const serviceLinks = [
@@ -93,10 +93,10 @@ export const Footer = () => {
             © {new Date().getFullYear()} AQ Systems. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/contact" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            <Link to="/policies/privacy-policy" className="text-muted-foreground hover:text-primary text-sm transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/contact" className="text-muted-foreground hover:text-primary text-sm transition-colors">
+            <Link to="/policies/terms-of-services" className="text-muted-foreground hover:text-primary text-sm transition-colors">
               Terms of Service
             </Link>
           </div>
