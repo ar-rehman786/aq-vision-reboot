@@ -180,7 +180,7 @@ const PrivacyPolicy = () => {
                 <div className="bg-muted/50 rounded-xl p-6 not-prose">
                   <p className="font-semibold text-foreground">AQ Systems</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
-                  <p className="text-muted-foreground">Bronx NY 10467</p>
+                  <p className="text-muted-foreground">Bronx NY 10468</p>
                   <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
                   <p className="text-muted-foreground">Phone: 929-990-2934</p>
                 </div>
