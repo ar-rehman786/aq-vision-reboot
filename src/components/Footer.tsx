@@ -13,9 +13,6 @@ const quickLinks = [
 const serviceLinks = [
   { label: "Home Internet", href: "/services" },
   { label: "Business Internet", href: "/services" },
-  { label: "TV Packages", href: "/services" },
-  { label: "Fiber Plans", href: "/services" },
-  { label: "Bundle Deals", href: "/services" },
 ];
 
 const legalLinks = [
