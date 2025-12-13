@@ -47,147 +47,201 @@ const TermsOfServices = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="prose prose-lg dark:prose-invert max-w-none"
+                className="space-y-10"
               >
-                <h2>1. Acceptance of Terms</h2>
-                <p>
-                  By accessing and using AQ Systems (the "Website"), you accept and agree to be bound 
-                  by these Terms & Conditions. The Website is owned and operated by Choice Communication LLC, 
-                  located at 3052 Bainbridge Ave apt 5E, Bronx NY 10468. If you do not agree to these terms, 
-                  please do not use this Website.
-                </p>
+                {/* Section 1 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">1. Acceptance of Terms</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    By accessing and using AQ Systems (the "Website"), you accept and agree to be bound 
+                    by these Terms & Conditions. The Website is owned and operated by Choice Communication LLC, 
+                    located at 3052 Bainbridge Ave apt 5E, Bronx NY 10468. If you do not agree to these terms, 
+                    please do not use this Website.
+                  </p>
+                </div>
 
-                <h2>2. Services Provided</h2>
-                <p>
-                  AQ Systems is an independent marketing partner. We are not the official website of 
-                  any internet or cable provider. Our services include:
-                </p>
-                <ul>
-                  <li>Helping customers explore available internet and TV services in their area</li>
-                  <li>Providing information about plans and pricing from participating service providers</li>
-                  <li>Facilitating communication between customers and service providers</li>
-                </ul>
+                {/* Section 2 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">2. Services Provided</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    AQ Systems is an independent marketing partner. We are not the official website of 
+                    any internet or cable provider. Our services include:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                    <li>Helping customers explore available internet and TV services in their area</li>
+                    <li>Providing information about plans and pricing from participating service providers</li>
+                    <li>Facilitating communication between customers and service providers</li>
+                  </ul>
+                </div>
 
-                <h2>3. Independent Marketing Partner Status</h2>
-                <p>
-                  AQ Systems operates as an independent marketing partner. We are not affiliated with, 
-                  endorsed by, or the official website of any specific internet or cable provider. 
-                  All service provider names, logos, and trademarks are the property of their 
-                  respective owners and are used for identification purposes only.
-                </p>
+                {/* Section 3 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">3. Independent Marketing Partner Status</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    AQ Systems operates as an independent marketing partner. We are not affiliated with, 
+                    endorsed by, or the official website of any specific internet or cable provider. 
+                    All service provider names, logos, and trademarks are the property of their 
+                    respective owners and are used for identification purposes only.
+                  </p>
+                </div>
 
-                <h2>4. Fees and Charges</h2>
-                <p>
-                  Choice Communication LLC charges a separate service and setup fee for processing and 
-                  coordinating orders through AQ Systems. These fees are:
-                </p>
-                <ul>
-                  <li>Disclosed to you prior to order completion</li>
-                  <li>In addition to charges from the service provider</li>
-                  <li>Non-refundable once the order has been processed</li>
-                  <li>Subject to change without prior notice</li>
-                </ul>
+                {/* Section 4 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">4. Fees and Charges</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Choice Communication LLC charges a separate service and setup fee for processing and 
+                    coordinating orders through AQ Systems. These fees are:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                    <li>Disclosed to you prior to order completion</li>
+                    <li>In addition to charges from the service provider</li>
+                    <li>Non-refundable once the order has been processed</li>
+                    <li>Subject to change without prior notice</li>
+                  </ul>
+                </div>
 
-                <h2>5. Pricing and Availability</h2>
-                <p>
-                  Prices displayed on this Website are typical ranges based on current market data 
-                  and may vary by location, provider, and available promotions. We make no guarantee 
-                  that specific prices or services will be available at your address. Final pricing 
-                  and service availability will be confirmed by the service provider during the 
-                  ordering process.
-                </p>
+                {/* Section 5 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">5. Pricing and Availability</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Prices displayed on this Website are typical ranges based on current market data 
+                    and may vary by location, provider, and available promotions. We make no guarantee 
+                    that specific prices or services will be available at your address. Final pricing 
+                    and service availability will be confirmed by the service provider during the 
+                    ordering process.
+                  </p>
+                </div>
 
-                <h2>6. Service Provider Relationship</h2>
-                <p>
-                  Once you place an order through AQ Systems, you will enter into a separate agreement 
-                  with the service provider. AQ Systems is not responsible for the service provider's 
-                  performance, billing, technical support, or service delivery. All matters related 
-                  to your active service must be addressed directly with your service provider.
-                </p>
+                {/* Section 6 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">6. Service Provider Relationship</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Once you place an order through AQ Systems, you will enter into a separate agreement 
+                    with the service provider. AQ Systems is not responsible for the service provider's 
+                    performance, billing, technical support, or service delivery. All matters related 
+                    to your active service must be addressed directly with your service provider.
+                  </p>
+                </div>
 
-                <h2>7. User Responsibilities</h2>
-                <p>You agree to:</p>
-                <ul>
-                  <li>Provide accurate and complete information when using our Website</li>
-                  <li>Use the Website only for lawful purposes</li>
-                  <li>Not misuse or attempt to gain unauthorized access to the Website</li>
-                  <li>Maintain the confidentiality of any account credentials</li>
-                  <li>Comply with all applicable laws and regulations</li>
-                </ul>
+                {/* Section 7 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">7. User Responsibilities</h2>
+                  <p className="text-muted-foreground leading-relaxed">You agree to:</p>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                    <li>Provide accurate and complete information when using our Website</li>
+                    <li>Use the Website only for lawful purposes</li>
+                    <li>Not misuse or attempt to gain unauthorized access to the Website</li>
+                    <li>Maintain the confidentiality of any account credentials</li>
+                    <li>Comply with all applicable laws and regulations</li>
+                  </ul>
+                </div>
 
-                <h2>8. No Warranties</h2>
-                <p>
-                  The Website and information provided are offered "as is" without any warranty of 
-                  any kind, either express or implied. We do not warrant that the Website will be 
-                  uninterrupted, error-free, or free from viruses or other harmful components. We 
-                  make no warranty regarding the performance, quality, or reliability of services 
-                  provided by third-party service providers.
-                </p>
+                {/* Section 8 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">8. No Warranties</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    The Website and information provided are offered "as is" without any warranty of 
+                    any kind, either express or implied. We do not warrant that the Website will be 
+                    uninterrupted, error-free, or free from viruses or other harmful components. We 
+                    make no warranty regarding the performance, quality, or reliability of services 
+                    provided by third-party service providers.
+                  </p>
+                </div>
 
-                <h2>9. Limitation of Liability</h2>
-                <p>
-                  To the maximum extent permitted by law, AQ Systems shall not be liable for any 
-                  indirect, incidental, special, consequential, or punitive damages arising from 
-                  your use of the Website or services. Our total liability shall not exceed the 
-                  amount of fees you paid to us for our services.
-                </p>
+                {/* Section 9 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">9. Limitation of Liability</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    To the maximum extent permitted by law, AQ Systems shall not be liable for any 
+                    indirect, incidental, special, consequential, or punitive damages arising from 
+                    your use of the Website or services. Our total liability shall not exceed the 
+                    amount of fees you paid to us for our services.
+                  </p>
+                </div>
 
-                <h2>10. Indemnification</h2>
-                <p>
-                  You agree to indemnify, defend, and hold harmless AQ Systems and its officers, 
-                  directors, employees, and agents from any claims, damages, losses, liabilities, 
-                  and expenses (including legal fees) arising out of or related to your use of the 
-                  Website or violation of these Terms.
-                </p>
+                {/* Section 10 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">10. Indemnification</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    You agree to indemnify, defend, and hold harmless AQ Systems and its officers, 
+                    directors, employees, and agents from any claims, damages, losses, liabilities, 
+                    and expenses (including legal fees) arising out of or related to your use of the 
+                    Website or violation of these Terms.
+                  </p>
+                </div>
 
-                <h2>11. Intellectual Property</h2>
-                <p>
-                  All content on this Website, including text, graphics, logos, and software, is 
-                  the property of AQ Systems or its content suppliers and is protected by intellectual 
-                  property laws. You may not reproduce, distribute, or create derivative works 
-                  without our written permission.
-                </p>
+                {/* Section 11 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">11. Intellectual Property</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    All content on this Website, including text, graphics, logos, and software, is 
+                    the property of AQ Systems or its content suppliers and is protected by intellectual 
+                    property laws. You may not reproduce, distribute, or create derivative works 
+                    without our written permission.
+                  </p>
+                </div>
 
-                <h2>12. Modifications to Terms</h2>
-                <p>
-                  We reserve the right to modify these Terms & Conditions at any time. Changes will 
-                  be effective immediately upon posting to the Website. Your continued use of the 
-                  Website after any changes constitutes acceptance of the new terms.
-                </p>
+                {/* Section 12 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">12. Modifications to Terms</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We reserve the right to modify these Terms & Conditions at any time. Changes will 
+                    be effective immediately upon posting to the Website. Your continued use of the 
+                    Website after any changes constitutes acceptance of the new terms.
+                  </p>
+                </div>
 
-                <h2>13. Termination</h2>
-                <p>
-                  We reserve the right to terminate or suspend your access to the Website at any 
-                  time, without notice, for any reason, including violation of these Terms.
-                </p>
+                {/* Section 13 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">13. Termination</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We reserve the right to terminate or suspend your access to the Website at any 
+                    time, without notice, for any reason, including violation of these Terms.
+                  </p>
+                </div>
 
-                <h2>14. Governing Law</h2>
-                <p>
-                  These Terms & Conditions shall be governed by and construed in accordance with the 
-                  laws of the State of New York, United States, without regard to its conflict of 
-                  law provisions.
-                </p>
+                {/* Section 14 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">14. Governing Law</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    These Terms & Conditions shall be governed by and construed in accordance with the 
+                    laws of the State of New York, United States, without regard to its conflict of 
+                    law provisions.
+                  </p>
+                </div>
 
-                <h2>15. Dispute Resolution</h2>
-                <p>
-                  Any disputes arising from these Terms or your use of the Website shall be resolved 
-                  through binding arbitration in accordance with the rules of the American Arbitration 
-                  Association, conducted in Bronx, New York.
-                </p>
+                {/* Section 15 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">15. Dispute Resolution</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Any disputes arising from these Terms or your use of the Website shall be resolved 
+                    through binding arbitration in accordance with the rules of the American Arbitration 
+                    Association, conducted in Bronx, New York.
+                  </p>
+                </div>
 
-                <h2>16. Contact Information</h2>
-                <p>If you have questions about these Terms & Conditions, please contact us:</p>
-                <div className="bg-muted/50 rounded-xl p-6 not-prose">
-                  <p className="font-semibold text-foreground">AQ Systems</p>
-                  <p className="text-muted-foreground">Choice Communication LLC</p>
-                  <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
-                  <p className="text-muted-foreground">Bronx NY 10468</p>
-                  <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
-                  <p className="text-muted-foreground">Phone: (929) 990-2934</p>
+                {/* Section 16 - Contact */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">16. Contact Information</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    If you have questions about these Terms & Conditions, please contact us:
+                  </p>
+                  <div className="bg-muted/50 rounded-xl p-6 space-y-2">
+                    <p className="font-semibold text-foreground">AQ Systems</p>
+                    <p className="text-muted-foreground">Choice Communication LLC</p>
+                    <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
+                    <p className="text-muted-foreground">Bronx NY 10468</p>
+                    <p className="text-muted-foreground mt-3">
+                      Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a>
+                    </p>
+                    <p className="text-muted-foreground">
+                      Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a>
+                    </p>
+                  </div>
                 </div>
 
                 {/* Related Policies */}
-                <div className="bg-accent/10 border border-accent/20 rounded-xl p-6 mt-8 not-prose">
+                <div className="bg-accent/10 border border-accent/20 rounded-xl p-6 mt-8">
                   <p className="font-semibold text-foreground mb-3">Related Policies</p>
                   <p className="text-muted-foreground text-sm mb-4">
                     Please also review our other policies to understand how we handle your information and provide our services:
