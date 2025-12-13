@@ -18,6 +18,13 @@ const serviceLinks = [
   { label: "Bundle Deals", href: "/services" },
 ];
 
+const legalLinks = [
+  { label: "Terms & Conditions", href: "/policies/terms-of-services" },
+  { label: "Privacy Policy", href: "/policies/privacy-policy" },
+  { label: "Refund Policy", href: "/policies/refund-policy" },
+  { label: "Disclaimer", href: "/policies/disclaimer" },
+];
+
 export const Footer = () => {
   return (
     <footer className="bg-card border-t border-border py-12">
@@ -90,18 +97,29 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
+        {/* Legal Information Section */}
+        <div className="border-t border-border pt-6 mb-6">
+          <h5 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3">
+            Legal Information
+          </h5>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="text-xs text-muted-foreground/70 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-border pt-6 text-center">
+          <p className="text-muted-foreground text-xs">
             © {new Date().getFullYear()} AQ Systems. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <Link to="/policies/privacy-policy" className="text-muted-foreground hover:text-primary text-sm transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/policies/terms-of-services" className="text-muted-foreground hover:text-primary text-sm transition-colors">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
