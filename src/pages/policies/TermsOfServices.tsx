@@ -182,7 +182,7 @@ const TermsOfServices = () => {
                   <p className="text-muted-foreground">Choice Communication LLC</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                   <p className="text-muted-foreground">Bronx NY 10467</p>
-                  <p className="text-muted-foreground mt-2">Email: support@internetone.live</p>
+                  <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
                   <p className="text-muted-foreground">Phone: (929) 990-2934</p>
                 </div>
 

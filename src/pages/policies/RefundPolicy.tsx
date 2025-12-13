@@ -51,8 +51,8 @@ const RefundPolicy = () => {
               >
                 <h2>Overview</h2>
                 <p>
-                  AQ Systems operates internetone.live. This Refund and Return Policy applies to services 
-                  and fees charged by AQ Systems through internetone.live. This policy does not cover 
+                  AQ Systems operates aqsystems.com. This Refund and Return Policy applies to services 
+                  and fees charged by AQ Systems through aqsystems.com. This policy does not cover 
                   refunds or returns related to services provided by third-party service providers, 
                   which are subject to their own policies and terms.
                 </p>
@@ -62,7 +62,7 @@ const RefundPolicy = () => {
                 <h3>Non-Refundable Fees</h3>
                 <p>
                   Service and setup fees charged by AQ Systems for order processing and coordination 
-                  through internetone.live are non-refundable once the order has been submitted and 
+                  through aqsystems.com are non-refundable once the order has been submitted and 
                   processed. These fees cover:
                 </p>
                 <ul>
@@ -116,7 +116,7 @@ const RefundPolicy = () => {
                 </ul>
                 <p>Contact Us:</p>
                 <ul>
-                  <li>Email: support@internetone.live</li>
+                  <li>Email: support@aqsystems.com</li>
                   <li>Phone: 929-990-2934</li>
                   <li>Mail: 3052 Bainbridge Ave apt 5E, Bronx NY 10467</li>
                 </ul>
@@ -174,7 +174,7 @@ const RefundPolicy = () => {
                   <p className="font-semibold text-foreground">AQ Systems</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                   <p className="text-muted-foreground">Bronx NY 10467</p>
-                  <p className="text-muted-foreground mt-2">Email: support@internetone.live</p>
+                  <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
                   <p className="text-muted-foreground">Phone: 929-990-2934</p>
                 </div>
               </motion.div>

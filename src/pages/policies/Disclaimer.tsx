@@ -51,14 +51,14 @@ const Disclaimer = () => {
               >
                 <h2>Important Notice</h2>
                 <p>
-                  Please read this disclaimer carefully before using internetone.live. By accessing 
+                  Please read this disclaimer carefully before using aqsystems.com. By accessing 
                   and using this website, you acknowledge that you have read, understood, and agree 
                   to be bound by this disclaimer.
                 </p>
 
                 <h2>Independent Marketing Partner</h2>
                 <p>
-                  internetone.live is owned and operated by AQ Systems, an independent marketing partner.
+                  aqsystems.com is owned and operated by AQ Systems, an independent marketing partner.
                 </p>
                 <p><strong>WE ARE NOT:</strong></p>
                 <ul>
@@ -127,7 +127,7 @@ const Disclaimer = () => {
 
                 <h2>No Professional Advice</h2>
                 <p>
-                  The information provided on internetone.live is for general informational purposes only 
+                  The information provided on aqsystems.com is for general informational purposes only 
                   and should not be considered professional or technical advice. We recommend consulting 
                   with service providers directly for specific technical requirements, compatibility 
                   questions, or detailed service information relevant to your situation.
@@ -159,7 +159,7 @@ const Disclaimer = () => {
                   <p className="font-semibold text-foreground">AQ Systems</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                   <p className="text-muted-foreground">Bronx NY 10467</p>
-                  <p className="text-muted-foreground mt-2">Email: support@internetone.live</p>
+                  <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
                   <p className="text-muted-foreground">Phone: 929-990-2934</p>
                 </div>
               </motion.div>
