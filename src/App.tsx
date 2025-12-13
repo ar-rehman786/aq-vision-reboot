@@ -11,6 +11,7 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import FAQ from "./pages/FAQ";
 import InternetHelp from "./pages/InternetHelp";
+import HowItWorks from "./pages/HowItWorks";
 import Disclaimer from "./pages/policies/Disclaimer";
 import PrivacyPolicy from "./pages/policies/PrivacyPolicy";
 import TermsOfServices from "./pages/policies/TermsOfServices";
@@ -34,6 +35,7 @@ const App = () => (
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/internet-help" element={<InternetHelp />} />
+              <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/policies/disclaimer" element={<Disclaimer />} />
               <Route path="/policies/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/policies/terms-of-services" element={<TermsOfServices />} />
