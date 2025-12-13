@@ -30,7 +30,7 @@ const whyWorkWithUs = [
 const companyInfo = [
   { label: "Website", value: "AQ Systems", icon: Globe },
   { label: "Company", value: "Choice Communication LLC", icon: Building2 },
-  { label: "Business Address", value: "3052 Bainbridge Ave apt 5E, Bronx NY 10467", icon: MapPin },
+  { label: "Business Address", value: "3052 Bainbridge Ave apt 5E, Bronx NY 10468", icon: MapPin },
 ];
 
 const disclosures = [

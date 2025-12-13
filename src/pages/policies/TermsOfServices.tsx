@@ -53,7 +53,7 @@ const TermsOfServices = () => {
                 <p>
                   By accessing and using AQ Systems (the "Website"), you accept and agree to be bound 
                   by these Terms & Conditions. The Website is owned and operated by Choice Communication LLC, 
-                  located at 3052 Bainbridge Ave apt 5E, Bronx NY 10467. If you do not agree to these terms, 
+                  located at 3052 Bainbridge Ave apt 5E, Bronx NY 10468. If you do not agree to these terms, 
                   please do not use this Website.
                 </p>
 
@@ -181,7 +181,7 @@ const TermsOfServices = () => {
                   <p className="font-semibold text-foreground">AQ Systems</p>
                   <p className="text-muted-foreground">Choice Communication LLC</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
-                  <p className="text-muted-foreground">Bronx NY 10467</p>
+                  <p className="text-muted-foreground">Bronx NY 10468</p>
                   <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
                   <p className="text-muted-foreground">Phone: (929) 990-2934</p>
                 </div>

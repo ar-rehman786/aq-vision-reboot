@@ -117,7 +117,7 @@ const RefundPolicy = () => {
                   <ul className="space-y-2 text-muted-foreground">
                     <li>Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a></li>
                     <li>Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">929-990-2934</a></li>
-                    <li>Mail: 3052 Bainbridge Ave apt 5E, Bronx NY 10467</li>
+                    <li>Mail: 3052 Bainbridge Ave apt 5E, Bronx NY 10468</li>
                   </ul>
                 </div>
 
@@ -173,7 +173,7 @@ const RefundPolicy = () => {
                 <div className="bg-muted/50 rounded-xl p-6 not-prose">
                   <p className="font-semibold text-foreground">AQ Systems</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
-                  <p className="text-muted-foreground">Bronx NY 10467</p>
+                  <p className="text-muted-foreground">Bronx NY 10468</p>
                   <p className="text-muted-foreground mt-2">
                     Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a>
                   </p>
