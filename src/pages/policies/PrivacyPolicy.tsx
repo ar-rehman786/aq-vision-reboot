@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
               >
                 <h2>Introduction</h2>
                 <p>
-                  AQ Systems ("we," "our," or "us") operates internetone.live. This Privacy Policy explains 
+                  AQ Systems ("we," "our," or "us") operates aqsystems.com. This Privacy Policy explains 
                   how we collect, use, disclose, and safeguard your information when you visit our website 
                   and use our services. We are committed to protecting your privacy and handling your data 
                   in accordance with applicable U.S. privacy laws.
@@ -144,7 +144,7 @@ const PrivacyPolicy = () => {
                   <li><strong>Opt-Out:</strong> Unsubscribe from marketing communications at any time</li>
                   <li><strong>Do Not Sell:</strong> We do not sell your personal information to third parties</li>
                 </ul>
-                <p>To exercise these rights, please contact us at support@internetone.live.</p>
+                <p>To exercise these rights, please contact us at support@aqsystems.com.</p>
 
                 <h2>California Privacy Rights (CCPA)</h2>
                 <p>
@@ -181,7 +181,7 @@ const PrivacyPolicy = () => {
                   <p className="font-semibold text-foreground">AQ Systems</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                   <p className="text-muted-foreground">Bronx NY 10467</p>
-                  <p className="text-muted-foreground mt-2">Email: support@internetone.live</p>
+                  <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
                   <p className="text-muted-foreground">Phone: 929-990-2934</p>
                 </div>
               </motion.div>
