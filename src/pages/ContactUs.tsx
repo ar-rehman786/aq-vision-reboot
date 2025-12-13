@@ -93,7 +93,7 @@ const ContactUs = () => {
         <title>Get in Touch | Check Internet & TV Availability - AQ Systems</title>
         <meta 
           name="description" 
-          content="Contact AQ Systems to check internet and TV availability in your area. Call (888) 524-0250 or fill out our form for a free consultation. Response within 24 hours." 
+          content="Contact AQ Systems to check internet and TV availability in your area. Call (929) 990-2934 or fill out our form for a free consultation. Response within 24 hours." 
         />
         <meta name="keywords" content="contact us, get in touch, internet availability, TV service inquiry, free quote" />
         <link rel="canonical" href="/contact-us" />

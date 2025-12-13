@@ -36,9 +36,9 @@ export const FinalCTASection = () => {
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
               asChild
             >
-              <a href="tel:+18885240250">
+              <a href="tel:+19299902934">
                 <Phone className="w-5 h-5" />
-                Call: (888) 524-0250
+                Call: (929) 990-2934
               </a>
             </Button>
             <Button 
