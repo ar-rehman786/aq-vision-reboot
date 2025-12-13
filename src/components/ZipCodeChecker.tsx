@@ -6,21 +6,20 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Core packages with exact pricing as specified
 const corePackages = [
-  { name: "AQ Business Fiber", speed: "500 Mbps", price: "39.99", type: "Fiber", rating: 5.0 },
-  { name: "AQ Cable Standard", speed: "2 Gbps", price: "49.99", type: "Cable", rating: 4.9 },
-  { name: "AQ Fiber Plus", speed: "100 Mbps", price: "29.99", type: "Fiber", rating: 4.3 },
+  { name: "Business Fiber", speed: "500 Mbps", price: "39.99", type: "Fiber", rating: 5.0 },
+  { name: "Cable Standard", speed: "2 Gbps", price: "49.99", type: "Cable", rating: 4.9 },
+  { name: "Fiber Plus", speed: "100 Mbps", price: "29.99", type: "Fiber", rating: 4.3 },
 ];
 
 // Additional provider options for variety
 const providerOptions = [
   ...corePackages,
-  { name: "AQ Fiber Pro", speed: "1 Gbps", price: "69.99", type: "Fiber", rating: 4.8 },
-  { name: "AQ Cable Ultra", speed: "1 Gbps", price: "59.99", type: "Cable", rating: 4.7 },
-  { name: "AQ DSL Connect", speed: "75 Mbps", price: "24.99", type: "DSL", rating: 4.4 },
-  { name: "AQ DSL Plus", speed: "150 Mbps", price: "34.99", type: "DSL", rating: 4.5 },
-  { name: "AQ Business Pro", speed: "1 Gbps", price: "79.99", type: "Fiber", rating: 4.8 },
-  { name: "AQ Home Starter", speed: "50 Mbps", price: "19.99", type: "Cable", rating: 4.2 },
-  { name: "AQ Wireless Home", speed: "100 Mbps", price: "44.99", type: "Fixed Wireless", rating: 4.3 },
+  { name: "Fiber Pro", speed: "1 Gbps", price: "69.99", type: "Fiber", rating: 4.8 },
+  { name: "Cable Ultra", speed: "1 Gbps", price: "59.99", type: "Cable", rating: 4.7 },
+  { name: "DSL Connect", speed: "75 Mbps", price: "24.99", type: "DSL", rating: 4.4 },
+  { name: "DSL Plus", speed: "150 Mbps", price: "34.99", type: "DSL", rating: 4.5 },
+  { name: "Home Starter", speed: "50 Mbps", price: "19.99", type: "Cable", rating: 4.2 },
+  { name: "Wireless Home", speed: "100 Mbps", price: "44.99", type: "Fixed Wireless", rating: 4.3 },
 ];
 
 const typeVariants = ["Fiber", "Cable", "DSL", "Fixed Wireless"];
