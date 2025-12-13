@@ -14,59 +14,59 @@ import {
 const faqs = [
   {
     question: "What is AQ Systems?",
-    answer: "AQ Systems is an independent service partner that helps customers discover and compare internet and TV services from multiple providers across the United States. We simplify the process of finding available services in your area and connect you with providers who can meet your needs.",
+    answer: "AQ Systems is managed by Choice Communication LLC, an independent marketing partner. We are not the official site of any specific internet or cable provider.",
   },
   {
     question: "How does AQ Systems work?",
-    answer: "Simply enter your ZIP code or contact us directly. We'll check which internet and TV services are available at your address, provide you with detailed plan options and pricing, and help coordinate your order with the selected provider. Our goal is to make finding the right service quick and hassle-free.",
+    answer: "We assist users in discovering home internet and TV service options from various participating providers across the U.S. Simply enter your ZIP code or contact us, and we will help you find available services in your area.",
   },
   {
     question: "Are the prices shown on your website guaranteed?",
-    answer: "Prices displayed on our website represent typical ranges based on current market data. Final pricing may vary depending on your specific location, the provider, current promotions, and any applicable fees. We always confirm exact pricing during the availability check before you commit to any service.",
+    answer: "Prices depend on your location, provider, and current promotions. Final prices will be confirmed during the availability check with the provider.",
   },
   {
     question: "Do I pay AQ Systems or the service provider?",
-    answer: "Your monthly service fees are paid directly to your chosen service provider. AQ Systems may charge a separate service and setup fee for coordinating and processing your order. All fees are fully disclosed before you complete your order.",
+    answer: "Payments are made directly to the service provider. AQ Systems does not handle payments for services. However, Choice Communication LLC may charge a separate service and setup fee for coordinating your order.",
   },
   {
     question: "What services are available in my area?",
-    answer: "Service availability varies by location. Enter your ZIP code on our website or call us at (888) 524-0250 to check which internet and TV providers service your specific address. We work with multiple nationwide and regional providers to find the best options for you.",
+    answer: "We will display available services for your area based on the address you provide. Enter your ZIP code on our website or call us at (888) 524-0250 to check availability.",
   },
   {
     question: "How long does installation take?",
-    answer: "Installation timeframes vary by provider and service type. Most providers offer installation within 3-7 business days of order confirmation. Some areas may have same-day or next-day installation available. We'll provide specific timing information during the ordering process.",
+    answer: "Installation timeframes differ by provider and location. We will assist in coordinating with your provider for scheduling. Most installations occur within 3-7 business days.",
   },
   {
     question: "Are there any installation fees?",
-    answer: "Installation fees vary by provider and may depend on the type of service and equipment needed. Many providers offer free professional installation as part of promotional packages. We'll clearly outline any applicable fees before you finalize your order.",
+    answer: "Installation fees may apply, and they vary by provider. Many providers offer free installation as part of promotional packages. We will outline any applicable fees before you finalize your order.",
   },
   {
     question: "Can I cancel or change my service?",
-    answer: "Service cancellation and modification policies are determined by your chosen provider. Most providers allow changes to your plan at any time, though some promotional pricing may require a minimum commitment period. Review your provider's terms of service for specific details.",
+    answer: "Service cancellations or modifications should be made directly with the provider, as they manage your account. Review your provider's terms of service for specific policies.",
   },
   {
     question: "What if I have problems with my service after installation?",
-    answer: "For technical support or service issues after installation, you should contact your service provider directly. They have dedicated technical support teams to help resolve any issues quickly. We're also available to assist with general questions and can help direct you to the right support resources.",
+    answer: "If you encounter issues after installation, contact your provider's customer support for help. They have dedicated technical support teams to resolve issues quickly.",
   },
   {
     question: "Do you offer business services?",
-    answer: "Yes! We help both residential and business customers find internet and TV services. Business plans often include features like dedicated support lines, faster speeds, static IP addresses, and service level agreements. Contact us to discuss your business needs.",
+    answer: "While we specialize in home internet and TV services, we can help connect you to business service options if required. Contact us to discuss your business needs.",
   },
   {
     question: "What equipment will I need?",
-    answer: "Equipment requirements vary by service type and provider. Most services include a modem or gateway device, and many offer WiFi routers. Some providers include equipment rental in the monthly price, while others offer options to purchase or use your own compatible equipment.",
+    answer: "The necessary equipment varies by provider and plan, including devices like modems, routers, and more. Some providers include equipment rental in the monthly price, while others offer purchase options.",
   },
   {
     question: "Are there contracts or commitments required?",
-    answer: "Contract requirements vary by provider and plan. Many providers now offer no-contract options, while others may require a 1-2 year agreement for promotional pricing. We'll clearly explain any commitment requirements before you make a decision.",
+    answer: "Certain providers may require contracts for specific plans. We will inform you of any requirements during the plan selection process.",
   },
   {
     question: "How do I contact customer support?",
-    answer: "You can reach our team by phone at (888) 524-0250 during business hours, or submit an inquiry through our contact form anytime. We typically respond to email inquiries within 24 hours. For issues with your active service, please contact your provider directly.",
+    answer: "Reach out to our customer support team by phone at (888) 524-0250 or email for assistance. We typically respond to inquiries within 24 hours.",
   },
   {
     question: "What is your refund policy?",
-    answer: "Our refund policy covers any service fees charged by AQ Systems. For refunds related to provider services, you'll need to work directly with your service provider according to their policies. Visit our Refund Policy page for complete details about our refund process.",
+    answer: "Refund policies are set by the provider. Please contact them for details on their specific terms. For fees charged by AQ Systems, visit our Refund Policy page for complete details.",
   },
 ];
 
@@ -74,12 +74,12 @@ const FAQ = () => {
   return (
     <>
       <Helmet>
-        <title>Frequently Asked Questions | Internet & TV Service Help - AQ Systems</title>
+        <title>Common Questions | Internet & TV Service Help - AQ Systems</title>
         <meta 
           name="description" 
           content="Find answers to common questions about internet and TV services. Learn about pricing, installation, contracts, equipment, and how AQ Systems helps you find the best plans." 
         />
-        <meta name="keywords" content="FAQ, internet service questions, TV service help, installation questions, pricing info" />
+        <meta name="keywords" content="FAQ, common questions, internet service help, TV service questions, installation info" />
         <link rel="canonical" href="/faq" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -93,7 +93,7 @@ const FAQ = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
               >
-                Frequently Asked Questions
+                Common Questions
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,7 @@ const FAQ = () => {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-muted-foreground max-w-3xl mx-auto"
               >
-                Find answers to common questions about AQ Systems and our internet and TV services.
+                Find answers to frequently asked questions about AQ Systems and our internet and TV services.
               </motion.p>
             </div>
           </section>
@@ -143,10 +143,10 @@ const FAQ = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  Still Have Questions?
+                  Have More Questions?
                 </h2>
                 <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                  Can't find the answer you're looking for? Our team is here to help.
+                  Don't see the answer you need? Our team is ready to assist.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild variant="hero" size="lg">
