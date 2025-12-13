@@ -51,7 +51,7 @@ const TermsOfServices = () => {
                 <p>
                   By accessing and using AQ Systems (the "Website"), you accept and agree to be bound 
                   by these Terms of Service. The Website is owned and operated by AQ Systems, located 
-                  at 3408 E Derringer Way, Gilbert, AZ 85297. If you do not agree to these terms, 
+                  at 3052 Bainbridge Ave apt 5E, Bronx NY 10467. If you do not agree to these terms, 
                   please do not use this Website.
                 </p>
 
@@ -163,7 +163,7 @@ const TermsOfServices = () => {
                 <h2>14. Governing Law</h2>
                 <p>
                   These Terms of Service shall be governed by and construed in accordance with the 
-                  laws of the State of Arizona, United States, without regard to its conflict of 
+                  laws of the State of New York, United States, without regard to its conflict of 
                   law provisions.
                 </p>
 
@@ -171,17 +171,17 @@ const TermsOfServices = () => {
                 <p>
                   Any disputes arising from these Terms or your use of the Website shall be resolved 
                   through binding arbitration in accordance with the rules of the American Arbitration 
-                  Association, conducted in Gilbert, Arizona.
+                  Association, conducted in Bronx, New York.
                 </p>
 
                 <h2>16. Contact Information</h2>
                 <p>If you have questions about these Terms of Service, please contact us:</p>
                 <div className="bg-muted/50 rounded-xl p-6 not-prose">
                   <p className="font-semibold text-foreground">AQ Systems</p>
-                  <p className="text-muted-foreground">3408 E Derringer Way</p>
-                  <p className="text-muted-foreground">Gilbert, AZ 85297</p>
-                  <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
-                  <p className="text-muted-foreground">Phone: (888) 524-0250</p>
+                  <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
+                  <p className="text-muted-foreground">Bronx NY 10467</p>
+                  <p className="text-muted-foreground mt-2">Email: support@internetone.live</p>
+                  <p className="text-muted-foreground">Phone: (929) 990-2934</p>
                 </div>
               </motion.div>
             </div>

@@ -49,10 +49,9 @@ export const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
             <ThemeToggle />
-            <a href="tel:+18885240250" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+            <a href="tel:+19299902934" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <Phone className="w-4 h-4" />
               <span className="font-medium">Call Now</span>
             </a>
@@ -101,9 +100,9 @@ export const Navbar = () => {
                 </Link>
               ))}
               <div className="pt-4 border-t border-border space-y-3">
-                <a href="tel:+18885240250" className="flex items-center gap-2 text-foreground font-medium">
+                <a href="tel:+19299902934" className="flex items-center gap-2 text-foreground font-medium">
                   <Phone className="w-4 h-4" />
-                  (888) 524-0250
+                  (929) 990-2934
                 </a>
                 <Link to="/services" onClick={() => setIsOpen(false)}>
                   <Button variant="hero" className="w-full">

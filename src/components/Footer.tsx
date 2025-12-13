@@ -72,19 +72,19 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary" />
-                <a href="tel:+18885240250" className="hover:text-primary transition-colors">
-                  (888) 524-0250
+                <a href="tel:+19299902934" className="hover:text-primary transition-colors">
+                  (929) 990-2934
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:info@aqsystems.com" className="hover:text-primary transition-colors">
-                  info@aqsystems.com
+                <a href="mailto:support@internetone.live" className="hover:text-primary transition-colors">
+                  support@internetone.live
                 </a>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>Available Nationwide</span>
+                <span>3052 Bainbridge Ave apt 5E, Bronx NY 10467</span>
               </li>
             </ul>
           </div>

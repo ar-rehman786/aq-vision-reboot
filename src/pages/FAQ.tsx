@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: "What services are available in my area?",
-    answer: "We will display available services for your area based on the address you provide. Enter your ZIP code on our website or call us at (888) 524-0250 to check availability.",
+    answer: "We will display available services for your area based on the address you provide. Enter your ZIP code on our website or call us at (929) 990-2934 to check availability.",
   },
   {
     question: "How long does installation take?",
@@ -62,7 +62,7 @@ const faqs = [
   },
   {
     question: "How do I contact customer support?",
-    answer: "Reach out to our customer support team by phone at (888) 524-0250 or email for assistance. We typically respond to inquiries within 24 hours.",
+    answer: "Reach out to our customer support team by phone at (929) 990-2934 or email for assistance. We typically respond to inquiries within 24 hours.",
   },
   {
     question: "What is your refund policy?",
@@ -153,7 +153,7 @@ const FAQ = () => {
                     <Link to="/contact-us">Contact Us</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg">
-                    <a href="tel:+18885240250">Call: (888) 524-0250</a>
+                    <a href="tel:+19299902934">Call: (929) 990-2934</a>
                   </Button>
                 </div>
               </motion.div>
