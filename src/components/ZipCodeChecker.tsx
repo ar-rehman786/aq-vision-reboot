@@ -4,23 +4,25 @@ import { Input } from "@/components/ui/input";
 import { Search, Loader2, Check, Wifi, Tv, Phone, Star, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Generate 100 different mock results
-const providerOptions = [
-  { name: "AQ Fiber Plus", speed: "1 Gbps", price: "79.99", type: "Fiber", rating: 4.9 },
-  { name: "AQ Fiber Basic", speed: "500 Mbps", price: "59.99", type: "Fiber", rating: 4.8 },
-  { name: "AQ Fiber Pro", speed: "2 Gbps", price: "99.99", type: "Fiber", rating: 4.9 },
-  { name: "AQ Cable Ultra", speed: "400 Mbps", price: "54.99", type: "Cable", rating: 4.7 },
-  { name: "AQ Cable Standard", speed: "200 Mbps", price: "44.99", type: "Cable", rating: 4.6 },
-  { name: "AQ DSL Connect", speed: "100 Mbps", price: "34.99", type: "DSL", rating: 4.5 },
-  { name: "AQ DSL Plus", speed: "150 Mbps", price: "39.99", type: "DSL", rating: 4.5 },
-  { name: "AQ Business Fiber", speed: "5 Gbps", price: "199.99", type: "Fiber", rating: 4.9 },
-  { name: "AQ Business Pro", speed: "1 Gbps", price: "129.99", type: "Fiber", rating: 4.8 },
-  { name: "AQ Home Starter", speed: "100 Mbps", price: "29.99", type: "Cable", rating: 4.4 },
+// Core packages with exact pricing as specified
+const corePackages = [
+  { name: "AQ Business Fiber", speed: "500 Mbps", price: "39.99", type: "Fiber", rating: 5.0 },
+  { name: "AQ Cable Standard", speed: "2 Gbps", price: "49.99", type: "Cable", rating: 4.9 },
+  { name: "AQ Fiber Plus", speed: "100 Mbps", price: "29.99", type: "Fiber", rating: 4.3 },
 ];
 
-const speedVariants = ["100 Mbps", "200 Mbps", "300 Mbps", "400 Mbps", "500 Mbps", "750 Mbps", "1 Gbps", "1.5 Gbps", "2 Gbps"];
-const priceVariants = ["29.99", "34.99", "39.99", "44.99", "49.99", "54.99", "59.99", "64.99", "69.99", "74.99", "79.99", "84.99", "89.99", "94.99", "99.99"];
-const ratingVariants = [4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5.0];
+// Additional provider options for variety
+const providerOptions = [
+  ...corePackages,
+  { name: "AQ Fiber Pro", speed: "1 Gbps", price: "69.99", type: "Fiber", rating: 4.8 },
+  { name: "AQ Cable Ultra", speed: "1 Gbps", price: "59.99", type: "Cable", rating: 4.7 },
+  { name: "AQ DSL Connect", speed: "75 Mbps", price: "24.99", type: "DSL", rating: 4.4 },
+  { name: "AQ DSL Plus", speed: "150 Mbps", price: "34.99", type: "DSL", rating: 4.5 },
+  { name: "AQ Business Pro", speed: "1 Gbps", price: "79.99", type: "Fiber", rating: 4.8 },
+  { name: "AQ Home Starter", speed: "50 Mbps", price: "19.99", type: "Cable", rating: 4.2 },
+  { name: "AQ Wireless Home", speed: "100 Mbps", price: "44.99", type: "Fixed Wireless", rating: 4.3 },
+];
+
 const typeVariants = ["Fiber", "Cable", "DSL", "Fixed Wireless"];
 
 const bundleOptions = [
@@ -38,14 +40,13 @@ const generateRandomProviders = (zipCode: string) => {
   const numProviders = 2 + random(4, 1); // 2-5 providers
   const providers = [];
   
-  for (let i = 0; i < numProviders; i++) {
-    const baseProvider = providerOptions[random(providerOptions.length, i * 7)];
+  // Always include at least one core package
+  const shuffledOptions = [...providerOptions].sort(() => (seed % 2 === 0 ? 1 : -1));
+  
+  for (let i = 0; i < numProviders && i < shuffledOptions.length; i++) {
+    const baseProvider = shuffledOptions[(seed + i * 7) % shuffledOptions.length];
     providers.push({
       ...baseProvider,
-      speed: speedVariants[random(speedVariants.length, i * 13)],
-      price: priceVariants[random(priceVariants.length, i * 17)],
-      rating: ratingVariants[random(ratingVariants.length, i * 23)],
-      type: typeVariants[random(typeVariants.length, i * 29)],
       id: i,
     });
   }
