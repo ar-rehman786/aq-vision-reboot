@@ -2,16 +2,18 @@ import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | Data Protection - AQ Systems</title>
+        <title>Privacy Policy | Data Security & Consumer Privacy Rights - AQ Systems</title>
         <meta 
           name="description" 
-          content="Read the AQ Systems privacy policy. Learn how we collect, use, and protect your personal information when using our internet and TV services." 
+          content="Read the AQ Systems privacy policy. Learn how we collect, use, and protect your personal information. Your data security and consumer privacy rights are our priority." 
         />
+        <meta name="keywords" content="Privacy Policy, Data Security, Consumer Privacy Rights, Personal Information Protection, CCPA, Data Protection" />
         <link rel="canonical" href="/policies/privacy-policy" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -47,15 +49,15 @@ const PrivacyPolicy = () => {
                 viewport={{ once: true }}
                 className="prose prose-lg dark:prose-invert max-w-none"
               >
-                <h2>1. Introduction</h2>
+                <h2>Introduction</h2>
                 <p>
-                  AQ Systems ("we," "our," or "us") is committed to protecting your privacy and 
-                  handling your data in accordance with applicable U.S. privacy laws. This Privacy 
-                  Policy explains how we collect, use, disclose, and safeguard your information 
-                  when you visit our website and use our services.
+                  AQ Systems ("we," "our," or "us") operates internetone.live. This Privacy Policy explains 
+                  how we collect, use, disclose, and safeguard your information when you visit our website 
+                  and use our services. We are committed to protecting your privacy and handling your data 
+                  in accordance with applicable U.S. privacy laws.
                 </p>
 
-                <h2>2. Information We Collect</h2>
+                <h2>Information We Collect</h2>
                 
                 <h3>Personal Information</h3>
                 <p>We may collect personal information that you voluntarily provide, including:</p>
@@ -76,7 +78,7 @@ const PrivacyPolicy = () => {
                   <li>Click patterns and website usage data</li>
                 </ul>
 
-                <h2>3. How We Use Your Information</h2>
+                <h2>How We Use Your Information</h2>
                 <p>We use the collected information to:</p>
                 <ul>
                   <li>Process your requests for service information</li>
@@ -88,7 +90,8 @@ const PrivacyPolicy = () => {
                   <li>Prevent fraud and ensure security</li>
                 </ul>
 
-                <h2>4. Information Sharing and Disclosure</h2>
+                <h2>Information Sharing and Disclosure</h2>
+                <p>We may share your information with:</p>
                 
                 <h3>Service Providers</h3>
                 <p>
@@ -115,22 +118,16 @@ const PrivacyPolicy = () => {
                   may be transferred as part of that transaction.
                 </p>
 
-                <h2>5. Cookies and Tracking Technologies</h2>
+                <h2>Cookies and Tracking Technologies</h2>
                 <p>
                   We use cookies and similar tracking technologies to enhance your experience. 
                   Cookies are small files stored on your device. We use:
                 </p>
                 <ul>
                   <li><strong>Essential Cookies:</strong> Required for website functionality</li>
-                  <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our website</li>
-                  <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertising</li>
                 </ul>
-                <p>
-                  You can control cookies through your browser settings, though disabling cookies 
-                  may affect website functionality.
-                </p>
 
-                <h2>6. Data Security</h2>
+                <h2>Data Security</h2>
                 <p>
                   We implement reasonable security measures to protect your personal information 
                   from unauthorized access, disclosure, alteration, or destruction. However, no 
@@ -138,7 +135,7 @@ const PrivacyPolicy = () => {
                   While we strive to protect your information, we cannot guarantee absolute security.
                 </p>
 
-                <h2>7. Your Privacy Rights</h2>
+                <h2>Your Privacy Rights</h2>
                 <p>Depending on your location, you may have certain rights regarding your personal information:</p>
                 <ul>
                   <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
@@ -147,9 +144,9 @@ const PrivacyPolicy = () => {
                   <li><strong>Opt-Out:</strong> Unsubscribe from marketing communications at any time</li>
                   <li><strong>Do Not Sell:</strong> We do not sell your personal information to third parties</li>
                 </ul>
-                <p>To exercise these rights, please contact us at support@aqsystems.com.</p>
+                <p>To exercise these rights, please contact us at support@internetone.live.</p>
 
-                <h2>8. California Privacy Rights (CCPA)</h2>
+                <h2>California Privacy Rights (CCPA)</h2>
                 <p>
                   California residents have additional rights under the California Consumer Privacy 
                   Act (CCPA), including the right to know what personal information is collected, 
@@ -157,35 +154,65 @@ const PrivacyPolicy = () => {
                   We do not sell personal information. To exercise your CCPA rights, please contact us.
                 </p>
 
-                <h2>9. Children's Privacy</h2>
+                <h2>Children's Privacy</h2>
                 <p>
                   Our services are not directed to individuals under the age of 18. We do not 
-                  knowingly collect personal information from children. If we become aware that 
+                  knowingly collect personal information from children under 13. If we learn that 
                   we have collected information from a child, we will take steps to delete such information.
                 </p>
 
-                <h2>10. Third-Party Links</h2>
+                <h2>Third-Party Links</h2>
                 <p>
                   Our website may contain links to third-party websites. We are not responsible for 
                   the privacy practices of these external sites. We encourage you to review their 
                   privacy policies before providing any personal information.
                 </p>
 
-                <h2>11. Changes to This Privacy Policy</h2>
+                <h2>Changes to This Privacy Policy</h2>
                 <p>
                   We may update this Privacy Policy from time to time. Changes will be posted on 
                   this page with an updated "Last Updated" date. We encourage you to review this 
                   policy periodically.
                 </p>
 
-                <h2>12. Contact Us</h2>
+                <h2>Contact Us</h2>
                 <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
                 <div className="bg-muted/50 rounded-xl p-6 not-prose">
                   <p className="font-semibold text-foreground">AQ Systems</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                   <p className="text-muted-foreground">Bronx NY 10467</p>
                   <p className="text-muted-foreground mt-2">Email: support@internetone.live</p>
-                  <p className="text-muted-foreground">Phone: (929) 990-2934</p>
+                  <p className="text-muted-foreground">Phone: 929-990-2934</p>
+                </div>
+              </motion.div>
+
+              {/* Related Policies Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mt-12 pt-8 border-t border-border"
+              >
+                <h3 className="text-lg font-semibold text-foreground mb-4">Related Policies</h3>
+                <div className="flex flex-wrap gap-4">
+                  <Link 
+                    to="/policies/terms-of-services" 
+                    className="text-sm text-primary hover:text-primary/80 transition-colors"
+                  >
+                    Terms & Conditions
+                  </Link>
+                  <Link 
+                    to="/policies/refund-policy" 
+                    className="text-sm text-primary hover:text-primary/80 transition-colors"
+                  >
+                    Refund Policy
+                  </Link>
+                  <Link 
+                    to="/policies/disclaimer" 
+                    className="text-sm text-primary hover:text-primary/80 transition-colors"
+                  >
+                    Disclaimer
+                  </Link>
                 </div>
               </motion.div>
             </div>
