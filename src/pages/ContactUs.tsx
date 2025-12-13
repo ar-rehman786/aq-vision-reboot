@@ -16,14 +16,14 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Our Address",
-    value: "Choice Communication LLC\n3408 E Derringer Way\nGilbert, AZ 85297",
+    value: "Choice Communication LLC\n3052 Bainbridge Ave apt 5E\nBronx NY 10467",
     href: null,
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "(888) 524-0250",
-    href: "tel:+18885240250",
+    value: "(929) 990-2934",
+    href: "tel:+19299902934",
     extra: "Monday to Friday: 8:00 AM – 8:00 PM EST\nSaturday: 9:00 AM – 5:00 PM EST",
   },
   {

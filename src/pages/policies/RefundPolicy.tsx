@@ -115,7 +115,7 @@ const RefundPolicy = () => {
                 <p>To request a refund:</p>
                 <ol>
                   <li>
-                    <strong>Contact Us:</strong> Email support@aqsystems.com or call (888) 524-0250 
+                    <strong>Contact Us:</strong> Email support@internetone.live or call (929) 990-2934 
                     with your refund request
                   </li>
                   <li>
@@ -168,10 +168,10 @@ const RefundPolicy = () => {
                 <p>For refund requests or questions about this policy, please contact us:</p>
                 <div className="bg-muted/50 rounded-xl p-6 not-prose">
                   <p className="font-semibold text-foreground">AQ Systems</p>
-                  <p className="text-muted-foreground">3408 E Derringer Way</p>
-                  <p className="text-muted-foreground">Gilbert, AZ 85297</p>
-                  <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
-                  <p className="text-muted-foreground">Phone: (888) 524-0250</p>
+                  <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
+                  <p className="text-muted-foreground">Bronx NY 10467</p>
+                  <p className="text-muted-foreground mt-2">Email: support@internetone.live</p>
+                  <p className="text-muted-foreground">Phone: (929) 990-2934</p>
                 </div>
 
                 <div className="bg-accent/10 border border-accent/20 rounded-xl p-6 mt-8 not-prose">

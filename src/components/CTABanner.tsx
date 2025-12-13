@@ -17,7 +17,7 @@ export const CTABanner = () => {
             className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
             asChild
           >
-            <a href="tel:+18885240250">(888) 524-0250</a>
+            <a href="tel:+19299902934">(929) 990-2934</a>
           </Button>
           <span className="text-primary-foreground/80 text-sm">
             Available 7 days a week • Quick setup

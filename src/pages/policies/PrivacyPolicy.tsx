@@ -182,10 +182,10 @@ const PrivacyPolicy = () => {
                 <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
                 <div className="bg-muted/50 rounded-xl p-6 not-prose">
                   <p className="font-semibold text-foreground">AQ Systems</p>
-                  <p className="text-muted-foreground">3408 E Derringer Way</p>
-                  <p className="text-muted-foreground">Gilbert, AZ 85297</p>
-                  <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
-                  <p className="text-muted-foreground">Phone: (888) 524-0250</p>
+                  <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
+                  <p className="text-muted-foreground">Bronx NY 10467</p>
+                  <p className="text-muted-foreground mt-2">Email: support@internetone.live</p>
+                  <p className="text-muted-foreground">Phone: (929) 990-2934</p>
                 </div>
               </motion.div>
             </div>

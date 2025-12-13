@@ -346,7 +346,7 @@ const Pricing = () => {
                     <Link to="/contact-us">Check Availability Now</Link>
                   </Button>
                   <Button asChild variant="outline" size="lg">
-                    <a href="tel:+18885240250">Call: (888) 524-0250</a>
+                    <a href="tel:+19299902934">Call: (929) 990-2934</a>
                   </Button>
                 </div>
               </motion.div>

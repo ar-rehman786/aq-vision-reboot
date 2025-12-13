@@ -298,7 +298,7 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button variant="hero" size="lg" asChild>
-                  <a href="tel:+18885240250">Call (888) 524-0250</a>
+                  <a href="tel:+19299902934">Call (929) 990-2934</a>
                 </Button>
                 <Button variant="outline" size="lg">
                   Schedule Installation
