@@ -1,17 +1,19 @@
 import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const TermsOfServices = () => {
   return (
     <>
       <Helmet>
-        <title>Terms of Service | User Agreement - AQ Systems</title>
+        <title>Terms & Conditions | Internet Services Provider Agreement - AQ Systems</title>
         <meta 
           name="description" 
-          content="Read the AQ Systems terms of service. Understand the terms and conditions for using our internet and TV service comparison platform." 
+          content="Read the AQ Systems Terms & Conditions. Understand the terms for using our internet and TV service comparison platform, provider agreements, and user responsibilities." 
         />
+        <meta name="keywords" content="terms and conditions, internet services, provider agreements, user terms, AQ Systems terms" />
         <link rel="canonical" href="/policies/terms-of-services" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -25,7 +27,7 @@ const TermsOfServices = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6"
               >
-                Terms of Service
+                Terms & Conditions
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -50,26 +52,25 @@ const TermsOfServices = () => {
                 <h2>1. Acceptance of Terms</h2>
                 <p>
                   By accessing and using AQ Systems (the "Website"), you accept and agree to be bound 
-                  by these Terms of Service. The Website is owned and operated by AQ Systems, located 
-                  at 3052 Bainbridge Ave apt 5E, Bronx NY 10467. If you do not agree to these terms, 
+                  by these Terms & Conditions. The Website is owned and operated by Choice Communication LLC, 
+                  located at 3052 Bainbridge Ave apt 5E, Bronx NY 10467. If you do not agree to these terms, 
                   please do not use this Website.
                 </p>
 
                 <h2>2. Services Provided</h2>
                 <p>
-                  AQ Systems is an independent service partner. We are not the official website of 
+                  AQ Systems is an independent marketing partner. We are not the official website of 
                   any internet or cable provider. Our services include:
                 </p>
                 <ul>
                   <li>Helping customers explore available internet and TV services in their area</li>
                   <li>Providing information about plans and pricing from participating service providers</li>
-                  <li>Assisting with the ordering process and coordinating with service providers</li>
                   <li>Facilitating communication between customers and service providers</li>
                 </ul>
 
-                <h2>3. Independent Service Partner Status</h2>
+                <h2>3. Independent Marketing Partner Status</h2>
                 <p>
-                  AQ Systems operates as an independent service partner. We are not affiliated with, 
+                  AQ Systems operates as an independent marketing partner. We are not affiliated with, 
                   endorsed by, or the official website of any specific internet or cable provider. 
                   All service provider names, logos, and trademarks are the property of their 
                   respective owners and are used for identification purposes only.
@@ -77,8 +78,8 @@ const TermsOfServices = () => {
 
                 <h2>4. Fees and Charges</h2>
                 <p>
-                  AQ Systems may charge a separate service and setup fee for processing and 
-                  coordinating orders. These fees are:
+                  Choice Communication LLC charges a separate service and setup fee for processing and 
+                  coordinating orders through AQ Systems. These fees are:
                 </p>
                 <ul>
                   <li>Disclosed to you prior to order completion</li>
@@ -149,7 +150,7 @@ const TermsOfServices = () => {
 
                 <h2>12. Modifications to Terms</h2>
                 <p>
-                  We reserve the right to modify these Terms of Service at any time. Changes will 
+                  We reserve the right to modify these Terms & Conditions at any time. Changes will 
                   be effective immediately upon posting to the Website. Your continued use of the 
                   Website after any changes constitutes acceptance of the new terms.
                 </p>
@@ -162,7 +163,7 @@ const TermsOfServices = () => {
 
                 <h2>14. Governing Law</h2>
                 <p>
-                  These Terms of Service shall be governed by and construed in accordance with the 
+                  These Terms & Conditions shall be governed by and construed in accordance with the 
                   laws of the State of New York, United States, without regard to its conflict of 
                   law provisions.
                 </p>
@@ -175,13 +176,42 @@ const TermsOfServices = () => {
                 </p>
 
                 <h2>16. Contact Information</h2>
-                <p>If you have questions about these Terms of Service, please contact us:</p>
+                <p>If you have questions about these Terms & Conditions, please contact us:</p>
                 <div className="bg-muted/50 rounded-xl p-6 not-prose">
                   <p className="font-semibold text-foreground">AQ Systems</p>
+                  <p className="text-muted-foreground">Choice Communication LLC</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                   <p className="text-muted-foreground">Bronx NY 10467</p>
                   <p className="text-muted-foreground mt-2">Email: support@internetone.live</p>
                   <p className="text-muted-foreground">Phone: (929) 990-2934</p>
+                </div>
+
+                {/* Related Policies */}
+                <div className="bg-accent/10 border border-accent/20 rounded-xl p-6 mt-8 not-prose">
+                  <p className="font-semibold text-foreground mb-3">Related Policies</p>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Please also review our other policies to understand how we handle your information and provide our services:
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link 
+                      to="/policies/privacy-policy" 
+                      className="text-primary hover:underline text-sm"
+                    >
+                      Privacy Policy
+                    </Link>
+                    <Link 
+                      to="/policies/refund-policy" 
+                      className="text-primary hover:underline text-sm"
+                    >
+                      Refund Policy
+                    </Link>
+                    <Link 
+                      to="/policies/disclaimer" 
+                      className="text-primary hover:underline text-sm"
+                    >
+                      Disclaimer
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             </div>
