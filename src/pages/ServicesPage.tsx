@@ -9,72 +9,72 @@ import { motion } from "framer-motion";
 const services = [
   {
     id: "internet",
-    title: "High-Speed Internet",
-    description: "Experience blazing-fast internet with speeds that keep up with your digital lifestyle. Stream, game, work from home, and connect all your devices without interruption.",
+    title: "Home Internet",
+    description: "Find the best internet plans available in your area, with varying speeds from top providers. Whether you need reliable connectivity for remote work, seamless streaming, or online gaming, we help you discover options that fit your lifestyle.",
     priceRange: "$39.99 - $89.99/mo",
     icon: Wifi,
     features: [
-      "Multiple speed options up to 5 Gbps",
+      "Flexible speed choices to match your needs",
       "Plans from trusted nationwide providers",
-      "Professional installation included",
-      "Modern equipment and router options",
-      "Unlimited data on most plans",
-      "24/7 technical support available",
+      "Expert installation services included",
+      "Varying equipment and router options",
+      "Unlimited data available on select plans",
+      "24/7 technical support access",
     ],
     color: "primary",
   },
   {
     id: "cable-tv",
-    title: "Cable TV Packages",
-    description: "Enjoy premium entertainment with comprehensive channel lineups. From live sports to movies and family programming, find the perfect package for your viewing preferences.",
+    title: "Cable / TV Packages",
+    description: "Explore TV plans with a variety of channel packages to match your entertainment preferences. From live sports and breaking news to family programming and premium movies, discover the viewing experience that suits you best.",
     priceRange: "$40 - $120/mo",
     icon: Tv,
     features: [
-      "150+ to 300+ channel options",
-      "HD and 4K premium channels",
-      "DVR recording capabilities",
-      "Sports and movie premium packages",
+      "Multiple channel lineups available",
+      "HD and premium channel options",
+      "DVR service for recording favorites",
+      "Sports and movie package add-ons",
       "On-demand content libraries",
-      "Multi-room viewing options",
+      "Multi-room viewing capabilities",
     ],
     color: "accent",
   },
   {
     id: "bundles",
     title: "Internet + TV Bundles",
-    description: "Maximize your savings and convenience by bundling internet and TV services. One bill, one provider, and exclusive bundle discounts for complete home entertainment.",
+    description: "Bundle your internet and TV services for added convenience and potential savings. Enjoy streamlined billing, coordinated installation, and a range of configurations designed to meet your household's entertainment and connectivity needs.",
     priceRange: "$79.99 - $149.99/mo",
     icon: Package,
     features: [
       "Combined internet and TV service",
-      "Single convenient monthly bill",
-      "Exclusive bundle-only savings",
-      "Coordinated installation",
-      "Premium channel add-ons available",
-      "Flexible package customization",
+      "Single convenient monthly billing",
+      "Potential bundle savings available",
+      "Coordinated installation scheduling",
+      "Premium channel add-on options",
+      "Flexible package configurations",
     ],
     color: "primary",
   },
 ];
 
 const importantInfo = [
-  "Pricing varies by location, provider, and current promotions",
-  "Final pricing confirmed during your availability check",
-  "Installation and equipment fees may apply",
-  "Service availability depends on your specific address",
-  "Speed and channel availability may vary by location",
+  "Prices depend on location, service provider, and current promotions",
+  "Installation and equipment costs may differ by provider",
+  "A processing and setup fee is charged by Choice Communication LLC for coordinating your new order",
+  "Availability depends on your location and the coverage of participating providers",
+  "Service speeds and channels may vary depending on the provider and your location",
 ];
 
 const ServicesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Internet & TV Services | Cable, Fiber & Bundle Packages - AQ Systems</title>
+        <title>Explore Our Services | Home Internet, TV & Bundle Plans - AQ Systems</title>
         <meta 
           name="description" 
-          content="Explore high-speed internet plans, cable TV packages, and money-saving bundles. Compare options from $39.99/mo. Professional installation and 24/7 support included." 
+          content="Discover the best home internet and TV plans available through participating providers. Find flexible speeds, cable packages, and money-saving bundles starting at $29.99/mo." 
         />
-        <meta name="keywords" content="internet service, cable TV, TV bundles, fiber internet, high-speed internet plans, cable packages" />
+        <meta name="keywords" content="home internet plans, cable TV packages, TV bundles, fiber internet, high-speed internet, streaming packages" />
         <link rel="canonical" href="/services" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -88,7 +88,7 @@ const ServicesPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
               >
-                Our Services
+                Explore Our Services
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -96,8 +96,8 @@ const ServicesPage = () => {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-muted-foreground max-w-3xl mx-auto"
               >
-                AQ Systems helps you explore home internet and TV service options from trusted providers. 
-                Find the perfect plan for your needs with transparent pricing and expert guidance.
+                Discover the best home internet and TV plans available through participating providers, 
+                with pricing tailored to your location and preferences.
               </motion.p>
             </div>
           </section>
@@ -195,10 +195,10 @@ const ServicesPage = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  Ready to Get Started?
+                  Let's Get Started!
                 </h2>
                 <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                  Let us help you find the perfect internet and TV services available in your area.
+                  Find the perfect internet and TV services available in your area.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild variant="hero" size="lg">
