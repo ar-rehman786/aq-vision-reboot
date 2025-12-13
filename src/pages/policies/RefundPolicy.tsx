@@ -51,10 +51,9 @@ const RefundPolicy = () => {
               >
                 <h2>Overview</h2>
                 <p>
-                  AQ Systems operates aqsystems.com. This Refund and Return Policy applies to services 
-                  and fees charged by AQ Systems through aqsystems.com. This policy does not cover 
-                  refunds or returns related to services provided by third-party service providers, 
-                  which are subject to their own policies and terms.
+                  This Refund and Return Policy applies to services and fees charged by AQ Systems. 
+                  This policy does not cover refunds or returns related to services provided by 
+                  third-party service providers, which are subject to their own policies and terms.
                 </p>
 
                 <h2>AQ Systems Service Fees</h2>
@@ -62,8 +61,7 @@ const RefundPolicy = () => {
                 <h3>Non-Refundable Fees</h3>
                 <p>
                   Service and setup fees charged by AQ Systems for order processing and coordination 
-                  through aqsystems.com are non-refundable once the order has been submitted and 
-                  processed. These fees cover:
+                  are non-refundable once the order has been submitted and processed. These fees cover:
                 </p>
                 <ul>
                   <li>Order processing and verification</li>
@@ -114,12 +112,14 @@ const RefundPolicy = () => {
                   <li>Submit documentation supporting your claim (if applicable)</li>
                   <li>Allow up to 10 business days for review of your request</li>
                 </ul>
-                <p>Contact Us:</p>
-                <ul>
-                  <li>Email: support@aqsystems.com</li>
-                  <li>Phone: 929-990-2934</li>
-                  <li>Mail: 3052 Bainbridge Ave apt 5E, Bronx NY 10467</li>
-                </ul>
+                <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 not-prose my-6">
+                  <p className="font-semibold text-foreground mb-3">Contact Us:</p>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a></li>
+                    <li>Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">929-990-2934</a></li>
+                    <li>Mail: 3052 Bainbridge Ave apt 5E, Bronx NY 10467</li>
+                  </ul>
+                </div>
 
                 <h2>Refund Method and Timing</h2>
                 <p>If your refund request is approved:</p>
@@ -174,8 +174,12 @@ const RefundPolicy = () => {
                   <p className="font-semibold text-foreground">AQ Systems</p>
                   <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                   <p className="text-muted-foreground">Bronx NY 10467</p>
-                  <p className="text-muted-foreground mt-2">Email: support@aqsystems.com</p>
-                  <p className="text-muted-foreground">Phone: 929-990-2934</p>
+                  <p className="text-muted-foreground mt-2">
+                    Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a>
+                  </p>
+                  <p className="text-muted-foreground">
+                    Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">929-990-2934</a>
+                  </p>
                 </div>
               </motion.div>
 
