@@ -47,169 +47,212 @@ const RefundPolicy = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="prose prose-lg dark:prose-invert max-w-none"
+                className="space-y-10"
               >
-                <h2>Overview</h2>
-                <p>
-                  This Refund and Return Policy applies to services and fees charged by AQ Systems. 
-                  This policy does not cover refunds or returns related to services provided by 
-                  third-party service providers, which are subject to their own policies and terms.
-                </p>
+                {/* Section 1 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">1. Overview</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    This Refund and Return Policy applies to services and fees charged by AQ Systems. 
+                    This policy does not cover refunds or returns related to services provided by 
+                    third-party service providers, which are subject to their own policies and terms.
+                  </p>
+                </div>
 
-                <h2>AQ Systems Service Fees</h2>
-                
-                <h3>Non-Refundable Fees</h3>
-                <p>
-                  Service and setup fees charged by AQ Systems for order processing and coordination 
-                  are non-refundable once the order has been submitted and processed. These fees cover:
-                </p>
-                <ul>
-                  <li>Order processing and verification</li>
-                  <li>Service availability checking</li>
-                  <li>Provider coordination and communication</li>
-                  <li>Administrative processing costs</li>
-                </ul>
+                {/* Section 2 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">2. AQ Systems Service Fees</h2>
+                  
+                  <div className="space-y-4 ml-4">
+                    <h3 className="text-lg font-semibold text-foreground">Non-Refundable Fees</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Service and setup fees charged by AQ Systems for order processing and coordination 
+                      are non-refundable once the order has been submitted and processed. These fees cover:
+                    </p>
+                    <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                      <li>Order processing and verification</li>
+                      <li>Service availability checking</li>
+                      <li>Provider coordination and communication</li>
+                      <li>Administrative processing costs</li>
+                    </ul>
+                  </div>
+                </div>
 
-                <h2>Service Provider Charges</h2>
-                <p>
-                  Refunds, returns, or cancellations related to charges from your internet or TV service 
-                  provider (including monthly service fees, installation fees, equipment charges, etc.) 
-                  are governed by that provider's policies, not by AQ Systems.
-                </p>
-                <p>For service provider-related refunds, you must:</p>
-                <ul>
-                  <li>Contact your service provider directly</li>
-                  <li>Follow their specific refund or cancellation procedures</li>
-                  <li>Be aware that providers may have different policies regarding refunds, cancellations, and early termination fees</li>
-                </ul>
-
-                <h2>When Refunds May Be Considered</h2>
-                <p>
-                  AQ Systems may consider refunds of our service and setup fees only in the following 
-                  limited circumstances:
-                </p>
-                <ul>
-                  <li>
-                    <strong>Service Not Available:</strong> If, after payment of our fees, it is determined 
-                    that the requested service is not actually available at your address and no alternative 
-                    service options can be provided, we may issue a full or partial refund at our discretion.
-                  </li>
-                  <li>
-                    <strong>Duplicate Charges:</strong> If you were charged multiple times for the same 
-                    service due to a processing error on our part, we will refund the duplicate charges.
-                  </li>
-                  <li>
-                    <strong>Billing Errors:</strong> If there is a clear billing error attributable to 
-                    AQ Systems, we will correct the error and issue appropriate refunds.
-                  </li>
-                </ul>
-
-                <h2>Refund Request Process</h2>
-                <p>To request a refund from AQ Systems, you must:</p>
-                <ul>
-                  <li>Contact us within 7 business days of the charge</li>
-                  <li>Provide your order details and reason for the refund request</li>
-                  <li>Submit documentation supporting your claim (if applicable)</li>
-                  <li>Allow up to 10 business days for review of your request</li>
-                </ul>
-                <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 not-prose my-6">
-                  <p className="font-semibold text-foreground mb-3">Contact Us:</p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a></li>
-                    <li>Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">929-990-2934</a></li>
-                    <li>Mail: 3052 Bainbridge Ave apt 5E, Bronx NY 10468</li>
+                {/* Section 3 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">3. Service Provider Charges</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Refunds, returns, or cancellations related to charges from your internet or TV service 
+                    provider (including monthly service fees, installation fees, equipment charges, etc.) 
+                    are governed by that provider's policies, not by AQ Systems.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    For service provider-related refunds, you must:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                    <li>Contact your service provider directly</li>
+                    <li>Follow their specific refund or cancellation procedures</li>
+                    <li>Be aware that providers may have different policies regarding refunds, cancellations, and early termination fees</li>
                   </ul>
                 </div>
 
-                <h2>Refund Method and Timing</h2>
-                <p>If your refund request is approved:</p>
-                <ul>
-                  <li>Refunds will be issued to the original payment method used</li>
-                  <li>Processing may take 5-10 business days after approval</li>
-                  <li>Additional time may be required depending on your financial institution</li>
-                  <li>You will receive email confirmation once the refund is processed</li>
-                </ul>
-
-                <h2>Cancellations</h2>
-                
-                <h3>Before Service Installation</h3>
-                <p>
-                  If you wish to cancel before your service provider's installation, you must contact 
-                  both AQ Systems and your service provider. Our service and setup fees remain 
-                  non-refundable, but you may avoid installation charges by canceling with the 
-                  provider according to their policies.
-                </p>
-
-                <h3>After Service Installation</h3>
-                <p>
-                  After service installation, you must contact your service provider directly to 
-                  discuss cancellation, as well as any applicable fees.
-                </p>
-
-                <h2>Disputes</h2>
-                <p>
-                  If you believe you have been charged incorrectly or have a dispute regarding fees, 
-                  please contact us immediately. We are committed to resolving issues fairly and 
-                  promptly. If we cannot reach a mutually satisfactory resolution, you may have the 
-                  right to dispute the charge with your credit card company or financial institution.
-                </p>
-
-                <h2>No Guarantee of Provider Service</h2>
-                <p>
-                  AQ Systems does not guarantee the performance, quality, availability, or continuation 
-                  of services provided by third-party service providers. We are not liable for service 
-                  issues, and such issues do not entitle you to a refund of our fees.
-                </p>
-
-                <h2>Changes to This Policy</h2>
-                <p>
-                  We reserve the right to modify this Refund and Return Policy at any time. Changes 
-                  will be effective immediately upon posting to the website. Your continued use of 
-                  our services after changes constitutes acceptance of the updated policy.
-                </p>
-
-                <h2>Contact Information</h2>
-                <p>For questions about this Refund and Return Policy or to request a refund, please contact us:</p>
-                <div className="bg-muted/50 rounded-xl p-6 not-prose">
-                  <p className="font-semibold text-foreground">AQ Systems</p>
-                  <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
-                  <p className="text-muted-foreground">Bronx NY 10468</p>
-                  <p className="text-muted-foreground mt-2">
-                    Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a>
+                {/* Section 4 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">4. When Refunds May Be Considered</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    AQ Systems may consider refunds of our service and setup fees only in the following 
+                    limited circumstances:
                   </p>
-                  <p className="text-muted-foreground">
-                    Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">929-990-2934</a>
+                  <ul className="list-disc list-inside space-y-3 text-muted-foreground ml-4">
+                    <li>
+                      <strong>Service Not Available:</strong> If, after payment of our fees, it is determined 
+                      that the requested service is not actually available at your address and no alternative 
+                      service options can be provided, we may issue a full or partial refund at our discretion.
+                    </li>
+                    <li>
+                      <strong>Duplicate Charges:</strong> If you were charged multiple times for the same 
+                      service due to a processing error on our part, we will refund the duplicate charges.
+                    </li>
+                    <li>
+                      <strong>Billing Errors:</strong> If there is a clear billing error attributable to 
+                      AQ Systems, we will correct the error and issue appropriate refunds.
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Section 5 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">5. Refund Request Process</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    To request a refund from AQ Systems, you must:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                    <li>Contact us within 7 business days of the charge</li>
+                    <li>Provide your order details and reason for the refund request</li>
+                    <li>Submit documentation supporting your claim (if applicable)</li>
+                    <li>Allow up to 10 business days for review of your request</li>
+                  </ul>
+                  
+                  <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 mt-6">
+                    <p className="font-semibold text-foreground mb-3">Contact Us:</p>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li>Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a></li>
+                      <li>Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a></li>
+                      <li>Mail: 3052 Bainbridge Ave apt 5E, Bronx NY 10468</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Section 6 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">6. Refund Method and Timing</h2>
+                  <p className="text-muted-foreground leading-relaxed">If your refund request is approved:</p>
+                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                    <li>Refunds will be issued to the original payment method used</li>
+                    <li>Processing may take 5-10 business days after approval</li>
+                    <li>Additional time may be required depending on your financial institution</li>
+                    <li>You will receive email confirmation once the refund is processed</li>
+                  </ul>
+                </div>
+
+                {/* Section 7 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">7. Cancellations</h2>
+                  
+                  <div className="space-y-4 ml-4">
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground">Before Service Installation</h3>
+                      <p className="text-muted-foreground leading-relaxed mt-2">
+                        If you wish to cancel before your service provider's installation, you must contact 
+                        both AQ Systems and your service provider. Our service and setup fees remain 
+                        non-refundable, but you may avoid installation charges by canceling with the 
+                        provider according to their policies.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground">After Service Installation</h3>
+                      <p className="text-muted-foreground leading-relaxed mt-2">
+                        After service installation, you must contact your service provider directly to 
+                        discuss cancellation, as well as any applicable fees.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Section 8 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">8. Disputes</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    If you believe you have been charged incorrectly or have a dispute regarding fees, 
+                    please contact us immediately. We are committed to resolving issues fairly and 
+                    promptly. If we cannot reach a mutually satisfactory resolution, you may have the 
+                    right to dispute the charge with your credit card company or financial institution.
                   </p>
                 </div>
-              </motion.div>
 
-              {/* Related Policies Section */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mt-12 pt-8 border-t border-border"
-              >
-                <h3 className="text-lg font-semibold text-foreground mb-4">Related Policies</h3>
-                <div className="flex flex-wrap gap-4">
-                  <Link 
-                    to="/policies/terms-of-services" 
-                    className="text-sm text-primary hover:text-primary/80 transition-colors"
-                  >
-                    Terms & Conditions
-                  </Link>
-                  <Link 
-                    to="/policies/privacy-policy" 
-                    className="text-sm text-primary hover:text-primary/80 transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                  <Link 
-                    to="/policies/disclaimer" 
-                    className="text-sm text-primary hover:text-primary/80 transition-colors"
-                  >
-                    Disclaimer
-                  </Link>
+                {/* Section 9 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">9. No Guarantee of Provider Service</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    AQ Systems does not guarantee the performance, quality, availability, or continuation 
+                    of services provided by third-party service providers. We are not liable for service 
+                    issues, and such issues do not entitle you to a refund of our fees.
+                  </p>
+                </div>
+
+                {/* Section 10 */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">10. Changes to This Policy</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We reserve the right to modify this Refund and Return Policy at any time. Changes 
+                    will be effective immediately upon posting to the website. Your continued use of 
+                    our services after changes constitutes acceptance of the updated policy.
+                  </p>
+                </div>
+
+                {/* Section 11 - Contact */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-bold text-foreground">11. Contact Information</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    For questions about this Refund and Return Policy or to request a refund, please contact us:
+                  </p>
+                  <div className="bg-muted/50 rounded-xl p-6 space-y-2">
+                    <p className="font-semibold text-foreground">AQ Systems</p>
+                    <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
+                    <p className="text-muted-foreground">Bronx NY 10468</p>
+                    <p className="text-muted-foreground mt-3">
+                      Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a>
+                    </p>
+                    <p className="text-muted-foreground">
+                      Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Related Policies */}
+                <div className="pt-8 border-t border-border">
+                  <h3 className="text-lg font-semibold text-foreground mb-4">Related Policies</h3>
+                  <div className="flex flex-wrap gap-4">
+                    <Link 
+                      to="/policies/terms-of-services" 
+                      className="text-sm text-primary hover:text-primary/80 transition-colors"
+                    >
+                      Terms & Conditions
+                    </Link>
+                    <Link 
+                      to="/policies/privacy-policy" 
+                      className="text-sm text-primary hover:text-primary/80 transition-colors"
+                    >
+                      Privacy Policy
+                    </Link>
+                    <Link 
+                      to="/policies/disclaimer" 
+                      className="text-sm text-primary hover:text-primary/80 transition-colors"
+                    >
+                      Disclaimer
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             </div>
