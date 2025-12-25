@@ -8,10 +8,10 @@ const Disclaimer = () => {
   return (
     <>
       <Helmet>
-        <title>Website Disclaimer | Service Terms & Third-Party Links - Premier Link</title>
+        <title>Website Disclaimer | Service Terms & Third-Party Links - Internet Core</title>
         <meta 
           name="description" 
-          content="Read the Premier Link website disclaimer. Important legal information about our services, service terms, pricing accuracy, and third-party links." 
+          content="Read the Internet Core website disclaimer. Important legal information about our services, service terms, pricing accuracy, and third-party links." 
         />
         <meta name="keywords" content="Website Disclaimer, Service Terms, Third-Party Links, Legal Notice, Pricing Disclaimer" />
         <link rel="canonical" href="/policies/disclaimer" />
@@ -53,7 +53,7 @@ const Disclaimer = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">1. Important Notice</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Please read this disclaimer carefully before using Premier Link. By accessing 
+                    Please read this disclaimer carefully before using Internet Core. By accessing 
                     and using this website, you acknowledge that you have read, understood, and agree 
                     to be bound by this disclaimer.
                   </p>
@@ -63,7 +63,7 @@ const Disclaimer = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">2. Independent Marketing Partner</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Premier Link is owned and operated by Choice Communication LLC, an independent marketing partner.
+                    Internet Core is owned and operated by Choice Communication LLC, an independent marketing partner.
                   </p>
                   <p className="text-foreground font-semibold mt-4">WE ARE NOT:</p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
@@ -119,7 +119,7 @@ const Disclaimer = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">6. No Guarantees or Warranties</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Premier Link makes no warranties or guarantees regarding:
+                    Internet Core makes no warranties or guarantees regarding:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
                     <li>Service provider performance, reliability, or quality</li>
@@ -154,7 +154,7 @@ const Disclaimer = () => {
                     <li>Prices shown are typical ranges and may not reflect your specific area</li>
                     <li>Final pricing is determined by the service provider based on your location</li>
                     <li>Additional fees may apply including installation, equipment, taxes, and surcharges</li>
-                    <li>Premier Link charges separate service fees for our services</li>
+                    <li>Internet Core charges separate service fees for our services</li>
                     <li>Prices are subject to change without notice</li>
                   </ul>
                 </div>
@@ -163,7 +163,7 @@ const Disclaimer = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">9. No Professional Advice</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    The information provided on Premier Link is for general informational purposes only 
+                    The information provided on Internet Core is for general informational purposes only 
                     and should not be considered professional or technical advice. We recommend consulting 
                     with service providers directly for specific technical requirements, compatibility 
                     questions, or detailed service information relevant to your situation.
@@ -206,7 +206,7 @@ const Disclaimer = () => {
                     If you have questions about this Disclaimer, please contact:
                   </p>
                   <div className="bg-muted/50 rounded-xl p-6 space-y-2">
-                    <p className="font-semibold text-foreground">Premier Link</p>
+                    <p className="font-semibold text-foreground">Internet Core</p>
                     <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                     <p className="text-muted-foreground">Bronx NY 10468</p>
                     <p className="text-muted-foreground mt-3">

@@ -90,10 +90,10 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Get in Touch | Check Internet & TV Availability - Premier Link</title>
+        <title>Get in Touch | Check Internet & TV Availability - Internet Core</title>
         <meta 
           name="description" 
-          content="Contact Premier Link to check internet and TV availability in your area. Call (929) 990-2934 or fill out our form for a free consultation. Response within 24 hours." 
+          content="Contact Internet Core to check internet and TV availability in your area. Call (929) 990-2934 or fill out our form for a free consultation. Response within 24 hours." 
         />
         <meta name="keywords" content="contact us, get in touch, internet availability, TV service inquiry, free quote" />
         <link rel="canonical" href="/contact-us" />

@@ -89,7 +89,7 @@ const InternetHelp = () => {
   return (
     <>
       <Helmet>
-        <title>Internet Help & Troubleshooting Guide - Premier Link</title>
+        <title>Internet Help & Troubleshooting Guide - Internet Core</title>
         <meta 
           name="description" 
           content="Get help with slow internet, WiFi setup, router issues, understanding bills, and online safety. Expert tips and troubleshooting guides for common internet problems." 
