@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Our Address",
-    value: "ZA LOGISTICS INC\n2601 Woodland Park Drive\nApt 8209, Houston, TX 77077, USA",
+    value: "Choice Communication LLC\n2601 Woodland Park Drive\nApt 8209, Houston, TX 77077, USA",
     href: null,
   },
   {
@@ -258,7 +258,7 @@ const ContactUs = () => {
                       </div>
 
                       <p className="text-sm text-muted-foreground">
-                        By submitting this form, you agree to be contacted by ZA LOGISTICS INC 
+                        By submitting this form, you agree to be contacted by Choice Communication LLC 
                         regarding available internet and TV services in your area. Your information will 
                         be processed in accordance with our{" "}
                         <Link to="/policies/privacy-policy" className="text-primary hover:underline">

@@ -60,7 +60,7 @@ const services = [
 const importantInfo = [
   "Prices depend on location, service provider, and current promotions",
   "Installation and equipment costs may differ by provider",
-  "A processing and setup fee is charged by ZA LOGISTICS INC for coordinating your new order",
+  "A processing and setup fee is charged by Choice Communication LLC for coordinating your new order",
   "Availability depends on your location and the coverage of participating providers",
   "Service speeds and channels may vary depending on the provider and your location",
 ];
