@@ -207,8 +207,8 @@ const Disclaimer = () => {
                   </p>
                   <div className="bg-muted/50 rounded-xl p-6 space-y-2">
                     <p className="font-semibold text-foreground">Internet Core</p>
-                    <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
-                    <p className="text-muted-foreground">Bronx NY 10468</p>
+                    <p className="text-muted-foreground">2601 Woodland Park Drive, Apt 8209</p>
+                    <p className="text-muted-foreground">Houston, TX 77077, USA</p>
                     <p className="text-muted-foreground mt-3">
                       Email: <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a>
                     </p>

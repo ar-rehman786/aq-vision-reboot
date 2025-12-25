@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Our Address",
-    value: "Choice Communication LLC\n3052 Bainbridge Ave apt 5E\nBronx NY 10468",
+    value: "Choice Communication LLC\n2601 Woodland Park Drive\nApt 8209, Houston, TX 77077, USA",
     href: null,
   },
   {

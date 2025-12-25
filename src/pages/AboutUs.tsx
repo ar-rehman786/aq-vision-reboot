@@ -30,7 +30,7 @@ const whyWorkWithUs = [
 const companyInfo = [
   { label: "Website", value: "Internet Core", icon: Globe },
   { label: "Company", value: "Choice Communication LLC", icon: Building2 },
-  { label: "Business Address", value: "3052 Bainbridge Ave apt 5E, Bronx NY 10468", icon: MapPin },
+  { label: "Business Address", value: "2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA", icon: MapPin },
 ];
 
 const disclosures = [
