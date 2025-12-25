@@ -55,7 +55,7 @@ const TermsOfServices = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     By accessing and using Internet Core (the "Website"), you accept and agree to be bound 
                     by these Terms & Conditions. The Website is owned and operated by Choice Communication LLC, 
-                    located at 3052 Bainbridge Ave apt 5E, Bronx NY 10468. If you do not agree to these terms, 
+                    located at 2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA. If you do not agree to these terms, 
                     please do not use this Website.
                   </p>
                 </div>
@@ -229,8 +229,8 @@ const TermsOfServices = () => {
                   <div className="bg-muted/50 rounded-xl p-6 space-y-2">
                     <p className="font-semibold text-foreground">Internet Core</p>
                     <p className="text-muted-foreground">Choice Communication LLC</p>
-                    <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
-                    <p className="text-muted-foreground">Bronx NY 10468</p>
+                    <p className="text-muted-foreground">2601 Woodland Park Drive, Apt 8209</p>
+                    <p className="text-muted-foreground">Houston, TX 77077, USA</p>
                     <p className="text-muted-foreground mt-3">
                       Email: <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a>
                     </p>

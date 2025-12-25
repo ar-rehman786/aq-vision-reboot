@@ -88,7 +88,7 @@ export const Footer = () => {
               </li>
               <li className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>3052 Bainbridge Ave apt 5E, Bronx NY 10468</span>
+                <span>2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA</span>
               </li>
             </ul>
           </div>
