@@ -63,7 +63,7 @@ const Disclaimer = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">2. Independent Marketing Partner</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Internet Core is owned and operated by Choice Communication LLC, an independent marketing partner.
+                    Internet Core is owned and operated by ZA LOGISTICS INC, an independent marketing partner.
                   </p>
                   <p className="text-foreground font-semibold mt-4">WE ARE NOT:</p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">

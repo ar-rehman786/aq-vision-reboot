@@ -29,14 +29,14 @@ const whyWorkWithUs = [
 
 const companyInfo = [
   { label: "Website", value: "Internet Core", icon: Globe },
-  { label: "Company", value: "Choice Communication LLC", icon: Building2 },
+  { label: "Company", value: "ZA LOGISTICS INC", icon: Building2 },
   { label: "Business Address", value: "2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA", icon: MapPin },
 ];
 
 const disclosures = [
   "Internet Core operates independently as a marketing partner. We are not connected to, endorsed by, or the official website of any particular internet or cable provider.",
   "Product names, logos, and trademarks listed on our site are owned by their respective entities. Their inclusion does not imply any endorsement.",
-  "Choice Communication LLC imposes a separate service and setup fee for handling and coordinating new orders via Internet Core, in addition to the charges from the service provider.",
+  "ZA LOGISTICS INC imposes a separate service and setup fee for handling and coordinating new orders via Internet Core, in addition to the charges from the service provider.",
 ];
 
 const AboutUs = () => {
@@ -46,9 +46,9 @@ const AboutUs = () => {
         <title>Learn More About Internet Core | Your Trusted Internet & TV Partner</title>
         <meta 
           name="description" 
-          content="Internet Core operates as a marketing partner under Choice Communication LLC. We assist customers in discovering home internet and TV service options from participating providers across the U.S." 
+          content="Internet Core operates as a marketing partner under ZA LOGISTICS INC. We assist customers in discovering home internet and TV service options from participating providers across the U.S." 
         />
-        <meta name="keywords" content="about Internet Core, Choice Communication LLC, internet service partner, TV service company" />
+        <meta name="keywords" content="about Internet Core, ZA LOGISTICS INC, internet service partner, TV service company" />
         <link rel="canonical" href="/about-us" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -90,7 +90,7 @@ const AboutUs = () => {
                   <div className="space-y-4 text-muted-foreground text-lg">
                     <p>
                       <strong className="text-foreground">Internet Core</strong> operates as a marketing partner 
-                      under Choice Communication LLC. We are not affiliated with or the official site of any 
+                      under ZA LOGISTICS INC. We are not affiliated with or the official site of any 
                       cable or internet provider.
                     </p>
                     <p>
