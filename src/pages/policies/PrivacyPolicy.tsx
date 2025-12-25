@@ -8,10 +8,10 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | Data Security & Consumer Privacy Rights - Premier Link</title>
+        <title>Privacy Policy | Data Security & Consumer Privacy Rights - Internet Core</title>
         <meta 
           name="description" 
-          content="Read the Premier Link privacy policy. Learn how we collect, use, and protect your personal information. Your data security and consumer privacy rights are our priority." 
+          content="Read the Internet Core privacy policy. Learn how we collect, use, and protect your personal information. Your data security and consumer privacy rights are our priority." 
         />
         <meta name="keywords" content="Privacy Policy, Data Security, Consumer Privacy Rights, Personal Information Protection, CCPA, Data Protection" />
         <link rel="canonical" href="/policies/privacy-policy" />
@@ -53,7 +53,7 @@ const PrivacyPolicy = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">1. Introduction</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Premier Link ("we," "our," or "us") is committed to protecting your privacy and 
+                    Internet Core ("we," "our," or "us") is committed to protecting your privacy and 
                     handling your data in accordance with applicable U.S. privacy laws. This Privacy 
                     Policy explains how we collect, use, disclose, and safeguard your information 
                     when you visit our website and use our services.
@@ -238,7 +238,7 @@ const PrivacyPolicy = () => {
                     If you have questions or concerns about this Privacy Policy or our data practices, please contact us:
                   </p>
                   <div className="bg-muted/50 rounded-xl p-6 space-y-2">
-                    <p className="font-semibold text-foreground">Premier Link</p>
+                    <p className="font-semibold text-foreground">Internet Core</p>
                     <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                     <p className="text-muted-foreground">Bronx NY 10468</p>
                     <p className="text-muted-foreground mt-3">

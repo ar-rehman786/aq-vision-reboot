@@ -34,7 +34,7 @@ export const Footer = () => {
                 <Wifi className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="font-heading font-bold text-xl text-foreground">
-                Premier Link
+                Internet Core
               </span>
             </Link>
             <p className="text-muted-foreground mb-4">
@@ -115,7 +115,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-border pt-6 text-center">
           <p className="text-muted-foreground text-xs">
-            © {new Date().getFullYear()} Premier Link. All rights reserved.
+            © {new Date().getFullYear()} Internet Core. All rights reserved.
           </p>
         </div>
       </div>
