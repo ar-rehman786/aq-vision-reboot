@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X, Wifi } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import logoIcon from "@/assets/logo-icon.png";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -24,9 +25,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <Wifi className="w-5 h-5 text-primary-foreground" />
-            </div>
+            <img src={logoIcon} alt="Internet Core logo" className="w-10 h-10 object-contain" />
             <span className="font-heading font-bold text-xl text-foreground">
               Internet Core
             </span>
