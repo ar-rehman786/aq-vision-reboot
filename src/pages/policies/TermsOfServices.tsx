@@ -54,7 +54,7 @@ const TermsOfServices = () => {
                   <h2 className="text-2xl font-bold text-foreground">1. Acceptance of Terms</h2>
                   <p className="text-muted-foreground leading-relaxed">
                     By accessing and using Internet Core (the "Website"), you accept and agree to be bound 
-                    by these Terms & Conditions. The Website is owned and operated by Choice Communication LLC, 
+                    by these Terms & Conditions. The Website is owned and operated by Internetcore.us, 
                     located at 2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA. If you do not agree to these terms, 
                     please do not use this Website.
                   </p>
@@ -89,7 +89,7 @@ const TermsOfServices = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">4. Fees and Charges</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Choice Communication LLC charges a separate service and setup fee for processing and 
+                    Internetcore.us charges a separate service and setup fee for processing and 
                     coordinating orders through Internet Core. These fees are:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
@@ -228,7 +228,7 @@ const TermsOfServices = () => {
                   </p>
                   <div className="bg-muted/50 rounded-xl p-6 space-y-2">
                     <p className="font-semibold text-foreground">Internet Core</p>
-                    <p className="text-muted-foreground">Choice Communication LLC</p>
+                    <p className="text-muted-foreground">Internetcore.us</p>
                     <p className="text-muted-foreground">2601 Woodland Park Drive, Apt 8209</p>
                     <p className="text-muted-foreground">Houston, TX 77077, USA</p>
                     <p className="text-muted-foreground mt-3">

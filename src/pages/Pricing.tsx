@@ -73,9 +73,9 @@ const importantInfo = [
 ];
 
 const setupFees = [
-  "Choice Communication LLC applies a service and setup fee for processing and coordinating orders on Internet Core",
+  "Internetcore.us applies a service and setup fee for processing and coordinating orders on Internet Core",
   "Setup fees will be disclosed before completing the order",
-  "The service and setup fees from Choice Communication LLC are non-refundable",
+  "The service and setup fees from Internetcore.us are non-refundable",
 ];
 
 const notIncluded = [

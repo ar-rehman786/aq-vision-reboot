@@ -14,7 +14,7 @@ import {
 const faqs = [
   {
     question: "What is Internet Core?",
-    answer: "Internet Core is managed by Choice Communication LLC, an independent marketing partner. We are not the official site of any specific internet or cable provider.",
+    answer: "Internet Core is managed by Internetcore.us, an independent marketing partner. We are not the official site of any specific internet or cable provider.",
   },
   {
     question: "How does Internet Core work?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Do I pay Internet Core or the service provider?",
-    answer: "Payments are made directly to the service provider. Internet Core does not handle payments for services. However, Choice Communication LLC may charge a separate service and setup fee for coordinating your order.",
+    answer: "Payments are made directly to the service provider. Internet Core does not handle payments for services. However, Internetcore.us may charge a separate service and setup fee for coordinating your order.",
   },
   {
     question: "What services are available in my area?",
