@@ -34,7 +34,7 @@ export const Footer = () => {
                 <Wifi className="w-5 h-5 text-primary-foreground" />
               </div>
               <span className="font-heading font-bold text-xl text-foreground">
-                AQ Systems
+                Premier Link
               </span>
             </Link>
             <p className="text-muted-foreground mb-4">
@@ -82,8 +82,8 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:support@aqsystems.com" className="hover:text-primary transition-colors">
-                  support@aqsystems.com
+                <a href="mailto:noor@premierlinkusa.com" className="hover:text-primary transition-colors">
+                  noor@premierlinkusa.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground">
@@ -115,7 +115,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-border pt-6 text-center">
           <p className="text-muted-foreground text-xs">
-            © {new Date().getFullYear()} AQ Systems. All rights reserved.
+            © {new Date().getFullYear()} Premier Link. All rights reserved.
           </p>
         </div>
       </div>

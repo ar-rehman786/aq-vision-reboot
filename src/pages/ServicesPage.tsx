@@ -69,7 +69,7 @@ const ServicesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Explore Our Services | Home Internet, TV & Bundle Plans - AQ Systems</title>
+        <title>Explore Our Services | Home Internet, TV & Bundle Plans - Premier Link</title>
         <meta 
           name="description" 
           content="Discover the best home internet and TV plans available through participating providers. Find flexible speeds, cable packages, and money-saving bundles starting at $29.99/mo." 
