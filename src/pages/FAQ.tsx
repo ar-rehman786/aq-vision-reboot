@@ -13,11 +13,11 @@ import {
 
 const faqs = [
   {
-    question: "What is AQ Systems?",
-    answer: "AQ Systems is managed by Choice Communication LLC, an independent marketing partner. We are not the official site of any specific internet or cable provider.",
+    question: "What is Premier Link?",
+    answer: "Premier Link is managed by Choice Communication LLC, an independent marketing partner. We are not the official site of any specific internet or cable provider.",
   },
   {
-    question: "How does AQ Systems work?",
+    question: "How does Premier Link work?",
     answer: "We assist users in discovering home internet and TV service options from various participating providers across the U.S. Simply enter your ZIP code or contact us, and we will help you find available services in your area.",
   },
   {
@@ -25,8 +25,8 @@ const faqs = [
     answer: "Prices depend on your location, provider, and current promotions. Final prices will be confirmed during the availability check with the provider.",
   },
   {
-    question: "Do I pay AQ Systems or the service provider?",
-    answer: "Payments are made directly to the service provider. AQ Systems does not handle payments for services. However, Choice Communication LLC may charge a separate service and setup fee for coordinating your order.",
+    question: "Do I pay Premier Link or the service provider?",
+    answer: "Payments are made directly to the service provider. Premier Link does not handle payments for services. However, Choice Communication LLC may charge a separate service and setup fee for coordinating your order.",
   },
   {
     question: "What services are available in my area?",
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     question: "What is your refund policy?",
-    answer: "Refund policies are set by the provider. Please contact them for details on their specific terms. For fees charged by AQ Systems, visit our Refund Policy page for complete details.",
+    answer: "Refund policies are set by the provider. Please contact them for details on their specific terms. For fees charged by Premier Link, visit our Refund Policy page for complete details.",
   },
 ];
 
@@ -74,10 +74,10 @@ const FAQ = () => {
   return (
     <>
       <Helmet>
-        <title>Common Questions | Internet & TV Service Help - AQ Systems</title>
+        <title>Common Questions | Internet & TV Service Help - Premier Link</title>
         <meta 
           name="description" 
-          content="Find answers to common questions about internet and TV services. Learn about pricing, installation, contracts, equipment, and how AQ Systems helps you find the best plans." 
+          content="Find answers to common questions about internet and TV services. Learn about pricing, installation, contracts, equipment, and how Premier Link helps you find the best plans." 
         />
         <meta name="keywords" content="FAQ, common questions, internet service help, TV service questions, installation info" />
         <link rel="canonical" href="/faq" />
@@ -101,7 +101,7 @@ const FAQ = () => {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-muted-foreground max-w-3xl mx-auto"
               >
-                Find answers to frequently asked questions about AQ Systems and our internet and TV services.
+                Find answers to frequently asked questions about Premier Link and our internet and TV services.
               </motion.p>
             </div>
           </section>

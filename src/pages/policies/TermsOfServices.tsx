@@ -8,12 +8,12 @@ const TermsOfServices = () => {
   return (
     <>
       <Helmet>
-        <title>Terms & Conditions | Internet Services Provider Agreement - AQ Systems</title>
+        <title>Terms & Conditions | Internet Services Provider Agreement - Premier Link</title>
         <meta 
           name="description" 
-          content="Read the AQ Systems Terms & Conditions. Understand the terms for using our internet and TV service comparison platform, provider agreements, and user responsibilities." 
+          content="Read the Premier Link Terms & Conditions. Understand the terms for using our internet and TV service comparison platform, provider agreements, and user responsibilities." 
         />
-        <meta name="keywords" content="terms and conditions, internet services, provider agreements, user terms, AQ Systems terms" />
+        <meta name="keywords" content="terms and conditions, internet services, provider agreements, user terms, Premier Link terms" />
         <link rel="canonical" href="/policies/terms-of-services" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -53,7 +53,7 @@ const TermsOfServices = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">1. Acceptance of Terms</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    By accessing and using AQ Systems (the "Website"), you accept and agree to be bound 
+                    By accessing and using Premier Link (the "Website"), you accept and agree to be bound 
                     by these Terms & Conditions. The Website is owned and operated by Choice Communication LLC, 
                     located at 3052 Bainbridge Ave apt 5E, Bronx NY 10468. If you do not agree to these terms, 
                     please do not use this Website.
@@ -64,7 +64,7 @@ const TermsOfServices = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">2. Services Provided</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    AQ Systems is an independent marketing partner. We are not the official website of 
+                    Premier Link is an independent marketing partner. We are not the official website of 
                     any internet or cable provider. Our services include:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
@@ -78,7 +78,7 @@ const TermsOfServices = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">3. Independent Marketing Partner Status</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    AQ Systems operates as an independent marketing partner. We are not affiliated with, 
+                    Premier Link operates as an independent marketing partner. We are not affiliated with, 
                     endorsed by, or the official website of any specific internet or cable provider. 
                     All service provider names, logos, and trademarks are the property of their 
                     respective owners and are used for identification purposes only.
@@ -90,7 +90,7 @@ const TermsOfServices = () => {
                   <h2 className="text-2xl font-bold text-foreground">4. Fees and Charges</h2>
                   <p className="text-muted-foreground leading-relaxed">
                     Choice Communication LLC charges a separate service and setup fee for processing and 
-                    coordinating orders through AQ Systems. These fees are:
+                    coordinating orders through Premier Link. These fees are:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
                     <li>Disclosed to you prior to order completion</li>
@@ -116,8 +116,8 @@ const TermsOfServices = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">6. Service Provider Relationship</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Once you place an order through AQ Systems, you will enter into a separate agreement 
-                    with the service provider. AQ Systems is not responsible for the service provider's 
+                    Once you place an order through Premier Link, you will enter into a separate agreement 
+                    with the service provider. Premier Link is not responsible for the service provider's 
                     performance, billing, technical support, or service delivery. All matters related 
                     to your active service must be addressed directly with your service provider.
                   </p>
@@ -152,7 +152,7 @@ const TermsOfServices = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">9. Limitation of Liability</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    To the maximum extent permitted by law, AQ Systems shall not be liable for any 
+                    To the maximum extent permitted by law, Premier Link shall not be liable for any 
                     indirect, incidental, special, consequential, or punitive damages arising from 
                     your use of the Website or services. Our total liability shall not exceed the 
                     amount of fees you paid to us for our services.
@@ -163,7 +163,7 @@ const TermsOfServices = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">10. Indemnification</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    You agree to indemnify, defend, and hold harmless AQ Systems and its officers, 
+                    You agree to indemnify, defend, and hold harmless Premier Link and its officers, 
                     directors, employees, and agents from any claims, damages, losses, liabilities, 
                     and expenses (including legal fees) arising out of or related to your use of the 
                     Website or violation of these Terms.
@@ -175,7 +175,7 @@ const TermsOfServices = () => {
                   <h2 className="text-2xl font-bold text-foreground">11. Intellectual Property</h2>
                   <p className="text-muted-foreground leading-relaxed">
                     All content on this Website, including text, graphics, logos, and software, is 
-                    the property of AQ Systems or its content suppliers and is protected by intellectual 
+                    the property of Premier Link or its content suppliers and is protected by intellectual 
                     property laws. You may not reproduce, distribute, or create derivative works 
                     without our written permission.
                   </p>
@@ -227,12 +227,12 @@ const TermsOfServices = () => {
                     If you have questions about these Terms & Conditions, please contact us:
                   </p>
                   <div className="bg-muted/50 rounded-xl p-6 space-y-2">
-                    <p className="font-semibold text-foreground">AQ Systems</p>
+                    <p className="font-semibold text-foreground">Premier Link</p>
                     <p className="text-muted-foreground">Choice Communication LLC</p>
                     <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                     <p className="text-muted-foreground">Bronx NY 10468</p>
                     <p className="text-muted-foreground mt-3">
-                      Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a>
+                      Email: <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a>
                     </p>
                     <p className="text-muted-foreground">
                       Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a>

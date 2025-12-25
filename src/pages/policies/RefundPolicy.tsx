@@ -8,10 +8,10 @@ const RefundPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Refund & Return Policy | Refund Process & Service Charges - AQ Systems</title>
+        <title>Refund & Return Policy | Refund Process & Service Charges - Premier Link</title>
         <meta 
           name="description" 
-          content="Read the AQ Systems refund and return policy. Learn about our refund process, eligibility requirements, service charges, and how to request a refund." 
+          content="Read the Premier Link refund and return policy. Learn about our refund process, eligibility requirements, service charges, and how to request a refund." 
         />
         <meta name="keywords" content="Refund and Return Policy, Refund Process, Service Charges, Cancellation Policy, Return Policy" />
         <link rel="canonical" href="/policies/refund-policy" />
@@ -53,7 +53,7 @@ const RefundPolicy = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">1. Overview</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    This Refund and Return Policy applies to services and fees charged by AQ Systems. 
+                    This Refund and Return Policy applies to services and fees charged by Premier Link. 
                     This policy does not cover refunds or returns related to services provided by 
                     third-party service providers, which are subject to their own policies and terms.
                   </p>
@@ -61,12 +61,12 @@ const RefundPolicy = () => {
 
                 {/* Section 2 */}
                 <div className="space-y-4">
-                  <h2 className="text-2xl font-bold text-foreground">2. AQ Systems Service Fees</h2>
+                  <h2 className="text-2xl font-bold text-foreground">2. Premier Link Service Fees</h2>
                   
                   <div className="space-y-4 ml-4">
                     <h3 className="text-lg font-semibold text-foreground">Non-Refundable Fees</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      Service and setup fees charged by AQ Systems for order processing and coordination 
+                      Service and setup fees charged by Premier Link for order processing and coordination 
                       are non-refundable once the order has been submitted and processed. These fees cover:
                     </p>
                     <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
@@ -84,7 +84,7 @@ const RefundPolicy = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     Refunds, returns, or cancellations related to charges from your internet or TV service 
                     provider (including monthly service fees, installation fees, equipment charges, etc.) 
-                    are governed by that provider's policies, not by AQ Systems.
+                    are governed by that provider's policies, not by Premier Link.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
                     For service provider-related refunds, you must:
@@ -100,7 +100,7 @@ const RefundPolicy = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">4. When Refunds May Be Considered</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    AQ Systems may consider refunds of our service and setup fees only in the following 
+                    Premier Link may consider refunds of our service and setup fees only in the following 
                     limited circumstances:
                   </p>
                   <ul className="list-disc list-inside space-y-3 text-muted-foreground ml-4">
@@ -115,7 +115,7 @@ const RefundPolicy = () => {
                     </li>
                     <li>
                       <strong>Billing Errors:</strong> If there is a clear billing error attributable to 
-                      AQ Systems, we will correct the error and issue appropriate refunds.
+                      Premier Link, we will correct the error and issue appropriate refunds.
                     </li>
                   </ul>
                 </div>
@@ -124,7 +124,7 @@ const RefundPolicy = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">5. Refund Request Process</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    To request a refund from AQ Systems, you must:
+                    To request a refund from Premier Link, you must:
                   </p>
                   <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
                     <li>Contact us within 7 business days of the charge</li>
@@ -136,7 +136,7 @@ const RefundPolicy = () => {
                   <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 mt-6">
                     <p className="font-semibold text-foreground mb-3">Contact Us:</p>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a></li>
+                      <li>Email: <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a></li>
                       <li>Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a></li>
                       <li>Mail: 3052 Bainbridge Ave apt 5E, Bronx NY 10468</li>
                     </ul>
@@ -164,7 +164,7 @@ const RefundPolicy = () => {
                       <h3 className="text-lg font-semibold text-foreground">Before Service Installation</h3>
                       <p className="text-muted-foreground leading-relaxed mt-2">
                         If you wish to cancel before your service provider's installation, you must contact 
-                        both AQ Systems and your service provider. Our service and setup fees remain 
+                        both Premier Link and your service provider. Our service and setup fees remain 
                         non-refundable, but you may avoid installation charges by canceling with the 
                         provider according to their policies.
                       </p>
@@ -195,7 +195,7 @@ const RefundPolicy = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">9. No Guarantee of Provider Service</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    AQ Systems does not guarantee the performance, quality, availability, or continuation 
+                    Premier Link does not guarantee the performance, quality, availability, or continuation 
                     of services provided by third-party service providers. We are not liable for service 
                     issues, and such issues do not entitle you to a refund of our fees.
                   </p>
@@ -218,11 +218,11 @@ const RefundPolicy = () => {
                     For questions about this Refund and Return Policy or to request a refund, please contact us:
                   </p>
                   <div className="bg-muted/50 rounded-xl p-6 space-y-2">
-                    <p className="font-semibold text-foreground">AQ Systems</p>
+                    <p className="font-semibold text-foreground">Premier Link</p>
                     <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                     <p className="text-muted-foreground">Bronx NY 10468</p>
                     <p className="text-muted-foreground mt-3">
-                      Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a>
+                      Email: <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a>
                     </p>
                     <p className="text-muted-foreground">
                       Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a>

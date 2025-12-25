@@ -68,7 +68,7 @@ const expectations = [
   },
   {
     title: "Our Role",
-    description: "AQ Systems assists you in finding options and connects you with providers. We are a third-party marketing partner.",
+    description: "Premier Link assists you in finding options and connects you with providers. We are a third-party marketing partner.",
   },
 ];
 
@@ -76,10 +76,10 @@ const HowItWorks = () => {
   return (
     <>
       <Helmet>
-        <title>How to Get Started | Easy Steps to Find Internet & TV - AQ Systems</title>
+        <title>How to Get Started | Easy Steps to Find Internet & TV - Premier Link</title>
         <meta 
           name="description" 
-          content="Starting with AQ Systems is easy! Follow these simple four steps to find and order internet and TV services available in your area. Check availability now." 
+          content="Starting with Premier Link is easy! Follow these simple four steps to find and order internet and TV services available in your area. Check availability now." 
         />
         <meta name="keywords" content="how it works, get started, internet setup, TV installation, service availability" />
         <link rel="canonical" href="/how-it-works" />
@@ -103,7 +103,7 @@ const HowItWorks = () => {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-muted-foreground max-w-3xl mx-auto"
               >
-                Starting with AQ Systems is easy! Just follow these simple four steps to find and 
+                Starting with Premier Link is easy! Just follow these simple four steps to find and 
                 order internet and TV services available in your area.
               </motion.p>
             </div>

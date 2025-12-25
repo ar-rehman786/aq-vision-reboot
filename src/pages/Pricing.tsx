@@ -73,7 +73,7 @@ const importantInfo = [
 ];
 
 const setupFees = [
-  "Choice Communication LLC applies a service and setup fee for processing and coordinating orders on AQ Systems",
+  "Choice Communication LLC applies a service and setup fee for processing and coordinating orders on Premier Link",
   "Setup fees will be disclosed before completing the order",
   "The service and setup fees from Choice Communication LLC are non-refundable",
 ];
@@ -91,7 +91,7 @@ const Pricing = () => {
   return (
     <>
       <Helmet>
-        <title>Our Pricing Plans | Internet & TV Service Rates - AQ Systems</title>
+        <title>Our Pricing Plans | Internet & TV Service Rates - Premier Link</title>
         <meta 
           name="description" 
           content="Explore our pricing plans for internet, TV, and bundle packages. Plans starting at $39.99/month. Get customized pricing based on your location and needs." 

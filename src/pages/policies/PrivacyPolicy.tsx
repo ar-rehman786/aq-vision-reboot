@@ -8,10 +8,10 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | Data Security & Consumer Privacy Rights - AQ Systems</title>
+        <title>Privacy Policy | Data Security & Consumer Privacy Rights - Premier Link</title>
         <meta 
           name="description" 
-          content="Read the AQ Systems privacy policy. Learn how we collect, use, and protect your personal information. Your data security and consumer privacy rights are our priority." 
+          content="Read the Premier Link privacy policy. Learn how we collect, use, and protect your personal information. Your data security and consumer privacy rights are our priority." 
         />
         <meta name="keywords" content="Privacy Policy, Data Security, Consumer Privacy Rights, Personal Information Protection, CCPA, Data Protection" />
         <link rel="canonical" href="/policies/privacy-policy" />
@@ -53,7 +53,7 @@ const PrivacyPolicy = () => {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">1. Introduction</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    AQ Systems ("we," "our," or "us") is committed to protecting your privacy and 
+                    Premier Link ("we," "our," or "us") is committed to protecting your privacy and 
                     handling your data in accordance with applicable U.S. privacy laws. This Privacy 
                     Policy explains how we collect, use, disclose, and safeguard your information 
                     when you visit our website and use our services.
@@ -186,7 +186,7 @@ const PrivacyPolicy = () => {
                   </ul>
                   <p className="text-muted-foreground leading-relaxed mt-4">
                     To exercise these rights, please contact us at{" "}
-                    <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a>.
+                    <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a>.
                   </p>
                 </div>
 
@@ -238,11 +238,11 @@ const PrivacyPolicy = () => {
                     If you have questions or concerns about this Privacy Policy or our data practices, please contact us:
                   </p>
                   <div className="bg-muted/50 rounded-xl p-6 space-y-2">
-                    <p className="font-semibold text-foreground">AQ Systems</p>
+                    <p className="font-semibold text-foreground">Premier Link</p>
                     <p className="text-muted-foreground">3052 Bainbridge Ave apt 5E</p>
                     <p className="text-muted-foreground">Bronx NY 10468</p>
                     <p className="text-muted-foreground mt-3">
-                      Email: <a href="mailto:support@aqsystems.com" className="text-primary hover:underline">support@aqsystems.com</a>
+                      Email: <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a>
                     </p>
                     <p className="text-muted-foreground">
                       Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a>

@@ -28,27 +28,27 @@ const whyWorkWithUs = [
 ];
 
 const companyInfo = [
-  { label: "Website", value: "AQ Systems", icon: Globe },
+  { label: "Website", value: "Premier Link", icon: Globe },
   { label: "Company", value: "Choice Communication LLC", icon: Building2 },
   { label: "Business Address", value: "3052 Bainbridge Ave apt 5E, Bronx NY 10468", icon: MapPin },
 ];
 
 const disclosures = [
-  "AQ Systems operates independently as a marketing partner. We are not connected to, endorsed by, or the official website of any particular internet or cable provider.",
+  "Premier Link operates independently as a marketing partner. We are not connected to, endorsed by, or the official website of any particular internet or cable provider.",
   "Product names, logos, and trademarks listed on our site are owned by their respective entities. Their inclusion does not imply any endorsement.",
-  "Choice Communication LLC imposes a separate service and setup fee for handling and coordinating new orders via AQ Systems, in addition to the charges from the service provider.",
+  "Choice Communication LLC imposes a separate service and setup fee for handling and coordinating new orders via Premier Link, in addition to the charges from the service provider.",
 ];
 
 const AboutUs = () => {
   return (
     <>
       <Helmet>
-        <title>Learn More About AQ Systems | Your Trusted Internet & TV Partner</title>
+        <title>Learn More About Premier Link | Your Trusted Internet & TV Partner</title>
         <meta 
           name="description" 
-          content="AQ Systems operates as a marketing partner under Choice Communication LLC. We assist customers in discovering home internet and TV service options from participating providers across the U.S." 
+          content="Premier Link operates as a marketing partner under Choice Communication LLC. We assist customers in discovering home internet and TV service options from participating providers across the U.S." 
         />
-        <meta name="keywords" content="about AQ Systems, Choice Communication LLC, internet service partner, TV service company" />
+        <meta name="keywords" content="about Premier Link, Choice Communication LLC, internet service partner, TV service company" />
         <link rel="canonical" href="/about-us" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -62,7 +62,7 @@ const AboutUs = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
               >
-                Learn More About AQ Systems
+                Learn More About Premier Link
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -89,7 +89,7 @@ const AboutUs = () => {
                   </h2>
                   <div className="space-y-4 text-muted-foreground text-lg">
                     <p>
-                      <strong className="text-foreground">AQ Systems</strong> operates as a marketing partner 
+                      <strong className="text-foreground">Premier Link</strong> operates as a marketing partner 
                       under Choice Communication LLC. We are not affiliated with or the official site of any 
                       cable or internet provider.
                     </p>

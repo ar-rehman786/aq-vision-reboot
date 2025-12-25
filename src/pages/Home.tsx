@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>AQ Systems - Find Internet & TV Services in Your Area | Fast Setup</title>
+        <title>Premier Link - Find Internet & TV Services in Your Area | Fast Setup</title>
         <meta 
           name="description" 
           content="Discover and compare internet and TV packages from leading providers. Get connected with blazing-fast speeds, no hidden fees, and 24/7 expert support. Check availability now!" 
