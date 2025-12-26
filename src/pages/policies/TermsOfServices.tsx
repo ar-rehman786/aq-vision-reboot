@@ -232,7 +232,7 @@ const TermsOfServices = () => {
                     <p className="text-muted-foreground">2601 Woodland Park Drive, Apt 8209</p>
                     <p className="text-muted-foreground">Houston, TX 77077, USA</p>
                     <p className="text-muted-foreground mt-3">
-                      Email: <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a>
+                      Email: <a href="mailto:support@internetcore.us" className="text-primary hover:underline">support@internetcore.us</a>
                     </p>
                     <p className="text-muted-foreground">
                       Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a>
