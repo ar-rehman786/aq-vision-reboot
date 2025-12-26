@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Our Address",
-    value: "Choice Communication LLC\n2601 Woodland Park Drive\nApt 8209, Houston, TX 77077, USA",
+    value: "Internetcore.us\n2601 Woodland Park Drive\nApt 8209, Houston, TX 77077, USA",
     href: null,
   },
   {
@@ -29,8 +29,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "noor@premierlinkusa.com",
-    href: "mailto:noor@premierlinkusa.com",
+    value: "support@internetcore.us",
+    href: "mailto:support@internetcore.us",
     extra: "We typically respond within 24 hours",
   },
   {

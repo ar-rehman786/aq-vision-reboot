@@ -136,7 +136,7 @@ const RefundPolicy = () => {
                   <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 mt-6">
                     <p className="font-semibold text-foreground mb-3">Contact Us:</p>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>Email: <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a></li>
+                      <li>Email: <a href="mailto:support@internetcore.us" className="text-primary hover:underline">support@internetcore.us</a></li>
                       <li>Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a></li>
                       <li>Mail: 2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA</li>
                     </ul>
@@ -222,7 +222,7 @@ const RefundPolicy = () => {
                     <p className="text-muted-foreground">2601 Woodland Park Drive, Apt 8209</p>
                     <p className="text-muted-foreground">Houston, TX 77077, USA</p>
                     <p className="text-muted-foreground mt-3">
-                      Email: <a href="mailto:noor@premierlinkusa.com" className="text-primary hover:underline">noor@premierlinkusa.com</a>
+                      Email: <a href="mailto:support@internetcore.us" className="text-primary hover:underline">support@internetcore.us</a>
                     </p>
                     <p className="text-muted-foreground">
                       Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a>
