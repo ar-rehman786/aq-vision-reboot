@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Wifi, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import logoIcon from "@/assets/logo-icon.png";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -30,9 +31,7 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <Wifi className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img src={logoIcon} alt="Internet Core Logo" className="w-10 h-10 object-contain" />
               <span className="font-heading font-bold text-xl text-foreground">
                 Internet Core
               </span>
