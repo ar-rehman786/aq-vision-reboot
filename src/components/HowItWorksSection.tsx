@@ -32,7 +32,7 @@ const steps = [
 
 export const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="section-padding">
+    <section id="how-it-works" className="section-padding bg-muted/30">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,7 +64,7 @@ export const HowItWorksSection = () => {
                 <div className="hidden lg:block absolute top-10 left-1/2 w-full h-0.5 bg-border" />
               )}
               
-              <div className="relative mx-auto w-20 h-20 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-lg flex items-center justify-center mb-6">
+              <div className="relative mx-auto w-20 h-20 rounded-2xl bg-card border border-border shadow-lg flex items-center justify-center mb-6">
                 <step.icon className="w-8 h-8 text-primary" />
                 <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-heading font-bold text-sm">
                   {step.step}

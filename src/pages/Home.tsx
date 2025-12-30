@@ -21,7 +21,7 @@ const Home = () => {
         <meta name="keywords" content="internet provider, TV service, cable TV, fiber internet, high-speed internet, home internet" />
         <link rel="canonical" href="/" />
       </Helmet>
-      <div className="min-h-screen relative z-10">
+      <div className="min-h-screen bg-background">
         <Navbar />
         <main>
           <HeroSection />

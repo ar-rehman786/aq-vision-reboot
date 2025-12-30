@@ -25,7 +25,7 @@ const legalLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-card/80 backdrop-blur-sm border-t border-border py-12 relative z-10">
+    <footer className="bg-card border-t border-border py-12">
       <div className="container-custom">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}

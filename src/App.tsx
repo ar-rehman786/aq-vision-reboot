@@ -7,7 +7,6 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "@/components/ScrollToTop";
 import { FloatingContactButton } from "@/components/FloatingContactButton";
-import { NetworkBackground } from "@/components/NetworkBackground";
 import Home from "./pages/Home";
 import ServicesPage from "./pages/ServicesPage";
 import AboutUs from "./pages/AboutUs";
@@ -33,9 +32,6 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <ScrollToTop />
-            {/* Background layer */}
-            <div className="network-bg-base" />
-            <NetworkBackground />
             <FloatingContactButton />
             <Routes>
               <Route path="/" element={<Home />} />

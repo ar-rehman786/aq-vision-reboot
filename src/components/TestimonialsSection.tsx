@@ -68,7 +68,7 @@ export const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="section-padding bg-muted/30 relative overflow-hidden">
       {/* Animated background elements */}
       <motion.div
         animate={{
@@ -135,7 +135,7 @@ export const TestimonialsSection = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.4 }}
-                className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-border text-center"
+                className="bg-card rounded-2xl p-8 md:p-10 shadow-lg border border-border text-center"
               >
                 <StarRating rating={testimonials[currentIndex].rating} />
                 

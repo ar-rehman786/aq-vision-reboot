@@ -5,7 +5,11 @@ import { motion } from "framer-motion";
 
 export const FinalCTASection = () => {
   return (
-    <section id="contact" className="section-padding bg-secondary/80 backdrop-blur-sm relative overflow-hidden">
+    <section id="contact" className="section-padding bg-secondary relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
+      
       <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
