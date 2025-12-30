@@ -25,9 +25,9 @@ const legalLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border py-12">
+    <footer className="bg-card border-t border-border py-8 sm:py-12">
       <div className="container-custom">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
@@ -85,9 +85,9 @@ export const Footer = () => {
                   support@internetcore.us
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA</span>
+              <li className="flex items-start gap-3 text-muted-foreground text-sm sm:text-base">
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="break-words">2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA</span>
               </li>
             </ul>
           </div>

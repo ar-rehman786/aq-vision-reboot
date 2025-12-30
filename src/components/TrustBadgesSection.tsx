@@ -36,20 +36,20 @@ const trustBadges = [
 
 export const TrustBadgesSection = () => {
   return (
-    <section className="py-12 bg-muted/30 border-y border-border">
+    <section className="py-8 sm:py-12 bg-muted/30 border-y border-border">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-8"
+          className="text-center mb-6 sm:mb-8"
         >
-          <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+          <p className="text-xs sm:text-sm font-medium text-muted-foreground uppercase tracking-wider">
             Trusted by thousands of customers nationwide
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
           {trustBadges.map((badge, index) => (
             <motion.div
               key={badge.title}
@@ -59,13 +59,13 @@ export const TrustBadgesSection = () => {
               transition={{ delay: index * 0.05 }}
               className="flex flex-col items-center text-center group"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                <badge.icon className="w-7 h-7 text-primary" />
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center mb-2 sm:mb-3 group-hover:bg-primary/20 transition-colors">
+                <badge.icon className="w-5 h-5 sm:w-7 sm:h-7 text-primary" />
               </div>
-              <h4 className="font-semibold text-foreground text-sm mb-1">
+              <h4 className="font-semibold text-foreground text-xs sm:text-sm mb-0.5 sm:mb-1">
                 {badge.title}
               </h4>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-[10px] sm:text-xs text-muted-foreground">
                 {badge.description}
               </p>
             </motion.div>
