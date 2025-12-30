@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MapPin, Eye, Settings, Wifi } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -81,8 +82,8 @@ export const HowItWorksSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="heroOutline" size="lg">
-            Learn More About The Process
+          <Button variant="heroOutline" size="lg" asChild>
+            <Link to="/how-it-works">Learn More About The Process</Link>
           </Button>
         </div>
       </div>

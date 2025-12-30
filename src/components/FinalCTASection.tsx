@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Search } from "lucide-react";
 import { motion } from "framer-motion";
@@ -45,9 +46,12 @@ export const FinalCTASection = () => {
               variant="outline" 
               size="xl"
               className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10"
+              asChild
             >
-              <Search className="w-5 h-5" />
-              Check Availability Online
+              <Link to="/services">
+                <Search className="w-5 h-5" />
+                Check Availability Online
+              </Link>
             </Button>
           </div>
 
