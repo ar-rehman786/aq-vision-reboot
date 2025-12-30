@@ -76,6 +76,43 @@ Internet Core helps customers discover and compare internet and TV packages from
 - Keep responses concise and helpful
 - If you don't know something specific, direct them to call or email for more details`;
 
+// Validate message structure
+function validateMessages(messages: unknown): { valid: boolean; error?: string } {
+  if (!Array.isArray(messages)) {
+    return { valid: false, error: "Messages must be an array" };
+  }
+  
+  if (messages.length === 0) {
+    return { valid: false, error: "Messages array cannot be empty" };
+  }
+  
+  if (messages.length > 50) {
+    return { valid: false, error: "Too many messages in conversation" };
+  }
+  
+  for (const msg of messages) {
+    if (typeof msg !== "object" || msg === null) {
+      return { valid: false, error: "Invalid message format" };
+    }
+    
+    const { role, content } = msg as { role?: unknown; content?: unknown };
+    
+    if (typeof role !== "string" || !["user", "assistant"].includes(role)) {
+      return { valid: false, error: "Invalid message role" };
+    }
+    
+    if (typeof content !== "string") {
+      return { valid: false, error: "Message content must be a string" };
+    }
+    
+    if (content.length > 4000) {
+      return { valid: false, error: "Message content too long" };
+    }
+  }
+  
+  return { valid: true };
+}
+
 serve(async (req) => {
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
@@ -83,15 +120,38 @@ serve(async (req) => {
   }
 
   try {
-    const { messages } = await req.json();
+    // Parse request body
+    let body: unknown;
+    try {
+      body = await req.json();
+    } catch {
+      return new Response(
+        JSON.stringify({ error: "Invalid request body" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    const { messages } = body as { messages?: unknown };
+    
+    // Validate messages
+    const validation = validateMessages(messages);
+    if (!validation.valid) {
+      return new Response(
+        JSON.stringify({ error: validation.error }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
     
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
       console.error("LOVABLE_API_KEY is not configured");
-      throw new Error("LOVABLE_API_KEY is not configured");
+      return new Response(
+        JSON.stringify({ error: "Service configuration error" }),
+        { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
     }
 
-    console.log("Sending request to AI gateway with", messages.length, "messages");
+    console.log("Processing chat request with", (messages as unknown[]).length, "messages");
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
@@ -103,15 +163,14 @@ serve(async (req) => {
         model: "google/gemini-2.5-flash",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
-          ...messages,
+          ...(messages as { role: string; content: string }[]),
         ],
         stream: true,
       }),
     });
 
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error("AI gateway error:", response.status, errorText);
+      console.error("AI gateway error:", response.status);
       
       if (response.status === 429) {
         return new Response(
@@ -127,7 +186,7 @@ serve(async (req) => {
       }
       
       return new Response(
-        JSON.stringify({ error: "Failed to get response from AI" }),
+        JSON.stringify({ error: "Failed to process request" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -138,9 +197,9 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
     });
   } catch (error) {
-    console.error("Chat function error:", error);
+    console.error("Chat function error:", error instanceof Error ? error.message : "Unknown error");
     return new Response(
-      JSON.stringify({ error: error instanceof Error ? error.message : "Unknown error" }),
+      JSON.stringify({ error: "An unexpected error occurred" }),
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   }
