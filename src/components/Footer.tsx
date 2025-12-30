@@ -31,7 +31,7 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <img src={logoIcon} alt="Internet Core Logo" className="w-10 h-10 object-contain drop-shadow-[0_0_8px_hsl(var(--primary)/0.5)]" />
+              <img src={logoIcon} alt="Internet Core Logo" className="w-10 h-10 object-contain drop-shadow-[0_0_8px_hsl(var(--primary)/0.5)] dark:mix-blend-screen mix-blend-multiply" />
               <span className="font-heading font-bold text-xl text-foreground">
                 Internet Core
               </span>
