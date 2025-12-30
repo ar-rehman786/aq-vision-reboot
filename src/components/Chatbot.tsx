@@ -228,14 +228,35 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
                 </motion.div>
               ))}
               {isLoading && messages[messages.length - 1]?.content === "" && (
-                <div className="flex gap-3">
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex gap-3"
+                >
                   <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
                     <img src={mikeAvatar} alt="Mike" className="w-8 h-8 object-cover" />
                   </div>
-                  <div className="bg-muted rounded-2xl px-4 py-2">
-                    <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />
+                  <div className="bg-muted rounded-2xl px-4 py-3">
+                    <div className="flex items-center gap-1">
+                      <span className="text-xs text-muted-foreground mr-2">Mike is typing</span>
+                      <motion.span
+                        className="w-2 h-2 bg-primary rounded-full"
+                        animate={{ opacity: [0.4, 1, 0.4], scale: [0.8, 1, 0.8] }}
+                        transition={{ duration: 1, repeat: Infinity, delay: 0 }}
+                      />
+                      <motion.span
+                        className="w-2 h-2 bg-primary rounded-full"
+                        animate={{ opacity: [0.4, 1, 0.4], scale: [0.8, 1, 0.8] }}
+                        transition={{ duration: 1, repeat: Infinity, delay: 0.2 }}
+                      />
+                      <motion.span
+                        className="w-2 h-2 bg-primary rounded-full"
+                        animate={{ opacity: [0.4, 1, 0.4], scale: [0.8, 1, 0.8] }}
+                        transition={{ duration: 1, repeat: Infinity, delay: 0.4 }}
+                      />
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               )}
             </div>
           </ScrollArea>
