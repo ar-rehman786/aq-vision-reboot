@@ -473,8 +473,8 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
                 <Button variant="hero" size="lg" asChild>
                   <a href="tel:+19299902934">Call (929) 990-2934</a>
                 </Button>
-                <Button variant="outline" size="lg">
-                  Schedule Installation
+                <Button variant="outline" size="lg" asChild>
+                  <a href="/contact-us">Schedule Installation</a>
                 </Button>
               </div>
             </div>
