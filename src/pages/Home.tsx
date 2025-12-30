@@ -9,6 +9,8 @@ import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { HomeFAQSection } from "@/components/HomeFAQSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { TrustBadgesSection } from "@/components/TrustBadgesSection";
+
 const Home = () => {
   return (
     <>
@@ -25,6 +27,7 @@ const Home = () => {
         <Navbar />
         <main>
           <HeroSection />
+          <TrustBadgesSection />
           <CTABanner />
           <FeaturesSection />
           <UseCaseSection />
