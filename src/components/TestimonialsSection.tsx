@@ -68,8 +68,46 @@ export const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="section-padding bg-muted/30">
-      <div className="container-custom">
+    <section className="section-padding bg-muted/30 relative overflow-hidden">
+      {/* Animated background elements */}
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.1, 0.2, 0.1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-10 left-1/4 w-72 h-72 bg-primary/20 rounded-full blur-3xl"
+      />
+      <motion.div
+        animate={{
+          scale: [1.2, 1, 1.2],
+          opacity: [0.15, 0.25, 0.15],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute bottom-10 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
+      />
+      <motion.div
+        animate={{
+          x: [0, 30, 0],
+          y: [0, -20, 0],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-1/2 right-10 w-48 h-48 bg-primary/10 rounded-full blur-2xl"
+      />
+
+      <div className="container-custom relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
