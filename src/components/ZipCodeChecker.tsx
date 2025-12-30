@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Search, Loader2, Check, Wifi, Tv, Phone, Star, Zap } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Search, Loader2, Check, Wifi, Tv, Phone, Star, Zap, X, ArrowRightLeft } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Core packages with exact pricing as specified
@@ -22,8 +23,6 @@ const providerOptions = [
   { name: "Wireless Home", speed: "100 Mbps", price: "44.99", type: "Fixed Wireless", rating: 4.3 },
 ];
 
-const typeVariants = ["Fiber", "Cable", "DSL", "Fixed Wireless"];
-
 const bundleOptions = [
   { name: "Internet + TV Basic", channels: "100+", price: "+29.99/mo" },
   { name: "Internet + TV Premium", channels: "250+", price: "+49.99/mo" },
@@ -31,15 +30,22 @@ const bundleOptions = [
   { name: "Triple Play Bundle", features: "Internet + TV + Phone", price: "+59.99/mo" },
 ];
 
-const generateRandomProviders = (zipCode: string) => {
-  // Use zip code to seed pseudo-random but consistent results
+type Provider = {
+  name: string;
+  speed: string;
+  price: string;
+  type: string;
+  rating: number;
+  id: number;
+};
+
+const generateRandomProviders = (zipCode: string): Provider[] => {
   const seed = parseInt(zipCode) || 12345;
   const random = (max: number, offset = 0) => ((seed + offset) % max);
   
-  const numProviders = 2 + random(4, 1); // 2-5 providers
-  const providers = [];
+  const numProviders = 2 + random(4, 1);
+  const providers: Provider[] = [];
   
-  // Always include at least one core package
   const shuffledOptions = [...providerOptions].sort(() => (seed % 2 === 0 ? 1 : -1));
   
   for (let i = 0; i < numProviders && i < shuffledOptions.length; i++) {
@@ -50,13 +56,12 @@ const generateRandomProviders = (zipCode: string) => {
     });
   }
   
-  // Sort by rating descending
   return providers.sort((a, b) => b.rating - a.rating);
 };
 
 const generateRandomBundles = (zipCode: string) => {
   const seed = parseInt(zipCode) || 12345;
-  const numBundles = 1 + (seed % 3); // 1-3 bundles
+  const numBundles = 1 + (seed % 3);
   const bundles = [];
   
   for (let i = 0; i < numBundles; i++) {
@@ -74,11 +79,13 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
   const [zipCode, setZipCode] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [results, setResults] = useState<{
-    providers: ReturnType<typeof generateRandomProviders>;
+    providers: Provider[];
     bundles: ReturnType<typeof generateRandomBundles>;
     zipCode: string;
   } | null>(null);
   const [error, setError] = useState("");
+  const [selectedForCompare, setSelectedForCompare] = useState<number[]>([]);
+  const [showComparison, setShowComparison] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -88,7 +95,6 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
       return;
     }
 
-    // Validate US zip code range (00501 to 99950)
     const zipNum = parseInt(zipCode, 10);
     if (zipNum < 501 || zipNum > 99950) {
       setError("Please enter a valid US zip code");
@@ -98,8 +104,9 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
     setError("");
     setIsLoading(true);
     setResults(null);
+    setSelectedForCompare([]);
+    setShowComparison(false);
     
-    // Simulate API call with 1.5 second delay
     await new Promise((resolve) => setTimeout(resolve, 1500));
     
     const providers = generateRandomProviders(zipCode);
@@ -113,7 +120,28 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
     const value = e.target.value.replace(/\D/g, "").slice(0, 5);
     setZipCode(value);
     setError("");
-    if (results) setResults(null);
+    if (results) {
+      setResults(null);
+      setSelectedForCompare([]);
+      setShowComparison(false);
+    }
+  };
+
+  const toggleCompareSelection = (providerId: number) => {
+    setSelectedForCompare(prev => {
+      if (prev.includes(providerId)) {
+        return prev.filter(id => id !== providerId);
+      }
+      if (prev.length >= 3) {
+        return prev;
+      }
+      return [...prev, providerId];
+    });
+  };
+
+  const getSelectedProviders = () => {
+    if (!results) return [];
+    return results.providers.filter(p => selectedForCompare.includes(p.id));
   };
 
   return (
@@ -203,15 +231,43 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
             className="mt-8 space-y-6"
           >
             {/* Success Header */}
-            <div className="flex items-center gap-3 text-primary">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Check className="w-5 h-5" />
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div className="flex items-center gap-3 text-primary">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Check className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Great news! Service is available in {results.zipCode}</p>
+                  <p className="text-sm text-muted-foreground">{results.providers.length} plans found in your area</p>
+                </div>
               </div>
-              <div>
-                <p className="font-semibold text-foreground">Great news! Service is available in {results.zipCode}</p>
-                <p className="text-sm text-muted-foreground">{results.providers.length} plans found in your area</p>
-              </div>
+              
+              {/* Compare Button */}
+              {selectedForCompare.length >= 2 && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                >
+                  <Button 
+                    variant="hero" 
+                    size="sm"
+                    onClick={() => setShowComparison(true)}
+                    className="gap-2"
+                  >
+                    <ArrowRightLeft className="w-4 h-4" />
+                    Compare {selectedForCompare.length} Plans
+                  </Button>
+                </motion.div>
+              )}
             </div>
+
+            {/* Compare Hint */}
+            {selectedForCompare.length === 0 && results.providers.length > 1 && (
+              <p className="text-sm text-muted-foreground flex items-center gap-2">
+                <ArrowRightLeft className="w-4 h-4" />
+                Select 2-3 plans to compare side by side
+              </p>
+            )}
 
             {/* Provider Cards */}
             <div className="grid gap-4">
@@ -221,8 +277,10 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className={`relative rounded-xl p-6 border ${
-                    index === 0
+                  className={`relative rounded-xl p-6 border transition-all ${
+                    selectedForCompare.includes(provider.id)
+                      ? "bg-primary/10 border-primary ring-2 ring-primary/20"
+                      : index === 0
                       ? "bg-primary/5 border-primary"
                       : "bg-card border-border"
                   }`}
@@ -236,6 +294,17 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
                   
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div className="flex items-start gap-4">
+                      {/* Compare Checkbox */}
+                      <div className="flex items-center">
+                        <Checkbox
+                          id={`compare-${provider.id}`}
+                          checked={selectedForCompare.includes(provider.id)}
+                          onCheckedChange={() => toggleCompareSelection(provider.id)}
+                          disabled={!selectedForCompare.includes(provider.id) && selectedForCompare.length >= 3}
+                          className="data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                        />
+                      </div>
+                      
                       <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                         provider.type === "Fiber" ? "bg-primary/10 text-primary" :
                         provider.type === "Cable" ? "bg-accent/10 text-accent" :
@@ -266,6 +335,103 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
                 </motion.div>
               ))}
             </div>
+
+            {/* Comparison Panel */}
+            <AnimatePresence>
+              {showComparison && selectedForCompare.length >= 2 && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="overflow-hidden"
+                >
+                  <div className="bg-card rounded-xl border border-primary p-6">
+                    <div className="flex items-center justify-between mb-6">
+                      <h4 className="font-semibold text-foreground flex items-center gap-2">
+                        <ArrowRightLeft className="w-5 h-5 text-primary" />
+                        Plan Comparison
+                      </h4>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => setShowComparison(false)}
+                        className="text-muted-foreground hover:text-foreground"
+                      >
+                        <X className="w-4 h-4" />
+                      </Button>
+                    </div>
+                    
+                    <div className="overflow-x-auto">
+                      <table className="w-full">
+                        <thead>
+                          <tr className="border-b border-border">
+                            <th className="text-left py-3 px-4 text-muted-foreground font-medium">Feature</th>
+                            {getSelectedProviders().map((provider) => (
+                              <th key={provider.id} className="text-center py-3 px-4 text-foreground font-semibold">
+                                {provider.name}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="border-b border-border">
+                            <td className="py-4 px-4 text-muted-foreground">Connection Type</td>
+                            {getSelectedProviders().map((provider) => (
+                              <td key={provider.id} className="text-center py-4 px-4 text-foreground">
+                                <span className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${
+                                  provider.type === "Fiber" ? "bg-primary/10 text-primary" :
+                                  provider.type === "Cable" ? "bg-accent/10 text-accent" :
+                                  "bg-muted text-muted-foreground"
+                                }`}>
+                                  {provider.type}
+                                </span>
+                              </td>
+                            ))}
+                          </tr>
+                          <tr className="border-b border-border">
+                            <td className="py-4 px-4 text-muted-foreground">Speed</td>
+                            {getSelectedProviders().map((provider) => (
+                              <td key={provider.id} className="text-center py-4 px-4 text-foreground font-medium">
+                                Up to {provider.speed}
+                              </td>
+                            ))}
+                          </tr>
+                          <tr className="border-b border-border">
+                            <td className="py-4 px-4 text-muted-foreground">Monthly Price</td>
+                            {getSelectedProviders().map((provider) => (
+                              <td key={provider.id} className="text-center py-4 px-4">
+                                <span className="text-xl font-bold text-primary">${provider.price}</span>
+                              </td>
+                            ))}
+                          </tr>
+                          <tr className="border-b border-border">
+                            <td className="py-4 px-4 text-muted-foreground">Rating</td>
+                            {getSelectedProviders().map((provider) => (
+                              <td key={provider.id} className="text-center py-4 px-4">
+                                <div className="flex items-center justify-center gap-1">
+                                  <Star className="w-4 h-4 text-accent fill-accent" />
+                                  <span className="font-medium text-foreground">{provider.rating}</span>
+                                </div>
+                              </td>
+                            ))}
+                          </tr>
+                          <tr>
+                            <td className="py-4 px-4"></td>
+                            {getSelectedProviders().map((provider) => (
+                              <td key={provider.id} className="text-center py-4 px-4">
+                                <Button variant="hero" size="sm" asChild className="w-full">
+                                  <a href="tel:+19299902934">Call now to get</a>
+                                </Button>
+                              </td>
+                            ))}
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             {/* Bundle Options */}
             {results.bundles.length > 0 && (
