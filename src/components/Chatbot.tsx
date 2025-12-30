@@ -44,8 +44,12 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
   }, [isOpen]);
 
   useEffect(() => {
+    // Auto-scroll to bottom when new messages arrive
     if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+      const scrollElement = scrollRef.current.querySelector('[data-radix-scroll-area-viewport]');
+      if (scrollElement) {
+        scrollElement.scrollTop = scrollElement.scrollHeight;
+      }
     }
   }, [messages]);
 
@@ -162,14 +166,21 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
           {/* Header */}
           <div className="bg-primary p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img 
-                src={mikeAvatar} 
-                alt="Mike - Customer Support" 
-                className="w-10 h-10 rounded-full object-cover"
-              />
+              <div className="relative">
+                <img 
+                  src={mikeAvatar} 
+                  alt="Mike - Customer Support" 
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                {/* Online status indicator */}
+                <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-primary rounded-full animate-pulse" />
+              </div>
               <div>
                 <h3 className="font-semibold text-primary-foreground">Mike</h3>
-                <p className="text-xs text-primary-foreground/80">Customer Support</p>
+                <p className="text-xs text-primary-foreground/80 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 bg-green-400 rounded-full" />
+                  Online
+                </p>
               </div>
             </div>
             <Button
