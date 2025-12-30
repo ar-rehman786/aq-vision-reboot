@@ -1,5 +1,4 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 
 // Allowed origins for CORS - add your production domains here
 const allowedOrigins = [
@@ -154,36 +153,6 @@ function validateMessages(messages: unknown): { valid: boolean; error?: string; 
   return { valid: true, sanitized: sanitizedMessages };
 }
 
-// Verify user authentication
-async function verifyUser(req: Request): Promise<{ userId: string | null; error?: string }> {
-  const authHeader = req.headers.get("authorization");
-  if (!authHeader) {
-    return { userId: null, error: "Missing authorization header" };
-  }
-
-  const token = authHeader.replace("Bearer ", "");
-  
-  const supabaseUrl = Deno.env.get("SUPABASE_URL");
-  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY");
-  
-  if (!supabaseUrl || !supabaseAnonKey) {
-    console.error("Supabase configuration missing");
-    return { userId: null, error: "Server configuration error" };
-  }
-
-  const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-    global: { headers: { Authorization: `Bearer ${token}` } }
-  });
-
-  const { data: { user }, error } = await supabase.auth.getUser();
-  
-  if (error || !user) {
-    return { userId: null, error: "Invalid or expired token" };
-  }
-
-  return { userId: user.id };
-}
-
 serve(async (req) => {
   const origin = req.headers.get("origin");
   const corsHeaders = getCorsHeaders(origin);
@@ -194,16 +163,6 @@ serve(async (req) => {
   }
 
   try {
-    // Verify user authentication
-    const { userId, error: authError } = await verifyUser(req);
-    if (!userId) {
-      console.log("Authentication failed:", authError);
-      return new Response(
-        JSON.stringify({ error: "Unauthorized" }),
-        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
-    }
-
     // Parse request body
     let body: unknown;
     try {
@@ -235,7 +194,7 @@ serve(async (req) => {
       );
     }
 
-    console.log("Processing chat request for user:", userId, "with", validation.sanitized.length, "messages");
+    console.log("Processing chat request with", validation.sanitized.length, "messages");
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
@@ -275,7 +234,7 @@ serve(async (req) => {
       );
     }
 
-    console.log("Streaming response to user:", userId);
+    console.log("Streaming response from AI gateway");
     
     return new Response(response.body, {
       headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
