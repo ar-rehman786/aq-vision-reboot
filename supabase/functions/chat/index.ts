@@ -1,5 +1,70 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
+// ============ Rate Limiting ============
+// Simple in-memory rate limiter (per edge function instance)
+const RATE_LIMIT_WINDOW_MS = 60 * 1000; // 1 minute
+const MAX_REQUESTS_PER_WINDOW = 20; // 20 requests per minute per IP
+
+interface RateLimitEntry {
+  count: number;
+  resetTime: number;
+}
+
+const rateLimitStore = new Map<string, RateLimitEntry>();
+
+// Clean up expired entries periodically
+function cleanupRateLimitStore() {
+  const now = Date.now();
+  for (const [key, entry] of rateLimitStore.entries()) {
+    if (now >= entry.resetTime) {
+      rateLimitStore.delete(key);
+    }
+  }
+}
+
+// Check if request is rate limited
+function isRateLimited(clientId: string): { limited: boolean; remaining: number; resetIn: number } {
+  const now = Date.now();
+  const entry = rateLimitStore.get(clientId);
+  
+  if (!entry || now >= entry.resetTime) {
+    // New window
+    rateLimitStore.set(clientId, {
+      count: 1,
+      resetTime: now + RATE_LIMIT_WINDOW_MS,
+    });
+    return { limited: false, remaining: MAX_REQUESTS_PER_WINDOW - 1, resetIn: RATE_LIMIT_WINDOW_MS };
+  }
+  
+  if (entry.count >= MAX_REQUESTS_PER_WINDOW) {
+    return { limited: true, remaining: 0, resetIn: entry.resetTime - now };
+  }
+  
+  entry.count++;
+  return { limited: false, remaining: MAX_REQUESTS_PER_WINDOW - entry.count, resetIn: entry.resetTime - now };
+}
+
+// Get client identifier (IP address or fallback)
+function getClientId(req: Request): string {
+  // Try various headers for client IP
+  const forwarded = req.headers.get("x-forwarded-for");
+  if (forwarded) {
+    return forwarded.split(",")[0].trim();
+  }
+  const realIp = req.headers.get("x-real-ip");
+  if (realIp) {
+    return realIp;
+  }
+  // Fallback to a hash of user-agent + origin as fingerprint
+  const ua = req.headers.get("user-agent") || "unknown";
+  const origin = req.headers.get("origin") || "unknown";
+  return `${ua.slice(0, 50)}-${origin}`;
+}
+
+// Periodic cleanup every 5 minutes
+setInterval(cleanupRateLimitStore, 5 * 60 * 1000);
+
+// ============ CORS Configuration ============
 // Allowed origins for CORS - add your production domains here
 const allowedOrigins = [
   "https://internetcore.us",
@@ -160,6 +225,28 @@ serve(async (req) => {
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
+  }
+
+  // Check rate limit
+  const clientId = getClientId(req);
+  const rateLimit = isRateLimited(clientId);
+  
+  if (rateLimit.limited) {
+    console.log("Rate limit exceeded for client:", clientId);
+    return new Response(
+      JSON.stringify({ 
+        error: "Too many requests. Please wait a moment before trying again.",
+        retryAfter: Math.ceil(rateLimit.resetIn / 1000)
+      }),
+      { 
+        status: 429, 
+        headers: { 
+          ...corsHeaders, 
+          "Content-Type": "application/json",
+          "Retry-After": String(Math.ceil(rateLimit.resetIn / 1000))
+        } 
+      }
+    );
   }
 
   try {
