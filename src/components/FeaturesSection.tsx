@@ -26,7 +26,7 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section id="about" className="section-padding bg-muted/30">
+    <section id="about" className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card rounded-2xl p-6 lg:p-8 card-hover border border-border"
+              className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 lg:p-8 card-hover border border-border"
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
                 <feature.icon className="w-7 h-7 text-primary" />

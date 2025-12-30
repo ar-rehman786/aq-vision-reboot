@@ -12,13 +12,6 @@ const benefits = [
 export const HeroSection = () => {
   return (
     <section className="relative pt-24 pb-16 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/50" />
-      
-      {/* Decorative elements */}
-      <div className="absolute top-40 right-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Content */}
@@ -84,7 +77,7 @@ export const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-4 shadow-xl border border-border"
+              className="absolute -bottom-6 -left-6 bg-card/80 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-border"
             >
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
