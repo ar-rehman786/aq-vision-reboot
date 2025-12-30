@@ -18,6 +18,13 @@ interface ChatbotProps {
 
 const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
 
+const quickReplies = [
+  { label: "💰 View Pricing", message: "What are your internet plan prices?" },
+  { label: "📍 Check Availability", message: "How do I check if service is available in my area?" },
+  { label: "📦 Bundle Options", message: "What bundle packages do you offer?" },
+  { label: "📞 Contact Info", message: "How can I contact customer support?" },
+];
+
 export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -42,10 +49,11 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
     }
   }, [messages]);
 
-  const sendMessage = async () => {
-    if (!input.trim() || isLoading) return;
+  const sendMessage = async (messageText?: string) => {
+    const text = messageText || input.trim();
+    if (!text || isLoading) return;
 
-    const userMessage: Message = { role: "user", content: input.trim() };
+    const userMessage: Message = { role: "user", content: text };
     const newMessages = [...messages, userMessage];
     setMessages(newMessages);
     setInput("");
@@ -221,6 +229,24 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
             </div>
           </ScrollArea>
 
+          {/* Quick Replies */}
+          {messages.length === 1 && !isLoading && (
+            <div className="px-4 pb-2">
+              <p className="text-xs text-muted-foreground mb-2">Quick questions:</p>
+              <div className="flex flex-wrap gap-2">
+                {quickReplies.map((reply) => (
+                  <button
+                    key={reply.label}
+                    onClick={() => sendMessage(reply.message)}
+                    className="text-xs px-3 py-1.5 rounded-full bg-muted hover:bg-primary/10 hover:text-primary text-foreground transition-colors border border-border"
+                  >
+                    {reply.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Input */}
           <div className="p-4 border-t border-border">
             <div className="flex gap-2">
@@ -234,7 +260,7 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
                 disabled={isLoading}
               />
               <Button
-                onClick={sendMessage}
+                onClick={() => sendMessage()}
                 disabled={!input.trim() || isLoading}
                 size="icon"
                 variant="hero"
