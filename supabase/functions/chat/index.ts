@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 
 // Allowed origins for CORS - add your production domains here
 const allowedOrigins = [
@@ -94,8 +95,17 @@ Internet Core helps customers discover and compare internet and TV packages from
 - Keep responses concise and helpful
 - If you don't know something specific, direct them to call or email for more details`;
 
-// Validate message structure
-function validateMessages(messages: unknown): { valid: boolean; error?: string } {
+// Maximum total payload size (50KB)
+const MAX_TOTAL_PAYLOAD_SIZE = 50000;
+
+// Sanitize message content - remove control characters except newlines/tabs
+function sanitizeContent(content: string): string {
+  // Remove control characters except \n, \r, \t
+  return content.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
+}
+
+// Validate message structure with enhanced checks
+function validateMessages(messages: unknown): { valid: boolean; error?: string; sanitized?: { role: string; content: string }[] } {
   if (!Array.isArray(messages)) {
     return { valid: false, error: "Messages must be an array" };
   }
@@ -107,6 +117,9 @@ function validateMessages(messages: unknown): { valid: boolean; error?: string }
   if (messages.length > 50) {
     return { valid: false, error: "Too many messages in conversation" };
   }
+
+  const sanitizedMessages: { role: string; content: string }[] = [];
+  let totalSize = 0;
   
   for (const msg of messages) {
     if (typeof msg !== "object" || msg === null) {
@@ -126,9 +139,49 @@ function validateMessages(messages: unknown): { valid: boolean; error?: string }
     if (content.length > 4000) {
       return { valid: false, error: "Message content too long" };
     }
+
+    // Track total payload size
+    totalSize += content.length;
+    if (totalSize > MAX_TOTAL_PAYLOAD_SIZE) {
+      return { valid: false, error: "Total message payload too large" };
+    }
+
+    // Sanitize content
+    const sanitizedContent = sanitizeContent(content);
+    sanitizedMessages.push({ role, content: sanitizedContent });
   }
   
-  return { valid: true };
+  return { valid: true, sanitized: sanitizedMessages };
+}
+
+// Verify user authentication
+async function verifyUser(req: Request): Promise<{ userId: string | null; error?: string }> {
+  const authHeader = req.headers.get("authorization");
+  if (!authHeader) {
+    return { userId: null, error: "Missing authorization header" };
+  }
+
+  const token = authHeader.replace("Bearer ", "");
+  
+  const supabaseUrl = Deno.env.get("SUPABASE_URL");
+  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY");
+  
+  if (!supabaseUrl || !supabaseAnonKey) {
+    console.error("Supabase configuration missing");
+    return { userId: null, error: "Server configuration error" };
+  }
+
+  const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+    global: { headers: { Authorization: `Bearer ${token}` } }
+  });
+
+  const { data: { user }, error } = await supabase.auth.getUser();
+  
+  if (error || !user) {
+    return { userId: null, error: "Invalid or expired token" };
+  }
+
+  return { userId: user.id };
 }
 
 serve(async (req) => {
@@ -141,6 +194,16 @@ serve(async (req) => {
   }
 
   try {
+    // Verify user authentication
+    const { userId, error: authError } = await verifyUser(req);
+    if (!userId) {
+      console.log("Authentication failed:", authError);
+      return new Response(
+        JSON.stringify({ error: "Unauthorized" }),
+        { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     // Parse request body
     let body: unknown;
     try {
@@ -154,9 +217,9 @@ serve(async (req) => {
 
     const { messages } = body as { messages?: unknown };
     
-    // Validate messages
+    // Validate and sanitize messages
     const validation = validateMessages(messages);
-    if (!validation.valid) {
+    if (!validation.valid || !validation.sanitized) {
       return new Response(
         JSON.stringify({ error: validation.error }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -172,7 +235,7 @@ serve(async (req) => {
       );
     }
 
-    console.log("Processing chat request with", (messages as unknown[]).length, "messages");
+    console.log("Processing chat request for user:", userId, "with", validation.sanitized.length, "messages");
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
@@ -184,7 +247,7 @@ serve(async (req) => {
         model: "google/gemini-2.5-flash",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
-          ...(messages as { role: string; content: string }[]),
+          ...validation.sanitized,
         ],
         stream: true,
       }),
@@ -212,7 +275,7 @@ serve(async (req) => {
       );
     }
 
-    console.log("Streaming response from AI gateway");
+    console.log("Streaming response to user:", userId);
     
     return new Response(response.body, {
       headers: { ...corsHeaders, "Content-Type": "text/event-stream" },
