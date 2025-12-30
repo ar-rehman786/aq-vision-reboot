@@ -8,7 +8,7 @@ import { UseCaseSection } from "@/components/UseCaseSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
 import { HomeFAQSection } from "@/components/HomeFAQSection";
-
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 const Home = () => {
   return (
     <>
@@ -29,6 +29,7 @@ const Home = () => {
           <FeaturesSection />
           <UseCaseSection />
           <HowItWorksSection />
+          <TestimonialsSection />
           <HomeFAQSection />
           <FinalCTASection />
         </main>
