@@ -205,7 +205,7 @@ const TermsOfServices = () => {
                   <h2 className="text-2xl font-bold text-foreground">14. Governing Law</h2>
                   <p className="text-muted-foreground leading-relaxed">
                     These Terms & Conditions shall be governed by and construed in accordance with the 
-                    laws of the State of New York, United States, without regard to its conflict of 
+                    laws of the State of Texas, United States, without regard to its conflict of 
                     law provisions.
                   </p>
                 </div>
@@ -216,7 +216,7 @@ const TermsOfServices = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     Any disputes arising from these Terms or your use of the Website shall be resolved 
                     through binding arbitration in accordance with the rules of the American Arbitration 
-                    Association, conducted in Bronx, New York.
+                    Association, conducted in Houston, Texas.
                   </p>
                 </div>
 
