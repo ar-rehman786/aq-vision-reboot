@@ -33,6 +33,8 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <ScrollToTop />
+            {/* Background layer */}
+            <div className="network-bg-base" />
             <NetworkBackground />
             <FloatingContactButton />
             <Routes>

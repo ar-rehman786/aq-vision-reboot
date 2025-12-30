@@ -29,7 +29,7 @@ const faqs = [
 
 export const HomeFAQSection = () => {
   return (
-    <section className="py-20 bg-card/50">
+    <section className="py-20">
       <div className="container-custom">
         <div className="text-center mb-12">
           <motion.h2
@@ -55,7 +55,7 @@ export const HomeFAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card rounded-xl border border-border px-6"
+                className="bg-card/80 backdrop-blur-sm rounded-xl border border-border px-6"
               >
                 <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary py-5">
                   {faq.question}
