@@ -2,8 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { X, Send, Bot, User, Loader2 } from "lucide-react";
+import { X, Send, User, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import mikeAvatar from "@/assets/mike-avatar.jpg";
 
 type Message = {
   role: "user" | "assistant";
@@ -21,7 +22,7 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi! I'm the Internet Core assistant. How can I help you today? I can answer questions about our internet and TV plans, pricing, and services.",
+      content: "Hi! I'm Mike, your Internet Core assistant. How can I help you today? I can answer questions about our internet and TV plans, pricing, and services.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -153,12 +154,14 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
           {/* Header */}
           <div className="bg-primary p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <Bot className="w-5 h-5 text-primary-foreground" />
-              </div>
+              <img 
+                src={mikeAvatar} 
+                alt="Mike - Customer Support" 
+                className="w-10 h-10 rounded-full object-cover"
+              />
               <div>
-                <h3 className="font-semibold text-primary-foreground">Internet Core</h3>
-                <p className="text-xs text-primary-foreground/80">AI Assistant</p>
+                <h3 className="font-semibold text-primary-foreground">Mike</h3>
+                <p className="text-xs text-primary-foreground/80">Customer Support</p>
               </div>
             </div>
             <Button
@@ -182,16 +185,16 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
                   className={`flex gap-3 ${message.role === "user" ? "flex-row-reverse" : ""}`}
                 >
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                    className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden ${
                       message.role === "user"
                         ? "bg-primary text-primary-foreground"
-                        : "bg-muted text-muted-foreground"
+                        : ""
                     }`}
                   >
                     {message.role === "user" ? (
                       <User className="w-4 h-4" />
                     ) : (
-                      <Bot className="w-4 h-4" />
+                      <img src={mikeAvatar} alt="Mike" className="w-8 h-8 object-cover" />
                     )}
                   </div>
                   <div
@@ -207,8 +210,8 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
               ))}
               {isLoading && messages[messages.length - 1]?.content === "" && (
                 <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
-                    <Bot className="w-4 h-4 text-muted-foreground" />
+                  <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+                    <img src={mikeAvatar} alt="Mike" className="w-8 h-8 object-cover" />
                   </div>
                   <div className="bg-muted rounded-2xl px-4 py-2">
                     <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />
