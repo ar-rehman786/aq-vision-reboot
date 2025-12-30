@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "@/components/ScrollToTop";
 import { FloatingContactButton } from "@/components/FloatingContactButton";
+import BackgroundAnimation from "@/components/BackgroundAnimation";
 import Home from "./pages/Home";
 import ServicesPage from "./pages/ServicesPage";
 import AboutUs from "./pages/AboutUs";
@@ -31,6 +32,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <BackgroundAnimation />
             <ScrollToTop />
             <FloatingContactButton />
             <Routes>
