@@ -29,7 +29,7 @@ const BackgroundAnimation = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Particle animation
+  // Particle animation with canvas
   useEffect(() => {
     if (reducedMotion) return;
     
@@ -56,17 +56,19 @@ const BackgroundAnimation = () => {
     };
 
     const initParticles = () => {
-      const particleCount = Math.min(50, Math.floor((canvas.width * canvas.height) / 25000));
+      // More particles for visibility
+      const particleCount = Math.min(80, Math.floor((canvas.width * canvas.height) / 15000));
       particles = [];
       
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: Math.random() * 2 + 0.5,
-          speedY: (Math.random() - 0.5) * 0.3,
-          speedX: (Math.random() - 0.5) * 0.15,
-          opacity: Math.random() * 0.3 + 0.1,
+          size: Math.random() * 2.5 + 1,
+          // Diagonal movement
+          speedY: Math.random() * 0.4 + 0.1,
+          speedX: Math.random() * 0.3 - 0.15,
+          opacity: Math.random() * 0.4 + 0.15,
         });
       }
     };
@@ -75,22 +77,25 @@ const BackgroundAnimation = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       particles.forEach((particle) => {
-        particle.y += particle.speedY;
+        // Slow diagonal drift
+        particle.y -= particle.speedY;
         particle.x += particle.speedX;
         
         // Wrap around edges
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < -10) {
+          particle.y = canvas.height + 10;
+          particle.x = Math.random() * canvas.width;
+        }
+        if (particle.x < -10) particle.x = canvas.width + 10;
+        if (particle.x > canvas.width + 10) particle.x = -10;
         
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         
-        // Theme-aware particle color
+        // Theme-aware particle color - more visible
         const color = isDark 
           ? `rgba(56, 189, 248, ${particle.opacity})` // cyan for dark
-          : `rgba(99, 102, 241, ${particle.opacity * 0.6})`; // indigo for light
+          : `rgba(99, 102, 241, ${particle.opacity * 0.8})`; // indigo for light
         
         ctx.fillStyle = color;
         ctx.fill();
@@ -117,77 +122,100 @@ const BackgroundAnimation = () => {
   }
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
-      {/* Base background */}
-      <div className="absolute inset-0 bg-background" />
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+      {/* Base background - deep navy for dark, off-white for light */}
+      <div 
+        className="absolute inset-0 transition-colors duration-500"
+        style={{
+          backgroundColor: isDark ? 'hsl(222 47% 5%)' : 'hsl(210 40% 98%)',
+        }}
+      />
       
-      {/* Mesh gradient layer */}
+      {/* Mesh gradient layer - more visible blobs */}
       <div className="absolute inset-0">
-        {/* Blob 1 - Primary */}
+        {/* Blob 1 - Primary large cyan/blue */}
         <motion.div
-          className="absolute w-[600px] h-[600px] rounded-full blur-[120px] opacity-30 dark:opacity-20"
+          className="absolute rounded-full"
           style={{
+            width: '50vw',
+            height: '50vw',
+            maxWidth: '800px',
+            maxHeight: '800px',
+            filter: 'blur(100px)',
             background: isDark 
-              ? 'radial-gradient(circle, hsl(199 89% 48% / 0.4) 0%, transparent 70%)'
-              : 'radial-gradient(circle, hsl(217 91% 60% / 0.3) 0%, transparent 70%)',
+              ? 'radial-gradient(circle, hsl(199 89% 48% / 0.35) 0%, hsl(199 89% 48% / 0.1) 50%, transparent 70%)'
+              : 'radial-gradient(circle, hsl(217 91% 60% / 0.25) 0%, hsl(217 91% 60% / 0.08) 50%, transparent 70%)',
+            top: '-5%',
+            left: '10%',
           }}
           animate={{
-            x: ['-10%', '5%', '-10%'],
-            y: ['-5%', '10%', '-5%'],
+            x: ['0%', '15%', '0%'],
+            y: ['0%', '20%', '0%'],
           }}
           transition={{
-            duration: 30,
+            duration: 25,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          initial={{ top: '10%', left: '20%' }}
         />
         
-        {/* Blob 2 - Secondary */}
+        {/* Blob 2 - Secondary blue/purple */}
         <motion.div
-          className="absolute w-[500px] h-[500px] rounded-full blur-[100px] opacity-25 dark:opacity-15"
+          className="absolute rounded-full"
           style={{
+            width: '45vw',
+            height: '45vw',
+            maxWidth: '700px',
+            maxHeight: '700px',
+            filter: 'blur(90px)',
             background: isDark 
-              ? 'radial-gradient(circle, hsl(217 91% 60% / 0.35) 0%, transparent 70%)'
-              : 'radial-gradient(circle, hsl(280 70% 60% / 0.2) 0%, transparent 70%)',
+              ? 'radial-gradient(circle, hsl(217 91% 55% / 0.3) 0%, hsl(217 91% 55% / 0.08) 50%, transparent 70%)'
+              : 'radial-gradient(circle, hsl(280 70% 60% / 0.18) 0%, hsl(280 70% 60% / 0.05) 50%, transparent 70%)',
+            bottom: '5%',
+            right: '5%',
           }}
           animate={{
-            x: ['5%', '-8%', '5%'],
-            y: ['8%', '-5%', '8%'],
+            x: ['0%', '-20%', '0%'],
+            y: ['0%', '-15%', '0%'],
           }}
           transition={{
-            duration: 35,
+            duration: 28,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          initial={{ bottom: '15%', right: '10%' }}
         />
         
-        {/* Blob 3 - Accent */}
+        {/* Blob 3 - Accent (subtle warm for dark, cyan for light) */}
         <motion.div
-          className="absolute w-[400px] h-[400px] rounded-full blur-[80px] opacity-20 dark:opacity-10"
+          className="absolute rounded-full"
           style={{
+            width: '35vw',
+            height: '35vw',
+            maxWidth: '550px',
+            maxHeight: '550px',
+            filter: 'blur(80px)',
             background: isDark 
-              ? 'radial-gradient(circle, hsl(45 93% 58% / 0.2) 0%, transparent 70%)'
-              : 'radial-gradient(circle, hsl(199 89% 48% / 0.2) 0%, transparent 70%)',
+              ? 'radial-gradient(circle, hsl(199 70% 45% / 0.25) 0%, hsl(199 70% 45% / 0.05) 50%, transparent 70%)'
+              : 'radial-gradient(circle, hsl(199 89% 55% / 0.15) 0%, hsl(199 89% 55% / 0.03) 50%, transparent 70%)',
+            top: '40%',
+            left: '55%',
           }}
           animate={{
-            x: ['-5%', '10%', '-5%'],
-            y: ['5%', '-8%', '5%'],
+            x: ['-10%', '10%', '-10%'],
+            y: ['10%', '-10%', '10%'],
           }}
           transition={{
-            duration: 40,
+            duration: 22,
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          initial={{ top: '50%', left: '60%' }}
         />
       </div>
       
       {/* Particle layer */}
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0"
       />
     </div>
   );
