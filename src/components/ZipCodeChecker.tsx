@@ -258,8 +258,8 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
                         <div className="text-2xl font-bold text-foreground">${provider.price}</div>
                         <div className="text-sm text-muted-foreground">/month</div>
                       </div>
-                      <Button variant={index === 0 ? "hero" : "outline"} size="sm">
-                        Select Plan
+                      <Button variant={index === 0 ? "hero" : "outline"} size="sm" asChild>
+                        <a href="tel:+19299902934">Call now to get</a>
                       </Button>
                     </div>
                   </div>
