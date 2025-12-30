@@ -44,7 +44,7 @@ export const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              AQ Systems helps you discover and compare internet and TV packages. 
+              Internet Core helps you discover and compare internet and TV packages. 
               Get connected with great deals available at your location.
             </p>
 

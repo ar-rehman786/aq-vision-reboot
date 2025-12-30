@@ -36,7 +36,7 @@ export const FeaturesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-foreground mb-4">
-            Why Choose <span className="gradient-text">AQ Systems</span>?
+            Why Choose <span className="gradient-text">Internet Core</span>?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We make finding and ordering internet and TV services simple and hassle-free

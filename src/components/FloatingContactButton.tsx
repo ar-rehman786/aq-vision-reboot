@@ -15,7 +15,7 @@ export const FloatingContactButton = () => {
     {
       icon: Mail,
       label: "Email Us",
-      href: "mailto:support@aqsystem.net",
+      href: "mailto:support@internetcore.us",
       color: "bg-blue-500 hover:bg-blue-600",
     },
   ];
