@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Zap, Shield, Phone, Wifi, Home } from "lucide-react";
@@ -85,9 +86,18 @@ export const UseCaseSection = () => {
                   </div>
                 ))}
               </div>
-              <Button variant="hero" size="lg">
-                {useCase.cta}
-              </Button>
+              {useCase.cta === "Call for Business Plans" ? (
+                <Button variant="hero" size="lg" asChild>
+                  <a href="tel:+19299902934">
+                    <Phone className="w-4 h-4 mr-2" />
+                    {useCase.cta}
+                  </a>
+                </Button>
+              ) : (
+                <Button variant="hero" size="lg" asChild>
+                  <Link to="/services">{useCase.cta}</Link>
+                </Button>
+              )}
             </div>
 
             {/* Image */}
