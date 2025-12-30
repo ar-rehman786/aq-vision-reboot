@@ -17,7 +17,7 @@ export const FloatingContactButton = () => {
     },
     {
       icon: Bot,
-      label: "Chat with AI",
+      label: "Chat with Assistant",
       href: undefined,
       color: "bg-primary hover:bg-primary/90",
       onClick: () => {
