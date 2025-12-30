@@ -1,9 +1,27 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
+// Allowed origins for CORS - add your production domains here
+const allowedOrigins = [
+  "https://internetcore.us",
+  "https://www.internetcore.us",
+];
+
+// Check if origin is allowed (includes Lovable preview URLs)
+function isAllowedOrigin(origin: string | null): boolean {
+  if (!origin) return false;
+  if (allowedOrigins.includes(origin)) return true;
+  // Allow Lovable preview URLs
+  if (origin.endsWith(".lovable.app") || origin.endsWith(".lovableproject.com")) return true;
+  return false;
+}
+
+function getCorsHeaders(origin: string | null): Record<string, string> {
+  const allowedOrigin = isAllowedOrigin(origin) ? origin! : allowedOrigins[0];
+  return {
+    "Access-Control-Allow-Origin": allowedOrigin,
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  };
+}
 
 // Website knowledge base for Internet Core
 const SYSTEM_PROMPT = `You are a helpful customer support assistant for Internet Core, an internet and TV service provider comparison website. You help customers find the best internet and TV packages in their area.
@@ -114,6 +132,9 @@ function validateMessages(messages: unknown): { valid: boolean; error?: string }
 }
 
 serve(async (req) => {
+  const origin = req.headers.get("origin");
+  const corsHeaders = getCorsHeaders(origin);
+
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
