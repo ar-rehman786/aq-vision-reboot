@@ -10,11 +10,11 @@ import {
 
 const faqs = [
   {
-    question: "What is AQ Systems?",
-    answer: "AQ Systems is an independent service partner that helps customers discover and compare internet and TV services from multiple providers across the United States.",
+    question: "What is Internet Core?",
+    answer: "Internet Core is an independent service partner that helps customers discover and compare internet and TV services from multiple providers across the United States.",
   },
   {
-    question: "How does AQ Systems work?",
+    question: "How does Internet Core work?",
     answer: "Simply enter your ZIP code or contact us directly. We'll check which services are available at your address and help coordinate your order with the selected provider.",
   },
   {

@@ -8,7 +8,7 @@ const testimonials = [
     name: "Sarah Johnson",
     location: "Dallas, TX",
     rating: 5,
-    review: "AQ Systems helped me find the perfect internet package for my family. The process was so easy and we're saving $30 a month compared to our old provider!",
+    review: "Internet Core helped me find the perfect internet package for my family. The process was so easy and we're saving $30 a month compared to our old provider!",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const testimonials = [
     name: "David Thompson",
     location: "Seattle, WA",
     rating: 5,
-    review: "Switched to a better plan through AQ Systems and couldn't be happier. Faster speeds, better price, and no hidden fees!",
+    review: "Switched to a better plan through Internet Core and couldn't be happier. Faster speeds, better price, and no hidden fees!",
   },
   {
     id: 5,
@@ -118,7 +118,7 @@ export const TestimonialsSection = () => {
             What Our Customers Say
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of satisfied customers who found their perfect internet and TV packages through AQ Systems.
+            Join thousands of satisfied customers who found their perfect internet and TV packages through Internet Core.
           </p>
         </motion.div>
 
