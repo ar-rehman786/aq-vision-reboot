@@ -84,7 +84,14 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
     e.preventDefault();
     
     if (!zipCode || zipCode.length !== 5 || !/^\d{5}$/.test(zipCode)) {
-      setError("Please enter a valid 5-digit zip code");
+      setError("Please enter a valid 5-digit US zip code");
+      return;
+    }
+
+    // Validate US zip code range (00501 to 99950)
+    const zipNum = parseInt(zipCode, 10);
+    if (zipNum < 501 || zipNum > 99950) {
+      setError("Please enter a valid US zip code");
       return;
     }
     
