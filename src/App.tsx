@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "@/components/ScrollToTop";
+import { FloatingContactButton } from "@/components/FloatingContactButton";
 import Home from "./pages/Home";
 import ServicesPage from "./pages/ServicesPage";
 import AboutUs from "./pages/AboutUs";
@@ -31,6 +32,7 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <ScrollToTop />
+            <FloatingContactButton />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/services" element={<ServicesPage />} />
