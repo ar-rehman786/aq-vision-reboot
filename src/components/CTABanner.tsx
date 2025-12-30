@@ -3,12 +3,12 @@ import { Phone } from "lucide-react";
 
 export const CTABanner = () => {
   return (
-    <section className="bg-primary py-4">
+    <section className="bg-primary py-3 sm:py-4">
       <div className="container-custom">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center sm:text-left">
-          <div className="flex items-center gap-3">
-            <Phone className="w-5 h-5 text-primary-foreground" />
-            <span className="text-primary-foreground font-medium">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-8 text-center sm:text-left">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
+            <span className="text-primary-foreground font-medium text-sm sm:text-base">
               Ready to get connected? Call us now!
             </span>
           </div>
@@ -19,7 +19,7 @@ export const CTABanner = () => {
           >
             <a href="tel:+19299902934">(929) 990-2934</a>
           </Button>
-          <span className="text-primary-foreground/80 text-sm">
+          <span className="text-primary-foreground/80 text-xs sm:text-sm hidden sm:inline">
             Available 7 days a week • Quick setup
           </span>
         </div>

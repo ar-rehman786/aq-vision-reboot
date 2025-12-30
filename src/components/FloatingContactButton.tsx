@@ -31,7 +31,7 @@ export const FloatingContactButton = () => {
     <>
       <Chatbot isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
       
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+      <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end gap-3">
         <AnimatePresence>
           {isOpen && !isChatOpen && (
             <motion.div
@@ -64,7 +64,7 @@ export const FloatingContactButton = () => {
             onClick={() => setIsOpen(!isOpen)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center transition-all duration-200 hover:shadow-xl"
+            className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center transition-all duration-200 hover:shadow-xl"
             aria-label={isOpen ? "Close contact options" : "Open contact options"}
           >
             <AnimatePresence mode="wait">
