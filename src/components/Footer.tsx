@@ -81,8 +81,8 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary" />
-                <a href="mailto:support@internetone.us" className="hover:text-primary transition-colors">
-                  support@internetone.us
+                <a href="mailto:zahid@internetone.us" className="hover:text-primary transition-colors">
+                  zahid@internetone.us
                 </a>
               </li>
               <li className="flex items-start gap-3 text-muted-foreground text-sm sm:text-base">

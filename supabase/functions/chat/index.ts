@@ -95,7 +95,7 @@ const SYSTEM_PROMPT = `You are a helpful customer support assistant for Internet
 - **Company Name**: Internet One
 - **Website**: internetone.us
 - **Phone**: (929) 536-5524 (Available 7 days a week)
-- **Email**: support@internetone.us
+- **Email**: zahid@internetone.us
 - **Address**: 3052 Bainbridge Ave, Apt 5e, Bronx, NY 10467
 
 ## What We Do
