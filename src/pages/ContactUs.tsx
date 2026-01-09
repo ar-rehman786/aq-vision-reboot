@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "(929) 990-2934",
-    href: "tel:+19299902934",
+    value: "(929) 536-5524",
+    href: "tel:+19295365524",
     extra: "Monday to Friday: 8:00 AM – 8:00 PM EST\nSaturday: 9:00 AM – 5:00 PM EST",
   },
   {
@@ -93,7 +93,7 @@ const ContactUs = () => {
         <title>Get in Touch | Check Internet & TV Availability - Internet One</title>
         <meta 
           name="description" 
-          content="Contact Internet One to check internet and TV availability in your area. Call (929) 990-2934 or fill out our form for a free consultation. Response within 24 hours." 
+          content="Contact Internet One to check internet and TV availability in your area. Call (929) 536-5524 or fill out our form for a free consultation. Response within 24 hours." 
         />
         <meta name="keywords" content="contact us, get in touch, internet availability, TV service inquiry, free quote" />
         <link rel="canonical" href="/contact-us" />

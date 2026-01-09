@@ -328,7 +328,7 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
                         <div className="text-sm text-muted-foreground">/month</div>
                       </div>
                       <Button variant={index === 0 ? "hero" : "outline"} size="sm" asChild>
-                        <a href="tel:+19299902934">Call now to get</a>
+                        <a href="tel:+19295365524">Call now to get</a>
                       </Button>
                     </div>
                   </div>
@@ -420,7 +420,7 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
                             {getSelectedProviders().map((provider) => (
                               <td key={provider.id} className="text-center py-4 px-4">
                                 <Button variant="hero" size="sm" asChild className="w-full">
-                                  <a href="tel:+19299902934">Call now to get</a>
+                                  <a href="tel:+19295365524">Call now to get</a>
                                 </Button>
                               </td>
                             ))}
@@ -471,7 +471,7 @@ export const ZipCodeChecker = ({ variant = "hero" }: ZipCodeCheckerProps) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button variant="hero" size="lg" asChild>
-                  <a href="tel:+19299902934">Call (929) 990-2934</a>
+                  <a href="tel:+19295365524">Call (929) 536-5524</a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <a href="/contact-us">Schedule Installation</a>
