@@ -60,7 +60,7 @@ const services = [
 const importantInfo = [
   "Prices depend on location, service provider, and current promotions",
   "Installation and equipment costs may differ by provider",
-  "A processing and setup fee is charged by Internetcore.us for coordinating your new order",
+  "A processing and setup fee is charged by Internetone.us for coordinating your new order",
   "Availability depends on your location and the coverage of participating providers",
   "Service speeds and channels may vary depending on the provider and your location",
 ];
@@ -69,7 +69,7 @@ const ServicesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Explore Our Services | Home Internet, TV & Bundle Plans - Internet Core</title>
+        <title>Explore Our Services | Home Internet, TV & Bundle Plans - Internet One</title>
         <meta 
           name="description" 
           content="Discover the best home internet and TV plans available through participating providers. Find flexible speeds, cable packages, and money-saving bundles starting at $29.99/mo." 

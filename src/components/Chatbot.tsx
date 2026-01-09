@@ -29,7 +29,7 @@ export const Chatbot = ({ isOpen, onClose }: ChatbotProps) => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hi! I'm Mike, your Internet Core assistant. How can I help you today? I can answer questions about our internet and TV plans, pricing, and services.",
+      content: "Hi! I'm Mike, your Internet One assistant. How can I help you today? I can answer questions about our internet and TV plans, pricing, and services.",
     },
   ]);
   const [input, setInput] = useState("");
