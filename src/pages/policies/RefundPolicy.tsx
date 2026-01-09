@@ -38,7 +38,7 @@ const RefundPolicy = () => {
                   <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 mt-6">
                     <p className="font-semibold text-foreground mb-3">Contact Us:</p>
                     <ul className="space-y-2 text-muted-foreground">
-                      <li>Email: <a href="mailto:support@internetone.us" className="text-primary hover:underline">support@internetone.us</a></li>
+                      <li>Email: <a href="mailto:zahid@internetone.us" className="text-primary hover:underline">zahid@internetone.us</a></li>
                       <li>Phone: <a href="tel:+19295365524" className="text-primary hover:underline">(929) 536-5524</a></li>
                       <li>Mail: 3052 Bainbridge Ave, Apt 5e, Bronx, NY 10467</li>
                     </ul>
