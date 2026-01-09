@@ -88,7 +88,7 @@ export const UseCaseSection = () => {
               </div>
               {useCase.cta === "Call for Business Plans" ? (
                 <Button variant="hero" size="lg" asChild>
-                  <a href="tel:+19299902934">
+                  <a href="tel:+19295365524">
                     <Phone className="w-4 h-4 mr-2" />
                     {useCase.cta}
                   </a>

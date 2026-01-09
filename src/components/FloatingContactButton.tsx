@@ -11,7 +11,7 @@ export const FloatingContactButton = () => {
     {
       icon: Phone,
       label: "Call Us",
-      href: "tel:929-990-2934",
+      href: "tel:+19295365524",
       color: "bg-green-500 hover:bg-green-600",
       onClick: undefined,
     },

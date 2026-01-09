@@ -45,7 +45,7 @@ const TermsOfServices = () => {
                     <p className="text-muted-foreground">3052 Bainbridge Ave, Apt 5e</p>
                     <p className="text-muted-foreground">Bronx, NY 10467</p>
                     <p className="text-muted-foreground mt-3">Email: <a href="mailto:support@internetone.us" className="text-primary hover:underline">support@internetone.us</a></p>
-                    <p className="text-muted-foreground">Phone: <a href="tel:929-990-2934" className="text-primary hover:underline">(929) 990-2934</a></p>
+                    <p className="text-muted-foreground">Phone: <a href="tel:+19295365524" className="text-primary hover:underline">(929) 536-5524</a></p>
                   </div>
                 </div>
                 <div className="bg-accent/10 border border-accent/20 rounded-xl p-6 mt-8">
