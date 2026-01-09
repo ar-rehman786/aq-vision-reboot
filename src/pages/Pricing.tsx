@@ -73,9 +73,9 @@ const importantInfo = [
 ];
 
 const setupFees = [
-  "Internetcore.us applies a service and setup fee for processing and coordinating orders on Internet Core",
+  "Internetone.us applies a service and setup fee for processing and coordinating orders on Internet One",
   "Setup fees will be disclosed before completing the order",
-  "The service and setup fees from Internetcore.us are non-refundable",
+  "The service and setup fees from Internetone.us are non-refundable",
 ];
 
 const notIncluded = [
@@ -91,7 +91,7 @@ const Pricing = () => {
   return (
     <>
       <Helmet>
-        <title>Our Pricing Plans | Internet & TV Service Rates - Internet Core</title>
+        <title>Our Pricing Plans | Internet & TV Service Rates - Internet One</title>
         <meta 
           name="description" 
           content="Explore our pricing plans for internet, TV, and bundle packages. Plans starting at $39.99/month. Get customized pricing based on your location and needs." 

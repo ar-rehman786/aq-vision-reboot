@@ -67,8 +67,8 @@ setInterval(cleanupRateLimitStore, 5 * 60 * 1000);
 // ============ CORS Configuration ============
 // Allowed origins for CORS - add your production domains here
 const allowedOrigins = [
-  "https://internetcore.us",
-  "https://www.internetcore.us",
+  "https://internetone.us",
+  "https://www.internetone.us",
 ];
 
 // Check if origin is allowed (includes Lovable preview URLs)
@@ -88,18 +88,18 @@ function getCorsHeaders(origin: string | null): Record<string, string> {
   };
 }
 
-// Website knowledge base for Internet Core
-const SYSTEM_PROMPT = `You are a helpful customer support assistant for Internet Core, an internet and TV service provider comparison website. You help customers find the best internet and TV packages in their area.
+// Website knowledge base for Internet One
+const SYSTEM_PROMPT = `You are a helpful customer support assistant for Internet One, an internet and TV service provider comparison website. You help customers find the best internet and TV packages in their area.
 
 ## Company Information
-- **Company Name**: Internet Core
-- **Website**: internetcore.us
+- **Company Name**: Internet One
+- **Website**: internetone.us
 - **Phone**: (929) 990-2934 (Available 7 days a week)
-- **Email**: support@internetcore.us
+- **Email**: support@internetone.us
 - **Address**: 2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA
 
 ## What We Do
-Internet Core helps customers discover and compare internet and TV packages from leading providers. We help users get connected with great deals available at their location.
+Internet One helps customers discover and compare internet and TV packages from leading providers. We help users get connected with great deals available at their location.
 
 ## Our Services
 - Home Internet services
@@ -135,7 +135,7 @@ Internet Core helps customers discover and compare internet and TV packages from
 3. Choose a plan that fits your needs
 4. Schedule installation
 
-## Why Choose Internet Core?
+## Why Choose Internet One?
 - Easy Comparison: Compare plans from multiple providers in one place
 - Quick Setup: Fast activation and professional installation
 - Trusted Service: Partnered with leading internet and TV providers

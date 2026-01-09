@@ -13,11 +13,11 @@ import {
 
 const faqs = [
   {
-    question: "What is Internet Core?",
-    answer: "Internet Core is managed by Internetcore.us, an independent marketing partner. We are not the official site of any specific internet or cable provider.",
+    question: "What is Internet One?",
+    answer: "Internet One is managed by Internetone.us, an independent marketing partner. We are not the official site of any specific internet or cable provider.",
   },
   {
-    question: "How does Internet Core work?",
+    question: "How does Internet One work?",
     answer: "We assist users in discovering home internet and TV service options from various participating providers across the U.S. Simply enter your ZIP code or contact us, and we will help you find available services in your area.",
   },
   {
@@ -25,8 +25,8 @@ const faqs = [
     answer: "Prices depend on your location, provider, and current promotions. Final prices will be confirmed during the availability check with the provider.",
   },
   {
-    question: "Do I pay Internet Core or the service provider?",
-    answer: "Payments are made directly to the service provider. Internet Core does not handle payments for services. However, Internetcore.us may charge a separate service and setup fee for coordinating your order.",
+    question: "Do I pay Internet One or the service provider?",
+    answer: "Payments are made directly to the service provider. Internet One does not handle payments for services. However, Internetone.us may charge a separate service and setup fee for coordinating your order.",
   },
   {
     question: "What services are available in my area?",
@@ -66,7 +66,7 @@ const faqs = [
   },
   {
     question: "What is your refund policy?",
-    answer: "Refund policies are set by the provider. Please contact them for details on their specific terms. For fees charged by Internet Core, visit our Refund Policy page for complete details.",
+    answer: "Refund policies are set by the provider. Please contact them for details on their specific terms. For fees charged by Internet One, visit our Refund Policy page for complete details.",
   },
 ];
 
@@ -74,10 +74,10 @@ const FAQ = () => {
   return (
     <>
       <Helmet>
-        <title>Common Questions | Internet & TV Service Help - Internet Core</title>
+        <title>Common Questions | Internet & TV Service Help - Internet One</title>
         <meta 
           name="description" 
-          content="Find answers to common questions about internet and TV services. Learn about pricing, installation, contracts, equipment, and how Internet Core helps you find the best plans." 
+          content="Find answers to common questions about internet and TV services. Learn about pricing, installation, contracts, equipment, and how Internet One helps you find the best plans." 
         />
         <meta name="keywords" content="FAQ, common questions, internet service help, TV service questions, installation info" />
         <link rel="canonical" href="/faq" />
@@ -101,7 +101,7 @@ const FAQ = () => {
                 transition={{ delay: 0.1 }}
                 className="text-xl text-muted-foreground max-w-3xl mx-auto"
               >
-                Find answers to frequently asked questions about Internet Core and our internet and TV services.
+                Find answers to frequently asked questions about Internet One and our internet and TV services.
               </motion.p>
             </div>
           </section>

@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Our Address",
-    value: "Internetcore.us\n2601 Woodland Park Drive\nApt 8209, Houston, TX 77077, USA",
+    value: "Internetone.us\n2601 Woodland Park Drive\nApt 8209, Houston, TX 77077, USA",
     href: null,
   },
   {
@@ -29,8 +29,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "support@internetcore.us",
-    href: "mailto:support@internetcore.us",
+    value: "support@internetone.us",
+    href: "mailto:support@internetone.us",
     extra: "We typically respond within 24 hours",
   },
   {
@@ -90,10 +90,10 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Get in Touch | Check Internet & TV Availability - Internet Core</title>
+        <title>Get in Touch | Check Internet & TV Availability - Internet One</title>
         <meta 
           name="description" 
-          content="Contact Internet Core to check internet and TV availability in your area. Call (929) 990-2934 or fill out our form for a free consultation. Response within 24 hours." 
+          content="Contact Internet One to check internet and TV availability in your area. Call (929) 990-2934 or fill out our form for a free consultation. Response within 24 hours." 
         />
         <meta name="keywords" content="contact us, get in touch, internet availability, TV service inquiry, free quote" />
         <link rel="canonical" href="/contact-us" />
@@ -258,7 +258,7 @@ const ContactUs = () => {
                       </div>
 
                       <p className="text-sm text-muted-foreground">
-                        By submitting this form, you agree to be contacted by Internetcore.us 
+                        By submitting this form, you agree to be contacted by Internetone.us 
                         regarding available internet and TV services in your area. Your information will 
                         be processed in accordance with our{" "}
                         <Link to="/policies/privacy-policy" className="text-primary hover:underline">

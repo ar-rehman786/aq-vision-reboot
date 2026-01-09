@@ -28,27 +28,27 @@ const whyWorkWithUs = [
 ];
 
 const companyInfo = [
-  { label: "Website", value: "Internet Core", icon: Globe },
-  { label: "Company", value: "Internetcore.us", icon: Building2 },
+  { label: "Website", value: "Internet One", icon: Globe },
+  { label: "Company", value: "Internetone.us", icon: Building2 },
   { label: "Business Address", value: "2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA", icon: MapPin },
 ];
 
 const disclosures = [
-  "Internet Core operates independently as a marketing partner. We are not connected to, endorsed by, or the official website of any particular internet or cable provider.",
+  "Internet One operates independently as a marketing partner. We are not connected to, endorsed by, or the official website of any particular internet or cable provider.",
   "Product names, logos, and trademarks listed on our site are owned by their respective entities. Their inclusion does not imply any endorsement.",
-  "Internetcore.us imposes a separate service and setup fee for handling and coordinating new orders via Internet Core, in addition to the charges from the service provider.",
+  "Internetone.us imposes a separate service and setup fee for handling and coordinating new orders via Internet One, in addition to the charges from the service provider.",
 ];
 
 const AboutUs = () => {
   return (
     <>
       <Helmet>
-        <title>Learn More About Internet Core | Your Trusted Internet & TV Partner</title>
+        <title>Learn More About Internet One | Your Trusted Internet & TV Partner</title>
         <meta 
           name="description" 
-          content="Internet Core operates as a marketing partner under Internetcore.us. We assist customers in discovering home internet and TV service options from participating providers across the U.S." 
+          content="Internet One operates as a marketing partner under Internetone.us. We assist customers in discovering home internet and TV service options from participating providers across the U.S." 
         />
-        <meta name="keywords" content="about Internet Core, Internetcore.us, internet service partner, TV service company" />
+        <meta name="keywords" content="about Internet One, Internetone.us, internet service partner, TV service company" />
         <link rel="canonical" href="/about-us" />
       </Helmet>
       <div className="min-h-screen bg-background">
@@ -62,7 +62,7 @@ const AboutUs = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
               >
-                Learn More About Internet Core
+                Learn More About Internet One
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -89,8 +89,8 @@ const AboutUs = () => {
                   </h2>
                   <div className="space-y-4 text-muted-foreground text-lg">
                     <p>
-                      <strong className="text-foreground">Internet Core</strong> operates as a marketing partner 
-                      under Internetcore.us. We are not affiliated with or the official site of any 
+                      <strong className="text-foreground">Internet One</strong> operates as a marketing partner 
+                      under Internetone.us. We are not affiliated with or the official site of any 
                       cable or internet provider.
                     </p>
                     <p>

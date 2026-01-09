@@ -25,9 +25,9 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={logoIcon} alt="Internet Core logo" className="w-10 h-10 object-contain drop-shadow-[0_0_8px_hsl(var(--primary)/0.5)] dark:mix-blend-screen mix-blend-multiply" />
+            <img src={logoIcon} alt="Internet One logo" className="w-10 h-10 object-contain drop-shadow-[0_0_8px_hsl(var(--primary)/0.5)] dark:mix-blend-screen mix-blend-multiply" />
             <span className="font-heading font-bold text-xl text-foreground">
-              Internet Core
+              Internet One
             </span>
           </Link>
 
