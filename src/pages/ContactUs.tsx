@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Our Address",
-    value: "Internetone.us\n2601 Woodland Park Drive\nApt 8209, Houston, TX 77077, USA",
+    value: "Internetone.us\n3052 Bainbridge Ave\nApt 5e, Bronx, NY 10467",
     href: null,
   },
   {

@@ -96,7 +96,7 @@ const SYSTEM_PROMPT = `You are a helpful customer support assistant for Internet
 - **Website**: internetone.us
 - **Phone**: (929) 990-2934 (Available 7 days a week)
 - **Email**: support@internetone.us
-- **Address**: 2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA
+- **Address**: 3052 Bainbridge Ave, Apt 5e, Bronx, NY 10467
 
 ## What We Do
 Internet One helps customers discover and compare internet and TV packages from leading providers. We help users get connected with great deals available at their location.

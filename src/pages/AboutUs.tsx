@@ -30,7 +30,7 @@ const whyWorkWithUs = [
 const companyInfo = [
   { label: "Website", value: "Internet One", icon: Globe },
   { label: "Company", value: "Internetone.us", icon: Building2 },
-  { label: "Business Address", value: "2601 Woodland Park Drive, Apt 8209, Houston, TX 77077, USA", icon: MapPin },
+  { label: "Business Address", value: "3052 Bainbridge Ave, Apt 5e, Bronx, NY 10467", icon: MapPin },
 ];
 
 const disclosures = [
