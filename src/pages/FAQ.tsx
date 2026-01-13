@@ -14,7 +14,7 @@ import {
 const faqs = [
   {
     question: "What is Internet One?",
-    answer: "Internet One is managed by Internetone.us, an independent marketing partner. We are not the official site of any specific internet or cable provider.",
+    answer: "Internet One is managed by Internetone.info, an independent marketing partner. We are not the official site of any specific internet or cable provider.",
   },
   {
     question: "How does Internet One work?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Do I pay Internet One or the service provider?",
-    answer: "Payments are made directly to the service provider. Internet One does not handle payments for services. However, Internetone.us may charge a separate service and setup fee for coordinating your order.",
+    answer: "Payments are made directly to the service provider. Internet One does not handle payments for services. However, Internetone.info may charge a separate service and setup fee for coordinating your order.",
   },
   {
     question: "What services are available in my area?",

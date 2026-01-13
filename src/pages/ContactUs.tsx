@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Our Address",
-    value: "Internetone.us\n3052 Bainbridge Ave\nApt 5e, Bronx, NY 10467",
+    value: "Internetone.info\n3052 Bainbridge Ave\nApt 5e, Bronx, NY 10467",
     href: null,
   },
   {
@@ -29,8 +29,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "zahid@internetone.us",
-    href: "mailto:zahid@internetone.us",
+    value: "zahid@internetone.info",
+    href: "mailto:zahid@internetone.info",
     extra: "We typically respond within 24 hours",
   },
   {
@@ -258,7 +258,7 @@ const ContactUs = () => {
                       </div>
 
                       <p className="text-sm text-muted-foreground">
-                        By submitting this form, you agree to be contacted by Internetone.us 
+                        By submitting this form, you agree to be contacted by Internetone.info 
                         regarding available internet and TV services in your area. Your information will 
                         be processed in accordance with our{" "}
                         <Link to="/policies/privacy-policy" className="text-primary hover:underline">

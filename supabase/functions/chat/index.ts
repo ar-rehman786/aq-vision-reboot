@@ -67,8 +67,8 @@ setInterval(cleanupRateLimitStore, 5 * 60 * 1000);
 // ============ CORS Configuration ============
 // Allowed origins for CORS - add your production domains here
 const allowedOrigins = [
-  "https://internetone.us",
-  "https://www.internetone.us",
+  "https://internetone.info",
+  "https://www.internetone.info",
 ];
 
 // Check if origin is allowed (includes Lovable preview URLs)
@@ -93,9 +93,9 @@ const SYSTEM_PROMPT = `You are a helpful customer support assistant for Internet
 
 ## Company Information
 - **Company Name**: Internet One
-- **Website**: internetone.us
+- **Website**: internetone.info
 - **Phone**: (929) 536-5524 (Available 7 days a week)
-- **Email**: zahid@internetone.us
+- **Email**: zahid@internetone.info
 - **Address**: 3052 Bainbridge Ave, Apt 5e, Bronx, NY 10467
 
 ## What We Do
