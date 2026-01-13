@@ -29,8 +29,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "zahid@internetone.info",
-    href: "mailto:zahid@internetone.info",
+    value: "AQsystems7@gmail.com",
+    href: "mailto:AQsystems7@gmail.com",
     extra: "We typically respond within 24 hours",
   },
   {

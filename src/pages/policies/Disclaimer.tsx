@@ -47,7 +47,7 @@ const Disclaimer = () => {
                     <p className="font-semibold text-foreground">Internet One</p>
                     <p className="text-muted-foreground">3052 Bainbridge Ave, Apt 5e</p>
                     <p className="text-muted-foreground">Bronx, NY 10467</p>
-                    <p className="text-muted-foreground mt-3">Email: <a href="mailto:zahid@internetone.info" className="text-primary hover:underline">zahid@internetone.info</a></p>
+                    <p className="text-muted-foreground mt-3">Email: <a href="mailto:AQsystems7@gmail.com" className="text-primary hover:underline">AQsystems7@gmail.com</a></p>
                     <p className="text-muted-foreground">Phone: <a href="tel:+19295365524" className="text-primary hover:underline">(929) 536-5524</a></p>
                   </div>
                 </div>
