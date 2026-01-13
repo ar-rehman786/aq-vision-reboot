@@ -27,7 +27,7 @@ const TermsOfServices = () => {
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-10">
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">1. Acceptance of Terms</h2>
-                  <p className="text-muted-foreground leading-relaxed">By accessing and using Internet One (the "Website"), you accept and agree to be bound by these Terms & Conditions. The Website is owned and operated by Internetone.us, located at 3052 Bainbridge Ave, Apt 5e, Bronx, NY 10467.</p>
+                  <p className="text-muted-foreground leading-relaxed">By accessing and using Internet One (the "Website"), you accept and agree to be bound by these Terms & Conditions. The Website is owned and operated by Internetone.info, located at 3052 Bainbridge Ave, Apt 5e, Bronx, NY 10467.</p>
                 </div>
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">2. Services Provided</h2>
@@ -35,16 +35,16 @@ const TermsOfServices = () => {
                 </div>
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">4. Fees and Charges</h2>
-                  <p className="text-muted-foreground leading-relaxed">Internetone.us charges a separate service and setup fee for processing and coordinating orders through Internet One.</p>
+                  <p className="text-muted-foreground leading-relaxed">Internetone.info charges a separate service and setup fee for processing and coordinating orders through Internet One.</p>
                 </div>
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">16. Contact Information</h2>
                 <div className="bg-muted/50 rounded-xl p-6 space-y-2">
                     <p className="font-semibold text-foreground">Internet One</p>
-                    <p className="text-muted-foreground">Internetone.us</p>
+                    <p className="text-muted-foreground">Internetone.info</p>
                     <p className="text-muted-foreground">3052 Bainbridge Ave, Apt 5e</p>
                     <p className="text-muted-foreground">Bronx, NY 10467</p>
-                    <p className="text-muted-foreground mt-3">Email: <a href="mailto:zahid@internetone.us" className="text-primary hover:underline">zahid@internetone.us</a></p>
+                    <p className="text-muted-foreground mt-3">Email: <a href="mailto:zahid@internetone.info" className="text-primary hover:underline">zahid@internetone.info</a></p>
                     <p className="text-muted-foreground">Phone: <a href="tel:+19295365524" className="text-primary hover:underline">(929) 536-5524</a></p>
                   </div>
                 </div>

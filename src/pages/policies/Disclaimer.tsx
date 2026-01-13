@@ -31,7 +31,7 @@ const Disclaimer = () => {
                 </div>
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">2. Independent Marketing Partner</h2>
-                  <p className="text-muted-foreground leading-relaxed">Internet One is owned and operated by Internetone.us, an independent marketing partner.</p>
+                  <p className="text-muted-foreground leading-relaxed">Internet One is owned and operated by Internetone.info, an independent marketing partner.</p>
                 </div>
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">8. Pricing Disclaimer</h2>
@@ -47,7 +47,7 @@ const Disclaimer = () => {
                     <p className="font-semibold text-foreground">Internet One</p>
                     <p className="text-muted-foreground">3052 Bainbridge Ave, Apt 5e</p>
                     <p className="text-muted-foreground">Bronx, NY 10467</p>
-                    <p className="text-muted-foreground mt-3">Email: <a href="mailto:zahid@internetone.us" className="text-primary hover:underline">zahid@internetone.us</a></p>
+                    <p className="text-muted-foreground mt-3">Email: <a href="mailto:zahid@internetone.info" className="text-primary hover:underline">zahid@internetone.info</a></p>
                     <p className="text-muted-foreground">Phone: <a href="tel:+19295365524" className="text-primary hover:underline">(929) 536-5524</a></p>
                   </div>
                 </div>
