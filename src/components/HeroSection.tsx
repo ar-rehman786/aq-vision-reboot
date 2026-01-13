@@ -1,7 +1,6 @@
 import { Phone, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import heroFamily from "@/assets/hero-family.jpg";
-import { ZipCodeChecker } from "@/components/ZipCodeChecker";
 
 const benefits = [
   "No Hidden Fees",
@@ -47,11 +46,6 @@ export const HeroSection = () => {
               Internet One helps you discover and compare internet and TV packages. 
               Get connected with great deals available at your location.
             </p>
-
-            {/* Zip Code Checker */}
-            <div className="mb-6 sm:mb-8">
-              <ZipCodeChecker variant="hero" />
-            </div>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
               {benefits.map((benefit) => (
